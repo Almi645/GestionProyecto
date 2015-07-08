@@ -12,5 +12,7 @@ namespace Gestion.Proyecto.Entity
         // ffff
         //gg
         //yuuu
+
+        // otro
     }
 }
