@@ -9,6 +9,7 @@ namespace Gestion.Proyecto.Entity
     public class Class1
     {
 
-        // ffff g
+        // ffff
+        //gg
     }
 }
