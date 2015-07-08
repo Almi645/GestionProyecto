@@ -19,6 +19,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion.Proyecto.DataAccess
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion.Proyecto.Entity", "Gestion.Proyecto.Entity\Gestion.Proyecto.Entity.csproj", "{5CA9526F-EEE1-4A29-8A07-6FCB06A76C94}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{5AD6327A-12C7-43B0-8AB8-852A4733B5E6}"
+	ProjectSection(SolutionItems) = preProject
+		Library\System.Web.Helpers.dll = Library\System.Web.Helpers.dll
+		Library\System.Web.Mvc.dll = Library\System.Web.Mvc.dll
+		Library\System.Web.Optimization.dll = Library\System.Web.Optimization.dll
+		Library\System.Web.Razor.dll = Library\System.Web.Razor.dll
+		Library\System.Web.WebPages.Deployment.dll = Library\System.Web.WebPages.Deployment.dll
+		Library\System.Web.WebPages.dll = Library\System.Web.WebPages.dll
+		Library\System.Web.WebPages.Razor.dll = Library\System.Web.WebPages.Razor.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
