@@ -8,7 +8,5 @@ namespace Gestion.Proyecto.Entity
 {
     public class Class1
     {
-        //hola sdasda
-        //fghjkaaaaaaaaaaa  s ss d
     }
 }
