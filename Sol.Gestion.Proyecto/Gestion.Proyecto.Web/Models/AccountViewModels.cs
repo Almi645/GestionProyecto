@@ -9,7 +9,6 @@ namespace Gestion.Proyecto.Web.Models
     public class AccountViewModels
     {
         [Required(AllowEmptyStrings = false, ErrorMessage = "Ingrese usuario")]
-        //[RegularExpression(RegExp.LoginName, ErrorMessageResourceName = "LoginName", ErrorMessageResourceType = typeof(Messages))]
         [Display(Name = "Usuario")]
         public string UserName { get; set; }
 

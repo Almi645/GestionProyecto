@@ -1500,7 +1500,6 @@
     <Content Include="Content\login\js\iphone.check.js" />
     <Content Include="Content\login\js\jquery-1.7.2.min.js" />
     <Content Include="Content\login\js\jquery-jrumble.js" />
-    <Content Include="Content\login\js\login.js" />
     <Content Include="Content\Multiselect\assets\ba.hashchange.js" />
     <Content Include="Content\Multiselect\assets\prettify.css" />
     <Content Include="Content\Multiselect\assets\prettify.js" />
