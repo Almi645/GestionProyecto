@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+
+
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/themes/komatsu/jquery.autocomplete.css")' />
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/themes/komatsu/treeview/jquery.treeview.css")' />
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/Multiselect/css/jquery.multiselect.css")' />
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/Multiselect/css/jquery.multiselect.filter.css")' />
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/css/toastr.css")' />
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/tooltipster.css")' />
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/tooltipster-noir.css")' />
+    <link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/css/simple-sidebar.css")' />
+
+    <script type='text/javascript' src='@Url.Content("~/Scripts/jquery-ui-1.8.24.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/others/jquery.fullcalendar.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Scripts/jquery.validate.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Content/Multiselect/js/jquery.multiselect.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Scripts/Util.JSHelper.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Scripts/Validation.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Content/Multiselect/js/jquery.multiselect.filter.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/sitemapstyler.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/UserControl.Helper.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/ckeditor/ckeditor.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/charts/excanvas.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/charts/jquery.flot.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/charts/jquery.flot.orderBars.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/charts/jquery.flot.pie.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/charts/jquery.flot.resize.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/charts/jquery.sparkline.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/autogrowtextarea.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/chosen.jquery.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.autotab.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.chosen.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.cleditor.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.dualListBox.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.ibutton.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.inputlimiter.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.maskedinput.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.mousewheel.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.tagsinput.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.uniform.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.validationEngine-en.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/jquery.validationEngine.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/forms/uniform.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/others/jquery.elfinder.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/tables/jquery.dataTables.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/tables/jquery.resizable.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/tables/jquery.sortable.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.breadcrumbs.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.collapsible.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.colorpicker.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.easytabs.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.fancybox.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.fileTree.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.jgrowl.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.progress.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.rounded.progress.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.sourcerer.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.timeentry.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/ui/jquery.tipsy.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/uploader/plupload.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/uploader/jquery.plupload.queue.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/uploader/plupload.html4.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/uploader/plupload.html5.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/wizards/jquery.form.wizard.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/jquery.browser.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/plugins/charts/excanvas.min.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/files/bootstrap.js")'></script>
+    <script type='text/javascript' src='@Url.Content("~/Content/js/toastr/toastr.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Scripts/jquery.tooltipster.min.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Content/js/jquery.js")'></script>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <header class="top">
+        <div style="float: left;">
+            <ul class="breadcrumb">
+                <li><span style="text-transform: uppercase; font-size: 12px"><a href="/Home/Index"><i class="icon-th icon-white"></i> Gestión Proyectos</a></span> <span class="divider">|</span></li>
+                <li class="active">@ViewBag.Title</li>
+            </ul>
+        </div>
+        <div style="float: right;">
+            <span><strong>BIENVENIDO : </strong>Miguel Mamani Arotoma</span>|
+            <a title="" class="cerrar" href="@Url.Action("SignOut", "Account")"><i class="icon-off icon-white"></i> </a>
+
+        </div>
+        <div class="clearfix"></div>
+
+    </header>
+    <div class="clear"></div>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container-fluid">
+
+            <fieldset id="me-content-fielset">
+                @RenderBody()
+            </fieldset>
+            <script>
+                $("#me-content-fielset").css("padding-right", "22px").css("padding-left", "15px").css("padding-bottom", "15px");
+            </script>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.tooltipster-noir {
+	border-radius: 10px; 
+    text-transform:uppercase!important;
+	border: 2px solid rgb(127,195,28);
+	background: #fff;
+	color: #2c2c2c;
+    text-transform: uppercase;
+}
+.tooltipster-noir .tooltipster-content {
+	font-family: Calibri, serif;
+    text-transform:uppercase!important;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 8px 10px;
+    text-transform: uppercase;
+}

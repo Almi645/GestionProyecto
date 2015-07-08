@@ -1,0 +1,113 @@
+﻿.frameGalery 
+{
+    width:100%;
+    height:100%;
+    background-color:White;
+}
+
+.elementGalery 
+{
+    width:110px;
+    height:110px;
+    margin:-2px;
+    margin-right:25px;
+    border:2px solid #aaa;
+    border-top-left-radius:8px;
+    border-top-right-radius:0px;
+    border-bottom-right-radius:8px;
+    border-bottom-left-radius:8px;
+    text-align:center;
+    display: inline-block;
+}
+
+.imageGalery 
+{
+    float:left;
+    margin-top:5px;
+    margin-left:5px;
+    width:100px;
+    height:100px;
+    text-align:center;
+    position:relative;
+}
+
+.tileGalery 
+{
+    width:50px;
+    height:50px;
+    position:relative;
+}
+
+.descriptionGalery 
+{
+    margin-left:5px;
+    text-align:left;
+    position:relative;
+}
+
+.viewGalery {
+    background: url("/Content/images/icons/usual/icon-search.png") no-repeat scroll center center transparent;
+    top:-2px;
+    left: 112px;
+    border:2px solid rgb(0,200,225);
+    border-top-right-radius:4px;
+    background-color:rgb(0,200,225);
+    position:relative;
+    display: block;
+    height: 16px;
+    width: 16px;
+    cursor:pointer;
+    vertical-align:middle;
+    text-align:center;
+}
+
+.viewGalery:hover {
+    border:2px solid rgb(0,225,225);
+    background-color:rgb(0,225,225);
+}
+
+.downloadGalery {
+    background: url("/Content/images/icons/usual/icon-download.png") no-repeat scroll center center transparent;
+    top:-2px;
+    left: 112px;
+    border:2px solid rgb(106,194,57);
+    background-color:rgb(106,194,57);
+    position:relative;
+    display: block;
+    height: 16px;
+    width: 16px;
+    cursor:pointer;
+    vertical-align:middle;
+    text-align:center;
+}
+
+.downloadGalery:hover {
+    border:2px solid rgb(106,224,57);
+    background-color:rgb(106,224,57);
+}
+
+.deleteGalery {
+    background: url("/Content/images/icons/usual/icon-cross.png") no-repeat scroll center center transparent;
+    top:-2px;
+    left: 112px;
+    border-bottom-right-radius:4px;
+    border:2px solid rgb(225,93,78);
+    background-color:rgb(225,93,78);
+    position:relative;
+    display: block;
+    height: 16px;
+    width: 16px;
+    cursor:pointer;
+    vertical-align:middle;
+    text-align:center;
+}
+
+.deleteGalery:hover {
+    border:2px solid rgb(255,123,108);
+    background-color:rgb(255,123,108);
+}
+
+strong 
+{
+    color: Black
+    }

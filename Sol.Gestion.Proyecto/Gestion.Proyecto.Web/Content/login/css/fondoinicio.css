@@ -1,0 +1,80 @@
+﻿body{ 
+
+	background: #f1f1f1 url(/Content/login/images/fondo.jpg) no-repeat center center fixed!important; 
+	-webkit-background-size: cover!important;
+	-moz-background-size: cover!important;
+	-o-background-size: cover!important;
+	background-size: cover!important;
+}
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.validation-summary-errors{  padding: 8px 35px 8px 14px;
+  margin-bottom: 18px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #c09853;
+
+}
+html {
+height:100%}
+/*body{ 
+
+	background: #f1f1f1 url(/Content/login/images/login-bg.png) bottom center no-repeat;
+
+}*/
+.head {
+text-transform: uppercase; font-size: 12px;color:white; margin-left:10px; line-height:26px}
+.login {
+background:#0070d4!important; border:1px solid White!important; box-shadow:0 0 8px!important; padding:15px!important}
+header {
+background:#0072ce;}
+/*form {
+width:100%;
+height:300px;
+background: #0070d4 ;
+border-bottom:3px solid #fe001c;
+
+}*/
+.sistema{ border-right:1px solid white}
+.sistema h1{ font-family:'Segoe UI';font-size:80px;color:white; line-height:96px; font-weight:normal;text-align:center }
+.sistema h4{ color:white; font-weight:normal; text-align:center}
+fieldset {color:white;
+    /*background: url(/Content/login/images/login.png);*/
+    width:auto; height:auto; margin:0 auto!important
+}
+body>h1{margin:20px; margin-bottom:30vh}
+ol {
+list-style:none!important; margin:0!important; padding:10px!important}
+li {padding:0 5px;
+  margin-bottom:3px}
+    li > label, input {
+     display:inline-block}
+    li > label {
+    width:90px
+    }
+    li > input, select {margin-top:0px!important;
+    height:24px!important
+    }
+        li > input { border:0!important; background:white!important; box-shadow:none!important; outline:0;
+    }
+
+select, input {width:100%!important
+}
+.ingresar:hover {background:#ff0000!important;
+}
+.ingresar {
+color:#fff; background:#333!important; width:80px!important; border:0!important; line-height:24px;font-size:12px;float:right
+}

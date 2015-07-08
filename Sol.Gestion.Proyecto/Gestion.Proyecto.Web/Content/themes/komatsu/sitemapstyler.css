@@ -1,0 +1,156 @@
+/*
+	Sitemap Styler 	 
+*/
+#sitemap, #sitemap ul, #sitemap li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#sitemap{}
+#sitemap ul{
+	display:none;
+}
+#sitemap li
+{
+    line-height: 200%;
+    margin-top: 3px;
+    background: #D4D4D4;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+}
+/* IE leaves a blank space where span is added so this is to avoid that */
+* html #sitemap li{
+	float:left;
+	display:inline;
+}
+
+#sitemap li a{padding-left:38px;}
+#sitemap li a:hover{text-decoration:underline}
+#sitemap li span{float:left;position:absolute;top:5px;left:25px;width:13px;height:13px;cursor:auto;font-size:0;}
+/*#sitemap li span, #sitemap li span.collapsed{background:url(../../Content/images/collapsed.gif) no-repeat 0 0;} 
+#sitemap li span.expanded{background:url(../../Content/images/expanded.gif) no-repeat 0 0;}
+*/
+/* second level */
+
+#sitemap li li{
+	background:#fff;
+	margin-top: 0.5pt;
+	margin-left: 10px;
+    width: 96.6%;
+}
+#sitemap li li a{padding-left:56px;}
+#sitemap li li span{left:33px;}
+
+/* third level */
+
+#sitemap li li li a{padding-left:84px;}
+#sitemap li li li span{left:76px;}
+
+/* etc. */
+
+/*  */
+
+#sitemap li #idspan{float:left;position:absolute;top:5px;left:-20px;width:15px;height:15px;cursor:auto;font-size:0;}
+#sitemap li #idspan, #sitemap li #idspan.collapsed{background:url(../../Content/images/Up.png) no-repeat 0 0;} 
+#sitemap li #idspan.expanded{background:url(../../Content/images/Down.png) no-repeat 0 0;}
+
+#sitemap li li #idspan{left: -13px;}
+
+#sitemap li li li #idspan{left:30px;}
+
+
+#sitemap li ul{margin-top: 6pt;}
+#sitemap li
+{
+    border-style:solid;
+    border-width:1pt;
+    border-color:#C0C0C0;
+    -moz-box-shadow:0 14px 0 white inset;
+    -webkit-box-shadow:0 14px 0 white inset;
+    box-shadow:0 14px 6px #eee inset;
+    behavior: url(../../Content/css/PIE.htc);
+    }
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+/*
+	Sitemap Styler 	 
+*/
+
+#sitemap2, #sitemap2 ul, #sitemap2 li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#sitemap2{}
+#sitemap2 ul{
+	display:none;
+}
+#sitemap2 li{
+	line-height:200%;
+	margin-top:3px;
+	background:#eee;
+	position:relative;
+	width:90%;
+	height:30px;
+	border-radius:6px;
+}
+/* IE leaves a blank space where span is added so this is to avoid that */
+* html #sitemap2 li{
+	float:left;
+	display:inline;
+}
+
+#sitemap2 li a{padding-left:38px;}
+#sitemap2 li a:hover{text-decoration:underline}
+#sitemap2 li span{float:left;position:absolute;top:5px;left:25px;width:13px;height:13px;cursor:auto;font-size:0;}
+
+/* second level */
+
+#sitemap2 li li{
+	background:#fff;
+	margin-top: 0.5pt;
+	margin-left: 10px;
+    width: 96.6%;
+}
+#sitemap2 li li a{padding-left:56px;}
+#sitemap2 li li span{left:33px;}
+
+/* third level */
+
+#sitemap2 li li li a{padding-left:84px;}
+#sitemap2 li li li span{left:76px;}
+
+/* etc. */
+
+/*  */
+
+#sitemap2 li #idspan2{float:left;position:absolute;top:5px;left:-20px;width:15px;height:15px;cursor:auto;font-size:0;}
+#sitemap2 li #idspan2, #sitemap2 li #idspan2.collapsed{background:url(../../Content/images/Up.png) no-repeat 0 0;} 
+#sitemap2 li #idspan2.expanded{background:url(../../Content/images/Down.png) no-repeat 0 0;}
+
+#sitemap2 li li #idspan2{left: -13px;}
+
+#sitemap2 li li li #idspan2{left:30px;}
+
+#sitemap2 li ul{margin-top: 6pt;}
+#sitemap2 li
+{
+    border-style:solid;
+    border-width:1pt;
+    border-color:#C0C0C0;
+    box-shadow:0 14px 0 white inset;
+    behavior: url(../../Content/css/PIE.htc);
+}
+
+*html #sitemap2 li
+{
+    border-style:solid;
+    border-width:1pt;
+    border-color:#C0C0C0;
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=-55, OffY=-15, Color=white);
+}
