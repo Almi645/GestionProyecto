@@ -8,6 +8,7 @@ namespace Gestion.Proyecto.Entity
 {
     public class Class1
     {
-        // hola maikito
+
+        // ffff
     }
 }
