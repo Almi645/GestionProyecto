@@ -245,10 +245,9 @@
     <Content Include="Content\css\image\tree-no-branches.png" />
     <Content Include="Content\css\image\tree-rtl.png" />
     <Content Include="Content\css\image\tree.png" />
+    <Content Include="Content\css\simple-sidebar.css" />
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\css\toastr.css" />
-    <Content Include="Content\css\TreeView\aciTree.css" />
-    <Content Include="Content\css\TreeView\demo.css" />
     <Content Include="Content\datepicker\css\datepicker.css" />
     <Content Include="Content\datepicker\css\layout.css" />
     <Content Include="Content\datepicker\images\custom_b.png" />
@@ -1401,6 +1400,7 @@
     <Content Include="Content\js\files\bootstrap.js" />
     <Content Include="Content\js\files\functions.js" />
     <Content Include="Content\js\files\roundLoader.js" />
+    <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\plugins\charts\excanvas.min.js" />
     <Content Include="Content\js\plugins\charts\jquery.flot.js" />
     <Content Include="Content\js\plugins\charts\jquery.flot.orderBars.js" />
@@ -1453,7 +1453,6 @@
     <Content Include="Content\js\plugins\wizards\jquery.form.js" />
     <Content Include="Content\js\plugins\wizards\jquery.form.wizard.js" />
     <Content Include="Content\js\plugins\wizards\jquery.validate.min.js" />
-    <Content Include="Content\js\sitemapstyler.js" />
     <Content Include="Content\js\toastr\toastr.js" />
     <Content Include="Content\js\UserControl.Helper.js" />
     <Content Include="Content\loaders\1.gif" />
