@@ -1,0 +1,31 @@
+﻿@model Gestion.Proyecto.Web.Models.Proyecto.ProyectoConsultaViewModel
+@{
+    ViewBag.Title = "Consultar";
+}
+@using (Html.BeginForm("NuevaVenta", "Venta", FormMethod.Post, new { @id = "FrmVenta" }))
+{
+    <fieldset>
+        <legend> :: @Gestion.Proyecto.Resource.Title.CriterioBusqueda</legend>
+      
+            <div class="row-fluid">
+                <div class="span4">
+                    @Html.LabelFor(model => model.Proyectos.Codigo, new { @Class = "span3" })
+
+                    <div class="span9">
+                        @Html.TextBoxFor(model => model.Proyectos.Codigo, new { @id = "Codigo", @placeholder = "Buscar Cliente por Código" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Proyectos.Codigo, string.Empty, new { @Class = "error", @Style = "display:block;" })
+                </div>
+
+            </div>
+            @*<hr style="color:#0056b2" />*@
+        
+    </fieldset>
+    <fieldset>
+        <legend> :: @Gestion.Proyecto.Resource.Title.ResultadoBusqueda</legend>
+        <div id="ContainerVentaDetalle" class="table">
+            @*@Html.Partial("_VentaProductoGridPartial", Model)*@
+        </div>
+    </fieldset>
+}
+
