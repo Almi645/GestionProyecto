@@ -6607,3 +6607,26 @@ border-bottom-left-radius: 5px;
 }
 .top span {
 color:#333333;}
+
+
+.bs-docs-example {
+  position: relative;
+  margin: 15px 0;
+  padding: 9px 15px 0px;
+  background-color: #F7F7F7;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.bs-docs-example + .prettyprint {
+  margin-top: -18px;
+  padding-top: 15px;
+}
+
+.prettyprint {
+  padding: 8px;
+  background-color: #FFFFFF;
+  border: 1px solid #e1e1e8;
+  border-radius: 0px 0px 4px 4px;
+}
