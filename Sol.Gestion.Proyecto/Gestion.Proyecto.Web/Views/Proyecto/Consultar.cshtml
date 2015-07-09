@@ -16,8 +16,9 @@
                 </div>
                 @Html.ValidationMessageFor(model => model.Proyectos.Codigo, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
-        </div> 
+        </div>
         <div class="row-fluid">
+
             <div class="span4">
                 @Html.LabelFor(model => model.Proyectos.Codigo, new { @Class = "span3" })
                 <div class="span9">
@@ -25,9 +26,12 @@
                 </div>
                 @Html.ValidationMessageFor(model => model.Proyectos.Codigo, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
-        </div> 
+        </div>
+        <div class="row-fluid">
+                <button type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Nuevo </button>
+                <button type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Buscar </button>       
+        </div>
     </div>
-    
     <div class="bs-docs-example">
         <p style="text-transform:uppercase">:: @Gestion.Proyecto.Resource.Title.ResultadoBusqueda</p>
     </div>
