@@ -21,6 +21,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion.Proyecto.Entity", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{5AD6327A-12C7-43B0-8AB8-852A4733B5E6}"
 	ProjectSection(SolutionItems) = preProject
+		Library\Microsoft.Practices.EnterpriseLibrary.Common.dll = Library\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		Library\Microsoft.Practices.EnterpriseLibrary.Data.dll = Library\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		C:\Users\User\Documents\visual studio 2013\Projects\Alm\Repository\bin\Debug\Repository.dll = C:\Users\User\Documents\visual studio 2013\Projects\Alm\Repository\bin\Debug\Repository.dll
 		Library\System.ComponentModel.DataAnnotations.dll = Library\System.ComponentModel.DataAnnotations.dll
 	EndProjectSection
 EndProject
