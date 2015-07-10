@@ -50,9 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Pagination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProyectosDataAccess.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Gestion.Proyecto.Common\Gestion.Proyecto.Common.csproj">
+      <Project>{9b8d6cad-b859-472a-af3e-58ec5a9f950a}</Project>
+      <Name>Gestion.Proyecto.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gestion.Proyecto.Entity\Gestion.Proyecto.Entity.csproj">
       <Project>{5ca9526f-eee1-4a29-8a07-6fcb06a76c94}</Project>
       <Name>Gestion.Proyecto.Entity</Name>
@@ -62,9 +68,7 @@
       <Name>Gestion.Proyecto.Resource</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

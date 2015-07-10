@@ -1,4 +1,5 @@
-﻿using Gestion.Proyecto.Resource;
+﻿using Gestion.Proyecto.Common;
+using Gestion.Proyecto.Resource;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -18,7 +19,13 @@ namespace Gestion.Proyecto.Entity.Entity
         public string Estado { get; set; }
         public string NombreEstacion { get; set; }
         public string TipoEquipo { get; set; }
+        public string NombreEquipo { get; set; }
         public string ID { get; set; }
         public string IP { get; set; }
+        public enum Proc
+        {
+            [StringValue("[dbo].[Usp_ProyectoPaginacion]")]
+            Paginacion
+        }
     }
 }

@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Consultar";
 }
-@using (Html.BeginForm("NuevaVenta", "Venta", FormMethod.Post, new { @id = "FrmVenta" }))
+@using (Html.BeginForm("ConsultarPartial", "Proyecto", FormMethod.Post, new { @id = "FrmProyectoConsulta" }))
 {
     <div class="bs-docs-example">
         <p style="text-transform:uppercase">:: @Gestion.Proyecto.Resource.Title.CriterioBusqueda</p>
@@ -18,27 +18,17 @@
             </div>
         </div>
         <div class="row-fluid">
-
-            <div class="span4">
-                @Html.LabelFor(model => model.Proyectos.Codigo, new { @Class = "span3" })
-                <div class="span9">
-                    @Html.TextBoxFor(model => model.Proyectos.Codigo, new { @id = "Codigo", @placeholder = "Buscar Cliente por Código" })
-                </div>
-                @Html.ValidationMessageFor(model => model.Proyectos.Codigo, string.Empty, new { @Class = "error", @Style = "display:block;" })
-            </div>
-        </div>
-        <div class="row-fluid">
             <button type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Nuevo </button>
-            <button type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Buscar </button>
+            <button id="btnProyectoBuscar" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Buscar </button>
         </div>
     </div>
     <div class="bs-docs-example">
         <p style="text-transform:uppercase">:: @Gestion.Proyecto.Resource.Title.ResultadoBusqueda</p>
     </div>
-    <pre class="prettyprint">
-        <div id="ContainerVentaDetalle" class="table">
-            @*@Html.Partial("_VentaProductoGridPartial", Model)*@
+    <div class="prettyprint">
+        <div id="ContainerGrid" class="table">
+            @Html.Partial("_ProyectoGridPartialView", Model)
         </div>
-    </pre>
+    </div>
 }
-
+<script type='text/javascript' src='@Url.Content("~/ViewScript/Proyecto/Consulta.js")'></script>

@@ -1,0 +1,34 @@
+﻿@model Gestion.Proyecto.Web.Models.Proyecto.ProyectoConsultaViewModel
+@{
+    WebGrid grid = new WebGrid(rowsPerPage: Model.Paginacion.RowsPerPage, ajaxUpdateContainerId: "IdGridProyecto",
+    ajaxUpdateCallback: "SetTotalRecordsProyecto");
+    grid.Bind(Model.PersonaList, autoSortAndPage: false, rowCount: Model.Paginacion.RowCount);
+
+    <div id="IdGridProyecto">
+        @grid.GetHtml(
+                headerStyle: "fix_head",
+                rowStyle: "fix_td",
+                alternatingRowStyle: "",
+                footerStyle: "pagination",
+                         htmlAttributes: new { id = "IdGridProyectoDetalle", @class = "table table-striped", @style = "width:99%; margin:5px auto" },
+                mode: WebGridPagerModes.All,
+                firstText: Gestion.Proyecto.Resource.Constants.ButtonPageFirst,
+                previousText: Gestion.Proyecto.Resource.Constants.ButtonPageBack,
+                nextText: Gestion.Proyecto.Resource.Constants.ButtonPageNext,
+                lastText: Gestion.Proyecto.Resource.Constants.ButtonPageLast,
+                columns: grid.Columns
+                (
+                    grid.Column("Codigo", "Código", canSort: true, style: "centrar", format: @<text>@item.Codigo</text>),
+                    grid.Column("Descripcion", "Nombre", canSort: true, style: "centrar", format: @<text>@item.Descripcion</text>),
+                    grid.Column("NombreEstacion", "Descripción", canSort: true, style: "centrar", format: @<text>@item.NombreEstacion</text>),
+                    grid.Column("NombreEstacion", "Descripción", canSort: true, style: "centrar", format: @<text>@item.NombreEstacion</text>),
+                    grid.Column("NombreEstacion", "Descripción", canSort: true, style: "centrar", format: @<text>@item.NombreEstacion</text>),
+
+                    grid.Column("", "Acciones", canSort: true, style: "centrar", format:
+                    @<text>@Html.ActionLink("Detalle", "Edit", "Proyecto", new { id = item.Codigo }, new { @class = "", title = "Detalle" })</text>)))
+
+        @Html.HiddenFor(model => model.Paginacion.RowCount, new { @id = "RowCountProyecto" })
+        @Html.HiddenFor(model => model.Paginacion.RowsPerPage, new { @id = "RowsPerPageProyecto" })
+        @Html.HiddenFor(model => model.Paginacion.FooterDesc, new { @id = "FooterDescProyecto" })
+    </div>
+}

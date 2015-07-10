@@ -1819,6 +1819,7 @@
     <Content Include="Scripts\Util.JSHelper.js" />
     <Content Include="Scripts\Validation.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="ViewScript\Proyecto\Consulta.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1854,6 +1855,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Proyecto\Consultar.cshtml" />
+    <Content Include="Views\Proyecto\_ProyectoGridPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1870,6 +1872,14 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Gestion.Proyecto.BusinessLogic\Gestion.Proyecto.BusinessLogic.csproj">
+      <Project>{ee08a67a-4681-413b-8377-74ecba6a4e41}</Project>
+      <Name>Gestion.Proyecto.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion.Proyecto.Common\Gestion.Proyecto.Common.csproj">
+      <Project>{9b8d6cad-b859-472a-af3e-58ec5a9f950a}</Project>
+      <Name>Gestion.Proyecto.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gestion.Proyecto.Entity\Gestion.Proyecto.Entity.csproj">
       <Project>{5ca9526f-eee1-4a29-8a07-6fcb06a76c94}</Project>
       <Name>Gestion.Proyecto.Entity</Name>

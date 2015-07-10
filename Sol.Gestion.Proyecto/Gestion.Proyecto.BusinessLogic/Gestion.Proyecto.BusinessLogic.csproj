@@ -39,8 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ProyectosBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gestion.Proyecto.DataAccess\Gestion.Proyecto.DataAccess.csproj">
+      <Project>{a6b81939-134d-4ef3-a015-f4365b170245}</Project>
+      <Name>Gestion.Proyecto.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion.Proyecto.Entity\Gestion.Proyecto.Entity.csproj">
+      <Project>{5ca9526f-eee1-4a29-8a07-6fcb06a76c94}</Project>
+      <Name>Gestion.Proyecto.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
