@@ -95,10 +95,9 @@ audio:not([controls]) {
   display: none;
 }
 *{font-family:Segoe UI,Tahoma,Arial,Verdana}
-html {  font-family:Segoe UI,Tahoma,Arial,Verdana;
-  font-size: 100%;
+html {
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 a:focus {
@@ -110,10 +109,6 @@ a:focus {
 a:hover,
 a:active {
   outline: 0;
-}
-td:hover  {
-    background:rgba(240, 255, 12, 0.46) !important;
-    /*font-weight:bold;*/
 }
 
 sub,
@@ -255,11 +250,9 @@ textarea {
   }
 }
 body {
-  margin: 0;
-  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  font-family:Segoe UI,Tahoma,Arial,Verdana;
+    margin : 0px;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 18px;
   color: #1e1e1e;
   background-color:#fff; 
 
@@ -270,10 +263,8 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
   color: #005580;
-  text-decoration: underline;
 }
 
 .img-rounded {
@@ -2059,31 +2050,13 @@ legend + .control-group {
   padding-left: 180px;
 }
 
-table {
-  max-width: 100%;
-  background-color: transparent;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
-.table
-{
-    width: 100%;
-    margin-bottom: 20px;
-    line-height: 15px;
-}
 
-    .table th,
-    .table td
+    .table th
     {
         padding: 2px;
-        /*line-height: 20px;*/
-        text-align: left;
-        vertical-align: top;
-        border: 1px dotted;
-        color: #333;
+        color: #1D5B78;
         white-space: nowrap;
-        text-transform: lowercase;
     }
 
         .table th,
@@ -2095,33 +2068,31 @@ table {
     .table th
     {
         font-weight: bold;
-        background: #d7d7d7;
-        border-bottom:2px solid #eaeaea;
-       /*background: rgb(127,195,28); */ 
-        /*background: -moz-linear-gradient(top,  #78ba4a 0%, #00774e 100%); 
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#78ba4a), color-stop(100%,#00774e)); 
-        background: -webkit-linear-gradient(top,  #78ba4a 0%,#00774e 100%); 
-        background: -o-linear-gradient(top,  #78ba4a 0%,#00774e 100%); 
-        background: -ms-linear-gradient(top,  #78ba4a 0%,#00774e 100%); 
-        background: linear-gradient(top,  #78ba4a 0%,#00774e 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78ba4a', endColorstr='#00774e',GradientType=0 );*/ 
-        
+        background: #DBEBF0 none repeat scroll 0% 0%;
+        border-bottom: 2px solid #EAEAEA;
         text-align: center;
+        border-radius: 3px;
     }
 
     .table td
     {
-        background: #e6e6e6;
-        color: #454545;
+        color: #713B3B;
+        background: #FFF none repeat scroll 0% 0%;
     }
 
     .table th a
     {
-        color: white;
+        color: #1D5B78;
     }
 
     .table thead th
     {
         vertical-align: middle;
+    }
+
+    .table thead
+    {
+        height: 30px;
     }
 
     .table caption + thead tr:first-child th,
@@ -2257,7 +2228,7 @@ table {
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th
 {
-    background-color: #f9f9f9;
+    background-color: #F2F2F2;
 }
 
 .table-hover tbody tr:hover > td,
@@ -5202,10 +5173,6 @@ border-radius: 10px 10px 0 0;
   color: yellow;
 }
 
-.pagination {
-  margin: 20px 0;
-}
-
 .pagination ul {
   display: inline-block;
   *display: inline;
@@ -6427,7 +6394,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e22c', end
 .table input{ padding:0; margin:0}
 .centrar{text-align:center!important; text-transform:uppercase!important;}
 .lefttextgrid{text-align:left!important; text-transform:uppercase!important;}
-/*body, html, .container-fluid, .row-fluid, .bgmain{height:100%}*/
 .PENDIENTE{ border:1px solid red;border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;color:#990000; font-weight:bold;text-transform:uppercase; font-size:11px}
 .TRANSFERIDO{ border:1px solid #b2d8b9;border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;color:#1e8e35 ;font-weight:bold; text-transform:uppercase; font-size:11px}
 a, button, input{transition:all 0.5s ease 0s;}
@@ -6459,18 +6425,26 @@ h1{color:white; font-size:22px; font-weight:normal!important;text-transform:uppe
 
 tfoot{height:28px;}
 tfoot a{line-height:22px;}
-tfoot a:hover{background:#00774e;color:white!important}
+tfoot a:hover {
+    background: #63A87B none repeat scroll 0% 0%;
+    color: #FFF !important;
+}
 tfoot a.total_registros:hover{background:none;}
+
 .pagination {
-    margin: 0 2%;
+    margin: 0px 2%;
     position: relative;
     text-align: right;
     width: 100%;
+    text-align: right;
 }
 .pages, .pagination td {
-    background: none repeat scroll 0 0 #EAEAEA;
-    border-top: 1px solid #CCCCCC;
-    padding: 2px;
+    background: #DBEBF0 none repeat scroll 0% 0%;
+    border-top: 1px solid #FFF;
+    padding: 10px;
+    color: #2766A4;
+    font-weight: bold;
+    font-size: 15px;
 }
 .pages li.prev {
     margin-right: 15px;
@@ -6479,13 +6453,13 @@ tfoot a.total_registros:hover{background:none;}
     margin-left: 15px;
 }
 .pages li a, .pagination td a {
-    border: 1px solid #D5D5D5;
-    color: #666666;
+    border: 1px solid #1D5B78;
     font-size: 11px;
     font-weight: bold;
     height: 25px;
     padding: 4px 8px;
-    text-decoration: none;
+    border-radius: 5px;
+    color: #1D5B78;
 }
 .pages li a:hover {
     background: none repeat scroll 0 0 #F6F6F6;
@@ -6500,15 +6474,9 @@ tfoot a.total_registros:hover{background:none;}
 .pagination .total_registros
 {
     color: #2B6893;
-    /*float: left;
-    background: none;*/
-    border: 0;
-    /*box-shadow: none;
-    cursor: default;
-    position: relative;
-    top: 2px;*/   
-        padding-right: 50px;
-    }
+    border: 0px none;
+    padding-right: 50px;
+}
 
 .ventana{width: 50%; display: block; overflow-x: scroll;}
 .top{
