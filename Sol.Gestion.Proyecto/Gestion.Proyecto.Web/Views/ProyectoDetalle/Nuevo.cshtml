@@ -1,0 +1,86 @@
+﻿@model Gestion.Proyecto.Web.Models.Proyecto.ProyectoConsultaViewModel
+@{
+    ViewBag.Title = "PROYECTO DETALLE";
+}
+
+<style>
+#overflow{border-bottom:1px solid #E1E1E8;border-radius: 4px; height:400px;overflow-y:scroll;overflow-x:hidden;}
+
+
+</style>
+
+<div class="bs-docs-example">
+    <p style="text-transform:uppercase">:: PROYECTO DETALLE</p>
+</div>
+<div class="prettyprint">
+    <div class="row-fluid">
+
+        <div class="span3">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    Seleccion un detalle ↓
+                </a>
+                <div id="overflow">
+                    <a href="#" class="list-group-item" codeform="A" onclick="dialog(this)">Item 1</a>
+                    <a href="#" class="list-group-item" codeform="B" onclick="dialog(this)">Item 2</a>
+                    <a href="#" class="list-group-item" codeform="C" onclick="dialog(this)">Item 3</a>
+                    <a href="#" class="list-group-item" codeform="D" onclick="dialog(this)">Item 4</a>
+                    <a href="#" class="list-group-item" codeform="E" onclick="dialog(this)">Item 5</a>
+                    <a href="#" class="list-group-item" codeform="F" onclick="dialog(this)">Item 6</a>
+                    <a href="#" class="list-group-item" codeform="G" onclick="dialog(this)">Item 7</a>
+                    <a href="#" class="list-group-item" codeform="H" onclick="dialog(this)">Item 8</a>
+                    <a href="#" class="list-group-item" codeform="I" onclick="dialog(this)">Item 9</a>
+                    <a href="#" class="list-group-item" codeform="J" onclick="dialog(this)">Item 10</a>
+                    <a href="#" class="list-group-item" codeform="K" onclick="dialog(this)">Item 11</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="span9">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    Proyecto
+                </a>
+                <div class="list-group-item">
+                    <div class="row-fluid">
+                        <div class="span4">
+                            @Html.LabelFor(model => model.Proyectos.Codigo, new { @Class = "span3" })
+                            <div class="span9">
+                                @Html.TextBoxFor(model => model.Proyectos.Codigo, new { @id = "Codigo", @placeholder = "Buscar Cliente por Código" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Proyectos.Codigo, string.Empty, new { @Class = "error", @Style = "display:block;" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="row-fluid">
+            <button type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Nuevo </button>
+            <button id="btnProyectoBuscar" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Buscar </button>
+        </div>
+    </div>
+
+    <script>
+        function dialog(thi) {
+            toastr.warning($(thi).attr('codeform'));
+        }
+    </script>
+    <script>
+
+ 
+
+        $(function () {
+            var width = 0;
+            $('#overflow .container div').each(function () {
+                width += $(this).outerWidth(true);
+            });
+            $('#overflow .container').css('width', width + "px");
+            alert(width);
+        });
+
+
+    </script>

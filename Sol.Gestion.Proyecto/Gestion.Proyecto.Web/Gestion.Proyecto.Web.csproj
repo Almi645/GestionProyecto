@@ -162,6 +162,7 @@
     <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\Base\JSResultView.cs" />
     <Compile Include="Controllers\ProyectoController.cs" />
+    <Compile Include="Controllers\ProyectoDetalleController.cs" />
     <Compile Include="Filters\NoCacheAttribute.cs" />
     <Compile Include="Helpers\ProfileUserUtil.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -1856,6 +1857,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Proyecto\Consultar.cshtml" />
     <Content Include="Views\Proyecto\_ProyectoGridPartialView.cshtml" />
+    <Content Include="Views\ProyectoDetalle\Nuevo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
