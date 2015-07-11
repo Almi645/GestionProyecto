@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="AlmacenDataAccess.cs" />
     <Compile Include="ArticulosDataAccess.cs" />
+    <Compile Include="EmpleadoDataAccess.cs" />
     <Compile Include="Helpers\Pagination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProyectosDataAccess.cs" />
