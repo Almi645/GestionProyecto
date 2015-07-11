@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityList\ProyectosList.cs" />
+    <Compile Include="Entity\DetalleTarjetaLugar.cs" />
     <Compile Include="Entity\Proyectos.cs" />
     <Compile Include="Others\Paginacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
