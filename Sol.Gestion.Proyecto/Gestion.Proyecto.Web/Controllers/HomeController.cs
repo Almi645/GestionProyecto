@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion.Proyecto.Seguridad.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace Gestion.Proyecto.Web.Controllers
 {
     public class HomeController : Controller
     {
+        [RequiresAuthenticationAttribute]
         public ActionResult Index()
         {
             return View();

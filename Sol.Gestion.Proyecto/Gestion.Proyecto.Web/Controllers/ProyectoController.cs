@@ -4,6 +4,7 @@ using Gestion.Proyecto.Entity.Entity;
 using Gestion.Proyecto.Entity.EntityList;
 using Gestion.Proyecto.Entity.Other;
 using Gestion.Proyecto.Resource;
+using Gestion.Proyecto.Seguridad.Filters;
 using Gestion.Proyecto.Web.Models.Proyecto;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace Gestion.Proyecto.Web.Controllers
             return View();
         }
 
+        [RequiresAuthenticationAjaxAttribute]
         public ActionResult Consultar()
         {
             var model = new ProyectoConsultaViewModel();

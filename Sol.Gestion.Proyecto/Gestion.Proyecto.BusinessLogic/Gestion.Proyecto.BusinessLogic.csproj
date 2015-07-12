@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ProyectosBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioBusinessLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gestion.Proyecto.DataAccess\Gestion.Proyecto.DataAccess.csproj">
