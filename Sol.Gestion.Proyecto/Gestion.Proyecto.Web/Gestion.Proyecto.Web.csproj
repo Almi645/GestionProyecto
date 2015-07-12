@@ -1408,7 +1408,6 @@
     <Content Include="Content\js\files\bootstrap.js" />
     <Content Include="Content\js\files\functions.js" />
     <Content Include="Content\js\files\roundLoader.js" />
-    <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\plugins\charts\excanvas.min.js" />
     <Content Include="Content\js\plugins\charts\jquery.flot.js" />
     <Content Include="Content\js\plugins\charts\jquery.flot.orderBars.js" />
@@ -1635,7 +1634,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\UserControl.Helper.js" />
     <Content Include="Scripts\Util.JSHelper.js" />
-    <Content Include="Scripts\Validation.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="ViewScript\Proyecto\Consulta.js" />
     <Content Include="Web.config" />

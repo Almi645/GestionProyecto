@@ -72,5 +72,3 @@ function PaintFooterGridProyecto() {
         $('#IdGridProyecto').css('display', '');
     }
 }
-
-

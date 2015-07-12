@@ -1,170 +1,171 @@
 ﻿
 var Util =
-    {
-        JSHelper: function ($) {
-            $.datepicker.setDefaults(
-            {
-                dateFormat: "dd/mm/yy",
-                //beforeShowDay: $.datepicker.noWeekends
+{
+    JSHelper: function ($) {
+        $.datepicker.setDefaults(
+        {
+            dateFormat: "dd/mm/yy",
+            //beforeShowDay: $.datepicker.noWeekends
            
-                //Chat Limpio
-                //
+            //Chat Limpio
+            //
+        });
+
+        $.fn.dataSourceEv = function (arrayList, valueMember, displayMember, element, selText) {
+
+            var ElementID = "#" + element;
+            var options = '<option value="" >' + selText + '</option>';
+            var Text = $(ElementID + " option:selected").text();
+
+            $(ElementID).clearSelect();
+            $(ElementID).append(options);
+            $(ElementID).parent().children("span").first().text(selText);
+
+
+            this.html(options)
+
+            options = "";
+
+            $.each(arrayList, function (index, item) {
+                options += "<option value='" + eval("item." + valueMember) + "'> " + eval("item." + displayMember) + " </option>";
             });
 
-            $.fn.dataSourceEv = function (arrayList, valueMember, displayMember, element, selText) {
+            this.append(options);
 
-                var ElementID = "#" + element;
-                var options = '<option value="" >' + selText + '</option>';
-                var Text = $(ElementID + " option:selected").text();
+            return this;
+        }
 
-                $(ElementID).clearSelect();
-                $(ElementID).append(options);
-                $(ElementID).parent().children("span").first().text(selText);
+        $.fn.datasourceClearEv = function (Element, selText) {
 
+            var TabId = "#" + Element;
 
-                this.html(options)
+            $(TabId).clearSelect();
+            $(TabId).append('<option value="" >' + selText + '</option>');
+            $(TabId).parent().children("span").first().text(selText);
 
-                options = "";
+            var Text = $(TabId + " option:selected").text();
+            $("div#uniform-" + Element + ".selector").attr("original-title", Text);
 
-                $.each(arrayList, function (index, item) {
-                    options += "<option value='" + eval("item." + valueMember) + "'> " + eval("item." + displayMember) + " </option>";
-                });
+            return this;
+        }
 
-                this.append(options);
+        $.fn.dataSource = function (arrayList, valueMember, displayMember, element) {
 
-                return this;
-            }
+            var ElementID = "#" + element;
 
-            $.fn.datasourceClearEv = function (Element, selText) {
+            $(ElementID).clearSelect();
 
-                var TabId = "#" + Element;
+            options = "";
 
-                $(TabId).clearSelect();
-                $(TabId).append('<option value="" >' + selText + '</option>');
-                $(TabId).parent().children("span").first().text(selText);
+            //selText = "";
 
-                var Text = $(TabId + " option:selected").text();
-                $("div#uniform-" + Element + ".selector").attr("original-title", Text);
-
-                return this;
-            }
-
-            $.fn.dataSource = function (arrayList, valueMember, displayMember, element) {
-
-                var ElementID = "#" + element;
-
-                $(ElementID).clearSelect();
-
-                options = "";
-
-                //selText = "";
-
-                $.each(arrayList, function (index, item) {
-                    options += "<option value='" + eval("item." + valueMember) + "'> " + eval("item." + displayMember) + " </option>";
-                    //selText = displayMember;
-                });
+            $.each(arrayList, function (index, item) {
+                options += "<option value='" + eval("item." + valueMember) + "'> " + eval("item." + displayMember) + " </option>";
+                //selText = displayMember;
+            });
                 
-                //$(ElementID).parent().children("span").first().text();
+            //$(ElementID).parent().children("span").first().text();
 
-                this.append(options);
+            this.append(options);
 
-                return this;
-            }
+            return this;
+        }
 
-            this.getDateTime = function (date) {
-                return (date.getDate() + 1) + "/" + date.getMonth() + "/" + date.getFullYear();
-            }
+        this.getDateTime = function (date) {
+            return (date.getDate() + 1) + "/" + date.getMonth() + "/" + date.getFullYear();
+        }
 
-            this.CalcularDiferenciaDias = function (fechaInicio, fechaFin) {
-                var dayDiff = Math.ceil((fechaFin - fechaInicio) / (1000 * 60 * 60 * 24));
+        this.CalcularDiferenciaDias = function (fechaInicio, fechaFin) {
+            var dayDiff = Math.ceil((fechaFin - fechaInicio) / (1000 * 60 * 60 * 24));
 
-                return dayDiff;
-            }
+            return dayDiff;
+        }
 
-            this.redireccionar = function (url) {
-                window.location = url;
-            }
+        this.redireccionar = function (url) {
+            window.location = url;
+        }
 
-            this.HasValue = function (value) {
-                return (value !== null && value !== undefined && value !== "" && value !== 0)
-            }
+        this.HasValue = function (value) {
+            return (value !== null && value !== undefined && value !== "" && value !== 0)
+        }
 
-            this.ValidarFechaMayor = function (fechaIni, fechaFin) {
-                return fechaFin >= fechaIni;
-            }
+        this.ValidarFechaMayor = function (fechaIni, fechaFin) {
+            return fechaFin >= fechaIni;
+        }
 
-            this.WebGridSetTotalRows = function (webGrid, description) {
+        this.WebGridSetTotalRows = function (webGrid, description) {
                  
-                var $webgrid = $(webGrid);
-                var $tFootPage = $("<a id='tfootPage' class='total_registros'></a>");
-                var footerDesc = this.HasValue(description) ? description : $(webGrid).attr("data_footerdesc");
+            var $webgrid = $(webGrid);
+            var $tFootPage = $("<a id='tfootPage' class='total_registros'></a>");
+            var footerDesc = this.HasValue(description) ? description : $(webGrid).attr("data_footerdesc");
 
-                $tFootPage.html(footerDesc);
+            $tFootPage.html(footerDesc);
 
-                $webgrid.find("tfoot tr:first td").prepend($tFootPage);
-            }
+            $webgrid.find("tfoot tr:first td").prepend($tFootPage);
         }
-
     }
 
-    Util.JSHelper = new Util.JSHelper(jQuery);
+}
 
-    var ReturnIndex = function () {
+Util.JSHelper = new Util.JSHelper(jQuery);
 
-        window.location.href = "/Home/Index";
+var ReturnIndex = function () {
 
+    window.location.href = "/Home/Index";
+
+}
+
+var NotificationAkiraStyle = function (Messages,MessageOption, Href,TextHref)
+{
+
+    if (MessageOption == 1) {
+
+        setTimeout(function () {
+
+            var Message = '<span class="icon icon-calendar"></span><p>' + Messages + ' <a href="' + Href + '">'+TextHref+'</a></p>'
+
+            // create the notification
+            var notification = new NotificationFx({
+                message: Message,
+                layout: 'attached',
+                effect: 'bouncyflip',
+                type: 'notice', // notice, warning or error
+                onClose: function () {
+
+                }
+            });
+
+            // show the notification
+            notification.show();
+
+        }, 1200);
     }
 
-    var NotificationAkiraStyle = function (Messages,MessageOption, Href,TextHref)
-    {
+    if (MessageOption == 2) {
 
-        if (MessageOption == 1) {
+        setTimeout(function () {
 
-            setTimeout(function () {
+            var Message = '<p>' + Messages + ' <a href="' + Href + '">' + TextHref + '</a></p>'
 
-                var Message = '<span class="icon icon-calendar"></span><p>' + Messages + ' <a href="' + Href + '">'+TextHref+'</a></p>'
-
-                // create the notification
-                var notification = new NotificationFx({
-                    message: Message,
-                    layout: 'attached',
-                    effect: 'bouncyflip',
-                    type: 'notice', // notice, warning or error
-                    onClose: function () {
-
-                    }
-                });
-
-                // show the notification
-                notification.show();
-
-            }, 1200);
-        }
-
-        if (MessageOption == 2) {
-
-            setTimeout(function () {
-
-                var Message = '<p>' + Messages + ' <a href="' + Href + '">' + TextHref + '</a></p>'
-
-                // create the notification
-                var notification = new NotificationFx({
-                    message: Message,
-                    layout: 'growl',
-                    effect: 'genie',
-                    type: 'notice', // notice, warning or error
-                    onClose: function () {
+            // create the notification
+            var notification = new NotificationFx({
+                message: Message,
+                layout: 'growl',
+                effect: 'genie',
+                type: 'notice', // notice, warning or error
+                onClose: function () {
                        
-                    }
-                });
+                }
+            });
 
-                // show the notification
-                notification.show();
+            // show the notification
+            notification.show();
 
-            }, 1200);
-        }
-
-        
-
-        
+        }, 1200);
     }
+}
+var ShowAlert = function (Title) {
+    bootbox.alert(Title, function () {
+        Example.show("Hello world callback");
+    });
+}
