@@ -61,11 +61,29 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ConsultarProyecto.
+        /// </summary>
+        public static string ConsultarProyecto {
+            get {
+                return ResourceManager.GetString("ConsultarProyecto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Criterios de Búsqueda.
         /// </summary>
         public static string CriterioBusqueda {
             get {
                 return ResourceManager.GetString("CriterioBusqueda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registrar Proyecto.
+        /// </summary>
+        public static string RegistrarProyecto {
+            get {
+                return ResourceManager.GetString("RegistrarProyecto", resourceCulture);
             }
         }
         

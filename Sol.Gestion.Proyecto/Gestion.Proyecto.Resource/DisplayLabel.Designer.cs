@@ -70,6 +70,69 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Descripción.
+        /// </summary>
+        public static string Descripcion {
+            get {
+                return ResourceManager.GetString("Descripcion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Estado.
+        /// </summary>
+        public static string Estado {
+            get {
+                return ResourceManager.GetString("Estado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID.
+        /// </summary>
+        public static string ID {
+            get {
+                return ResourceManager.GetString("ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IP.
+        /// </summary>
+        public static string IP {
+            get {
+                return ResourceManager.GetString("IP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nombre de Equipo.
+        /// </summary>
+        public static string NombreEquipo {
+            get {
+                return ResourceManager.GetString("NombreEquipo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nombre de Estación.
+        /// </summary>
+        public static string NombreEstacion {
+            get {
+                return ResourceManager.GetString("NombreEstacion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tipo de Equipo.
+        /// </summary>
+        public static string TipoEquipo {
+            get {
+                return ResourceManager.GetString("TipoEquipo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ingrese contraseña.
         /// </summary>
         public static string IngreseContraseña {

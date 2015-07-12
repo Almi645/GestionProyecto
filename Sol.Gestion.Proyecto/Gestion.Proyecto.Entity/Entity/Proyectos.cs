@@ -15,13 +15,28 @@ namespace Gestion.Proyecto.Entity.Entity
 
         [Display(Name = "Codigo", ResourceType = typeof(DisplayLabel))]
         public string Codigo{ get; set; }
+
+        [Display(Name = "Descripcion", ResourceType = typeof(DisplayLabel))]
         public string Descripcion { get; set; }
+
+        [Display(Name = "Estado", ResourceType = typeof(DisplayLabel))]
         public string Estado { get; set; }
+
+        [Display(Name = "NombreEstacion", ResourceType = typeof(DisplayLabel))]
         public string NombreEstacion { get; set; }
+
+        [Display(Name = "TipoEquipo", ResourceType = typeof(DisplayLabel))]
         public string TipoEquipo { get; set; }
+
+        [Display(Name = "NombreEquipo", ResourceType = typeof(DisplayLabel))]
         public string NombreEquipo { get; set; }
+
+        [Display(Name = "ID", ResourceType = typeof(DisplayLabel))]
         public string ID { get; set; }
+
+        [Display(Name = "IP", ResourceType = typeof(DisplayLabel))]
         public string IP { get; set; }
+
         public enum Proc
         {
             [StringValue("[dbo].[Usp_ProyectoPaginacion]")]
