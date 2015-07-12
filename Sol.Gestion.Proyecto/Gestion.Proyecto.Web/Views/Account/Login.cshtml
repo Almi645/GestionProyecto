@@ -1,1 +1,93 @@
-﻿
+﻿@model Gestion.Proyecto.Web.Models.Usuario.UsuarioViewModel
+@{
+    Layout = null;
+}
+@using Gestion.Proyecto.Resource;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>@Title.TituloLogin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="3Dev">
+    <link type="text/css" rel="stylesheet" href="~/Content/login/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/login/css/login.css" />
+    <script type="text/javascript" src="@Url.Content("~/Content/login/js/jquery-1.7.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/login/js/bootstrap.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/login/js/jquery-jrumble.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/login/js/login.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/login/js/global.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/login/js/iphone.check.js")"></script>
+
+</head>
+<body style="overflow: hidden;">
+    <div id="alertMessage" class="error">
+    </div>
+    <div id="successLogin">
+    </div>
+    <div class="wrapper" id="inner">
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "loginForm" }))
+        {
+            <div class="container">
+                <div style="border-radius: 0 0 5px 5px; background: #FFFFFF; line-height: 36px; padding: 5px; position: absolute;z-index: 1; top: 0px; left: 5%;">
+                    <label style="color:    #097917">
+                        @DateTime.Now.ToString("dddd, d 'de' MMMM 'del' yyyy")
+                    </label>
+                </div>
+                <div class="row">
+                    <h1 style="color: white;z-index: 2;position: relative; text-align: right">@Titles.ApplicationName</h1>
+                    <div style="clear: both">
+                    </div>
+                </div>
+            </div>
+
+            <div id="login">
+                <div class="inner">
+
+                    <div class="formLogin">
+
+
+
+                        <img style="float: left;" src="~/Content/images/CRP_Chavin.png" />
+                        <div class="tip">
+
+                            <label class="form-label">Usuario</label>
+
+                            @Html.EditorFor(model => model.UserName,
+                                    new
+                                    {
+                                        @id = "UserName",
+                                        @placeholder = "Ingrese Usuario",
+                                    })
+                            <font color="red">@Html.ValidationMessageFor(model => model.UserName, "", new { Style = "display: block; margin-right:85px;" })</font>
+
+                        </div>
+                        <div class="tip">
+                            <label class="form-label">Contraseña</label>
+
+                            @Html.EditorFor(model => model.Password,
+                                    new
+                                    {
+                                        @id = "Password",
+                                        placeholder = Labels.Password
+                                    })
+                            <font color="red">@Html.ValidationMessageFor(model => model.Password, "", new { Style = "display: block; margin-right:63px;" })</font>
+
+                            <input type="submit" value="Acceder" class="bingresar" />
+
+                        </div>
+                        <div>
+                            @Html.AntiForgeryToken()
+                            <font color="red">@Html.ValidationSummary(true)</font>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+
+        }
+    </div>
+</body>
+</html>

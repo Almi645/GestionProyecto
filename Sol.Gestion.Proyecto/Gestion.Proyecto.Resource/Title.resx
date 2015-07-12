@@ -123,4 +123,7 @@
   <data name="ResultadoBusqueda" xml:space="preserve">
     <value>Resultados de Búsqueda</value>
   </data>
+  <data name="TituloLogin" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
 </root>

@@ -120,4 +120,13 @@
   <data name="Codigo" xml:space="preserve">
     <value>Código</value>
   </data>
+  <data name="IngreseContraseña" xml:space="preserve">
+    <value>Ingrese contraseña</value>
+  </data>
+  <data name="IngreseUsuario" xml:space="preserve">
+    <value>Ingrese usuario</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
 </root>
