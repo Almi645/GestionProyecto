@@ -875,7 +875,7 @@ $(function () {
     //    show24Hours: true, showSeconds: false,
     //    spinnerSize: [0, 0, 0], // Image size
     //    spinnerIncDecOnly: true, // Only up and down arrows
-    //    spinnerImage: '/Content/images/spinnerDefault.png', // Arrows image
+    //    spinnerImage: '/Content/images/spinnerDefault.png', // Arrows image 
     //}); 
 });
 
