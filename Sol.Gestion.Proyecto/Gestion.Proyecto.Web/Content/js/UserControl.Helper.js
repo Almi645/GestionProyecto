@@ -876,7 +876,7 @@ $(function () {
     //    spinnerSize: [0, 0, 0], // Image size
     //    spinnerIncDecOnly: true, // Only up and down arrows
     //    spinnerImage: '/Content/images/spinnerDefault.png', // Arrows image
-    //});
+    //}); 
 });
 
 function makeDatePicker(selector) {
