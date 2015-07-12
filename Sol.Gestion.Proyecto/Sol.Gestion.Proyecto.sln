@@ -23,7 +23,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{5AD6
 	ProjectSection(SolutionItems) = preProject
 		Library\Microsoft.Practices.EnterpriseLibrary.Common.dll = Library\Microsoft.Practices.EnterpriseLibrary.Common.dll
 		Library\Microsoft.Practices.EnterpriseLibrary.Data.dll = Library\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		Library\MvcSiteMapProvider.dll = Library\MvcSiteMapProvider.dll
+		Library\MvcSiteMapProvider.WebActivator.dll = Library\MvcSiteMapProvider.WebActivator.dll
 		Library\System.ComponentModel.DataAnnotations.dll = Library\System.ComponentModel.DataAnnotations.dll
+		Library\WebActivatorEx.dll = Library\WebActivatorEx.dll
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion.Proyecto.Common", "Gestion.Proyecto.Common\Gestion.Proyecto.Common.csproj", "{9B8D6CAD-B859-472A-AF3E-58EC5A9F950A}"
