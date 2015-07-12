@@ -1238,3 +1238,4 @@ function val_Hours(e) {
     }
     return patron.test(text);
 }
+
