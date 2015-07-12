@@ -44,5 +44,10 @@ namespace Gestion.Proyecto.Web.Controllers
             model.Paginacion.FooterDesc = UtilGrid.CountRecords(page, model.Paginacion.RowsPerPage, RowCount);
             return PartialView("_ProyectoGridPartialView", model);
         }
+
+        public ActionResult Nuevo()
+        {
+            return View();
+        }
     }
 }

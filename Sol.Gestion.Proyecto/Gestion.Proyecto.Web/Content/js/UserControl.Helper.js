@@ -1,4 +1,4 @@
-﻿function ValidarAutocomplete(IdControl,IdMsj) {
+﻿function ValidarAutocomplete(IdControl, IdMsj) {
     var IDRecirbidoPor = $(IdControl).val();
 
     if (IDRecirbidoPor == "" || IDRecirbidoPor == 0)
@@ -46,55 +46,55 @@ $(document).ready(function () {
 //////    'feedback': '.charsLeft' // note: looks within the current form
 //////});
 
-jQuery.fn.limitMaxlength = function(options){
+jQuery.fn.limitMaxlength = function (options) {
 
-  var settings = jQuery.extend({
-    attribute: "maxlength",
-    onLimit: function(){},
-    onEdit: function(){}
-  }, options);
-  
-  // Event handler to limit the textarea
-  var onEdit = function(){
-    var textarea = jQuery(this);
-    var maxlength = parseInt(textarea.attr(settings.attribute));
+    var settings = jQuery.extend({
+        attribute: "maxlength",
+        onLimit: function () { },
+        onEdit: function () { }
+    }, options);
 
-    if(textarea.val().length > maxlength){
-      textarea.val(textarea.val().substr(0, maxlength));
-      
-      // Call the onlimit handler within the scope of the textarea
-      jQuery.proxy(settings.onLimit, this)();
+    // Event handler to limit the textarea
+    var onEdit = function () {
+        var textarea = jQuery(this);
+        var maxlength = parseInt(textarea.attr(settings.attribute));
+
+        if (textarea.val().length > maxlength) {
+            textarea.val(textarea.val().substr(0, maxlength));
+
+            // Call the onlimit handler within the scope of the textarea
+            jQuery.proxy(settings.onLimit, this)();
+        }
+
+        // Call the onEdit handler within the scope of the textarea
+        jQuery.proxy(settings.onEdit, this)(maxlength - textarea.val().length);
     }
-    
-    // Call the onEdit handler within the scope of the textarea
-    jQuery.proxy(settings.onEdit, this)(maxlength - textarea.val().length);
-  }
 
-  this.each(onEdit);
+    this.each(onEdit);
 
-  return this.keyup(onEdit)
-        .keydown(onEdit)
-        .focus(onEdit);
+    return this.keyup(onEdit)
+          .keydown(onEdit)
+          .focus(onEdit);
 }
 
-$(document).ready(function(){
-  
-  var onEditCallback = function(remaining){
-    $(this).siblings('.charsRemaining').text("Characters remaining: " + remaining);
-    
-    if(remaining > 0){
-      //$(this).css('background-color', 'white');
+$(document).ready(function () {
+
+    var onEditCallback = function (remaining) {
+        $(this).siblings('.charsRemaining').text("Characters remaining: " + remaining);
+
+        if (remaining > 0) {
+            //$(this).css('background-color', 'white');
+        }
     }
-  }
-  
-  var onLimitCallback = function(){
-    //$(this).css('background-color', 'white');
-  }
-  
-  $('textarea[maxlength]').limitMaxlength({
-    onEdit: onEditCallback,
-    onLimit: onLimitCallback
-  });
+
+    var onLimitCallback = function () {
+        //$(this).css('background-color', 'white');
+    }
+
+    //$('textarea[maxlength]').limitMaxlength({
+    //    onEdit: onEditCallback,
+    //    onLimit: onLimitCallback
+    //});
 });
 
 function InicioJPopUp(selector, ancho, alto, resize, titulo) {
@@ -183,8 +183,8 @@ function val_Email(e) {
     tecla = (document.all) ? e.keyCode : e.which;
     if (tecla == 8) return true;
 
-   patron = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-  // patron = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/
+    patron = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    // patron = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/
     te = String.fromCharCode(tecla);
     return patron.test(te);
 }
@@ -375,9 +375,9 @@ function Load_EmptyDDL(ParamUrl, destino) {
     });
 }
 function msjRequerido(control) {
-//    if ($(control).val()=='') {
+    //    if ($(control).val()=='') {
     //alert($(control).parent().parent().children().get());
-//    }
+    //    }
 }
 
 function InicioJPopUp(selector, ancho, alto, resize, titulo) {
@@ -393,8 +393,6 @@ function InicioJPopUp(selector, ancho, alto, resize, titulo) {
         zIndex: 9999
     });
 }
-
-
 
 function InicioJPopUpOpen(selector) {
     $(selector).dialog("open");
@@ -525,20 +523,20 @@ function removeCustomAlert() {
 }
 
 ////CAMBIAR ESTILO ALERT END
-function Jalert(text,Url) {
+function Jalert(text, Url) {
     $('#buttonAlert').html(text);
     $('#dialogAlert').css("display", "block");
     $('#dialogAlert').dialog({
         autoOpen: false,
         width: 400,
         modal: true,
-        resizable:false,
+        resizable: false,
         hide: 'fade',
         show: 'fade',
         buttons: {
             "Aceptar": function () {
-                $('#dialogAlert').dialog("close");                
-                if(Url != null)
+                $('#dialogAlert').dialog("close");
+                if (Url != null)
                     window.location = Url;
             }
         }
@@ -581,7 +579,7 @@ function compare_dates(fecha, fecha2) {
 }
 
 
-function CreateUrl(Action,Controller) {
+function CreateUrl(Action, Controller) {
     var Url = '';
     var UrlAcionResult = '';
     var ParamUrl = $('#UrlActionGen').val();
@@ -697,7 +695,7 @@ function ValidarFechaMaskEdit(styleDate) {
             this.value = '';
         }
     });
-   
+
     $("form").each(function () { $.data($(this)[0], 'validator', false); });
 
     $("input[data-val-date]").removeAttr("data-val-date");
@@ -724,10 +722,10 @@ function InicioJPopUpAlert(text, actionfunction) {
                 if (actionfunction != null)
                     actionfunction();
                 $(this).dialog("close");
-                
+
             }
         }]
-       
+
     });
 
     $('#dialogAlert').dialog('option', 'modal', true).dialog('open');
@@ -873,24 +871,24 @@ function customValidationScript(IdSpanValidate, Message) {
 
 $(function () {
     //===== Time picker =====//
-    $('.timepicker').timeEntry({
-        show24Hours: true, showSeconds: false,
-        spinnerSize: [0, 0, 0], // Image size
-        spinnerIncDecOnly: true, // Only up and down arrows
-        spinnerImage: '/Content/images/spinnerDefault.png', // Arrows image
-    });
+    //$('.timepicker').timeEntry({
+    //    show24Hours: true, showSeconds: false,
+    //    spinnerSize: [0, 0, 0], // Image size
+    //    spinnerIncDecOnly: true, // Only up and down arrows
+    //    spinnerImage: '/Content/images/spinnerDefault.png', // Arrows image
+    //});
 });
 
 function makeDatePicker(selector) {
     //===== Date picker =====//
-    $(selector).datepicker({ 
-		showOtherMonths:true,
-		autoSize: true,
+    $(selector).datepicker({
+        showOtherMonths: true,
+        autoSize: true,
         changeMonth: true,
-		changeYear: true,
-		appendText: '(dd/mm/yyyy)',
-		dateFormat: 'dd/mm/yy'
-	});	
+        changeYear: true,
+        appendText: '(dd/mm/yyyy)',
+        dateFormat: 'dd/mm/yy'
+    });
 }
 
 function validarFechaMenorActual(IdFechaSeleccionada) {
@@ -926,8 +924,8 @@ function EnterSubmit(e, buttonClick) {
 function clearInputsSection(selector) {
     $(selector).find('input[type="text"],select,textarea').each(function (index, elem) {
         elem.value = "";
-        if(elem.type=="text") {
-            $("#"+elem.id).removeAttr("value");
+        if (elem.type == "text") {
+            $("#" + elem.id).removeAttr("value");
         }
     });
 }
@@ -935,7 +933,7 @@ function clearInputsSection(selector) {
 function appendErrorMessage(selector, message, visible) {
     message = "<span>" + message + "</span>";
     $(selector).html(message);
-    if(visible == true) {
+    if (visible == true) {
         $(selector).css('display', '');
     }
     else {
@@ -944,11 +942,11 @@ function appendErrorMessage(selector, message, visible) {
 }
 
 function clearFileInputField(tagId) {
-    document.getElementById(tagId).outerHTML  = document.getElementById(tagId).outerHTML ;
+    document.getElementById(tagId).outerHTML = document.getElementById(tagId).outerHTML;
 }
 
 function TrimString(str) {
-    str = str.replace(/^\s*|\s*$/g,"");
+    str = str.replace(/^\s*|\s*$/g, "");
     return str;
 }
 
@@ -962,42 +960,42 @@ function uniformPartialList(selector) {
     var text = $("#" + selector + " option:selected").text();
     var divParent = $("#" + selector).closest('div');
 
-//    $(divParent).attr("original-title", text);
-//    $(divParent).addClass('tipS');
-//    $(divParent).tipsy({ gravity: 's', fade: true, html: true });
+    //    $(divParent).attr("original-title", text);
+    //    $(divParent).addClass('tipS');
+    //    $(divParent).tipsy({ gravity: 's', fade: true, html: true });
 
-//    $(divParent).attr("data-toggle", "tooltip");
-//    $(divParent).attr("data-placement", "top");
-//    $(divParent).attr("data-original-title", text);
-//    $(divParent).tooltip();
+    //    $(divParent).attr("data-toggle", "tooltip");
+    //    $(divParent).attr("data-placement", "top");
+    //    $(divParent).attr("data-original-title", text);
+    //    $(divParent).tooltip();
 
-    $("#" + selector).on('change', function() {
+    $("#" + selector).on('change', function () {
         var IdSelect = $(this).attr("id");
         text = $("#" + IdSelect + " option:selected").text();
-//        divParent = $('#' + IdSelect).closest('div');
+        //        divParent = $('#' + IdSelect).closest('div');
 
-//       $(divParent).attr("original-title", text);
-//       $(divParent).addClass('tipS');
-//        $(divParent).tipsy({ gravity: 's', fade: true, html: true });
+        //       $(divParent).attr("original-title", text);
+        //       $(divParent).addClass('tipS');
+        //        $(divParent).tipsy({ gravity: 's', fade: true, html: true });
 
-//        $(divParent).attr("data-toggle", "tooltip");
-//        $(divParent).attr("data-placement", "top");
-//        $(divParent).attr("data-original-title", text);
-//        $(divParent).tooltip();
-       jQuery('#' + IdSelect).parent().children("span").first().text(text);
+        //        $(divParent).attr("data-toggle", "tooltip");
+        //        $(divParent).attr("data-placement", "top");
+        //        $(divParent).attr("data-original-title", text);
+        //        $(divParent).tooltip();
+        jQuery('#' + IdSelect).parent().children("span").first().text(text);
     });
 
 
-//    $("#" + selector).blur(function() {
-//        $('.tipsy-s').css('display','none');
-//    });
+    //    $("#" + selector).blur(function() {
+    //        $('.tipsy-s').css('display','none');
+    //    });
 }
 
-function SetRequiredMark(selector){
+function SetRequiredMark(selector) {
     $(selector).html($(selector).html() + '<span class="req">*</span>');
 }
 
-function limitStringLength(inputText, spanText, limit){
+function limitStringLength(inputText, spanText, limit) {
     $(inputText).inputlimiter({
         limit: limit,
         boxId: spanText,

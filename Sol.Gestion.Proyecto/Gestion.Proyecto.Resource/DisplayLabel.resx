@@ -120,4 +120,25 @@
   <data name="Codigo" xml:space="preserve">
     <value>Código</value>
   </data>
+  <data name="Descripcion" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Estado" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="IP" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="NombreEquipo" xml:space="preserve">
+    <value>Nombre de Equipo</value>
+  </data>
+  <data name="NombreEstacion" xml:space="preserve">
+    <value>Nombre de Estación</value>
+  </data>
+  <data name="TipoEquipo" xml:space="preserve">
+    <value>Tipo de Equipo</value>
+  </data>
 </root>

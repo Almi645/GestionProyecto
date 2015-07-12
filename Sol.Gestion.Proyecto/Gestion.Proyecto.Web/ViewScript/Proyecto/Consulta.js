@@ -2,6 +2,7 @@
 
     $(document).ready(function () {
         $("#btnProyectoBuscar").click(BuscarProyecto);
+        $("#btnProyectoNuevo").click(NuevoProyecto);
     })
 
     var BuscarProyecto = function () {
@@ -9,6 +10,7 @@
             url: $("#FrmProyectoConsulta").attr('action'),
             data: $("#FrmProyectoConsulta").serialize(),
             type: 'GET',
+            cache: false,
             success: function (data) {
                 $("#IdGridProyecto").html(data);
             },
@@ -21,24 +23,13 @@
 
         });
     }
-})()
 
-
-function PaintFooterGridProyecto() {
-    var RowCount = $("#RowCountProyecto").val();
-    var RowsPerPage = $('#RowsPerPageProyecto').val();
-
-    $("#IdGridProyectoDetalle .detail").attr("href", "#");
-    $("#IdGridProyecto tfoot tr:last td").prepend("<a id='tfootPage'  class='total_registros'></a>");
-    $("#tfootPage").html($('#FooterDescProyecto').val());
-
-    if (RowCount <= 0) {
-        $('#IdGridProyecto').css('display', 'block');
-    } else {
-        $('#IdGridProyecto').css('display', '');
+    var NuevoProyecto = function ()
+    {
+        window.location = $("#UrlNuevoProyecto").val();
     }
-}
 
+})()
 
 function SetTotalRecordsProyecto() {
     $("#IdGridProyecto tfoot tr a, #IdGridProyecto thead tr a").on("click", function (e) {
@@ -67,3 +58,19 @@ function SetTotalRecordsProyecto() {
 
     PaintFooterGridProyecto();
 }
+
+function PaintFooterGridProyecto() {
+    var RowCount = $("#RowCountProyecto").val();
+    var RowsPerPage = $('#RowsPerPageProyecto').val();
+
+    //$("#IdGridProyectoDetalle .detail").attr("href", "#");
+    $("#IdGridProyecto tfoot tr:last td").prepend("<a id='tfootPage'  class='total_registros'></a>");
+    $("#tfootPage").html($('#FooterDescProyecto').val());
+    if (RowCount <= 0) {
+        $('#IdGridProyecto').css('display', 'block');
+    } else {
+        $('#IdGridProyecto').css('display', '');
+    }
+}
+
+
