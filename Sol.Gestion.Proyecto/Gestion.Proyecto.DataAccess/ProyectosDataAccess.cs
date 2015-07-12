@@ -1,5 +1,4 @@
-﻿using Gestion.Proyecto.Entity.Entity;
-using Gestion.Proyecto.Entity.EntityList;
+﻿using Gestion.Proyecto.DataAccess;
 using Gestion.Proyecto.Entity.Other;
 using Gestion.Proyecto.Resource;
 using Microsoft.Practices.EnterpriseLibrary.Data;
@@ -13,6 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gestion.Proyecto.Common;
+using Gestion.Proyecto.Entity.EntityList;
+using Gestion.Proyecto.Entity.Entity;
 
 namespace Gestion.Proyecto.DataAccess
 {

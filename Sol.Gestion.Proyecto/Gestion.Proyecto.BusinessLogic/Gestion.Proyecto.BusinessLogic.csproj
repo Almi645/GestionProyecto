@@ -39,8 +39,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlmacenBusinessLogic.cs" />
+    <Compile Include="ArticulosBusinessLogic.cs" />
+    <Compile Include="CabeceraGuiaBusinessLogic.cs" />
+    <Compile Include="CargoBusinessLogic.cs" />
+    <Compile Include="ClienteBusinessLogic.cs" />
+    <Compile Include="ConectividadODFBusinessLogic.cs" />
+    <Compile Include="ConectividadT2000BusinessLogic.cs" />
+    <Compile Include="DepartamentoBusinessLogic.cs" />
+    <Compile Include="DetalleDCMBusinessLogic.cs" />
+    <Compile Include="DetalleGuiaBusinessLogic.cs" />
+    <Compile Include="DetalleTarjetaLugarBusinessLogic.cs" />
+    <Compile Include="DetTarjetaLugarBusinessLogic.cs" />
+    <Compile Include="DistritoBusinessLogic.cs" />
+    <Compile Include="EmpleadoBusinessLogic.cs" />
+    <Compile Include="EmpleadoProyectoBusinessLogic.cs" />
+    <Compile Include="FamiliaBusinessLogic.cs" />
+    <Compile Include="FuncionamientoTarjMCABusinessLogic.cs" />
+    <Compile Include="GananciaAmplificadorBusinessLogic.cs" />
+    <Compile Include="GananciaAmpliRamanBusinessLogic.cs" />
+    <Compile Include="LonOndaCentralOpTransBusinessLogic.cs" />
+    <Compile Include="MarcaBusinessLogic.cs" />
+    <Compile Include="ModelosBusinessLogic.cs" />
+    <Compile Include="MovimientosBusinessLogic.cs" />
+    <Compile Include="ObservacionesOpticalBusinessLogic.cs" />
+    <Compile Include="PaisBusinessLogic.cs" />
+    <Compile Include="PerdidaInsercionDCMBusinessLogic.cs" />
+    <Compile Include="PerdidaInsercionDCPBusinessLogic.cs" />
+    <Compile Include="PerdidaInsercionFIUBusinessLogic.cs" />
+    <Compile Include="PerdidaInsercionITLBusinessLogic.cs" />
+    <Compile Include="PerdidaInsercionM40VBusinessLogic.cs" />
+    <Compile Include="PosicionesEnergiaBusinessLogic.cs" />
+    <Compile Include="PosicionesODFBusinessLogic.cs" />
+    <Compile Include="PotenciaOpPromTransBusinessLogic.cs" />
+    <Compile Include="ProveedorBusinessLogic.cs" />
+    <Compile Include="ProvinciaBusinessLogic.cs" />
     <Compile Include="ProyectosBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PruebaConmutacionBusinessLogic.cs" />
+    <Compile Include="PruebaFuncionTefBusinessLogic.cs" />
+    <Compile Include="PruebasConexNS3_THABusinessLogic.cs" />
+    <Compile Include="PruebaSenalRuidoOpBusinessLogic.cs" />
+    <Compile Include="PruebasTasaBusinessLogic.cs" />
+    <Compile Include="RuidoOpticoBusinessLogic.cs" />
+    <Compile Include="SensitividadMinRecepBusinessLogic.cs" />
+    <Compile Include="TarjetaM40VBusinessLogic.cs" />
     <Compile Include="UsuarioBusinessLogic.cs" />
   </ItemGroup>
   <ItemGroup>
