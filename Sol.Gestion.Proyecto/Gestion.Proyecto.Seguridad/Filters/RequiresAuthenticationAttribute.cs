@@ -9,34 +9,7 @@ namespace Gestion.Proyecto.Seguridad.Filters
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            //if (filterContext.HttpContext.Request.IsAjaxRequest())
-            //{
-            //    if ((!filterContext.HttpContext.Request.IsAuthenticated) || (HttpContext.Current.Session["Usuario"] == null))
-            //    {
-            //        JavaScriptResult result = new JavaScriptResult()
-            //        {
-            //            Script = "window.location='" + "/Account/Login" + "';"
-            //        };
-            //        filterContext.Result = result;
-            //    }
-            //}
-            //else
-            //{
-            //    if (HttpContext.Current.Session["Usuario"] == null)
-            //    {
-            //        filterContext.Result = new RedirectToRouteResult(
-            //            new RouteValueDictionary(new
-            //            {
-            //                controller = "Account",
-            //                action = "Login"
-            //            }
-            //        ));
-            //    }
-            //}
-
-            //base.OnActionExecuting(filterContext);
-
-            if (/*!filterContext.HttpContext.Request.IsAuthenticated*/ HttpContext.Current.Session["UsuarioGP"] == null)
+            if (HttpContext.Current.Session["UsuarioGP"] == null)
             {
                 filterContext.Result = Gestion.Proyecto.Seguridad.Helpers.RedirectResultTo.Redirect(
                     new RouteValueDictionary( new 

@@ -9,7 +9,6 @@ namespace Gestion.Proyecto.Web.Controllers
 {
     public class HomeController : Controller
     {
-        [RequiresAuthenticationAttribute]
         public ActionResult Index()
         {
             return View();

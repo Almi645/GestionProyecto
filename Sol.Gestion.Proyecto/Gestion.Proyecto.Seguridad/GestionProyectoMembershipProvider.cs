@@ -167,7 +167,8 @@ namespace Gestion.Proyecto.Seguridad
             
             Usuario oUsuario = new Usuario();
             oUsuario.NombreUsuario = username;
-            oUsuario.Contrasenia = password;
+           // oUsuario.Contrasenia = password;
+            oUsuario.Contrasenia =Encriptador.RijndaelSimple.Encriptar(password);
             //oUsuario.IdAplicacion = Int32.Parse(ConfigurationManager.AppSettings["CodigoAplicacion"]);
             var usuarioResponse =oUsuarioBusinessLogic.AutenticarUsuario(oUsuario);
 

@@ -13,11 +13,13 @@ namespace ProyectoGestionTest
         [TestMethod]
         public void TestMethod1()
         {
-            //UsuarioBusinessLogic oUsuarioBusinessLogic = new UsuarioBusinessLogic();
+            UsuarioBusinessLogic oUsuarioBusinessLogic = new UsuarioBusinessLogic();
             Usuario oUsuario = new Usuario();
+            oUsuario.Empleado = new Empleado();
+            oUsuario.Empleado.IdEmpleado = 1000;
             oUsuario.NombreUsuario = "Admin";
-            oUsuario.NombreUsuario = Encriptador.RijndaelSimple.Encriptar("123");
-            //Int32 i = oUsuarioBusinessLogic.RegistrarUsuario(oUsuario);
+            oUsuario.Contrasenia = Encriptador.RijndaelSimple.Encriptar("123");
+            Int32 i = oUsuarioBusinessLogic.RegistrarUsuario(oUsuario);
         }
     }
 }
