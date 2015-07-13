@@ -2,90 +2,137 @@
 @{
     Layout = null;
 }
-@using Gestion.Proyecto.Resource;
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <title>@Title.TituloLogin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="3Dev">
-    <link type="text/css" rel="stylesheet" href="~/Content/login/css/bootstrap.css" />
-    <link type="text/css" rel="stylesheet" href="~/Content/login/css/login.css" />
-    <script type="text/javascript" src="@Url.Content("~/Content/login/js/jquery-1.7.2.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/login/js/bootstrap.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/login/js/jquery-jrumble.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/login/js/login.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/login/js/global.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/login/js/iphone.check.js")"></script>
+<style>
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+}
 
-</head>
-<body style="overflow: hidden;">
-    <div id="alertMessage" class="error">
+.card-container.card {
+    max-width: 300px;
+    /*padding: 40px 40px;*/
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.card {
+    background-color: #F7F7F7;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    background-color: rgb(104, 145, 162);
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+    .btn.btn-signin:hover,
+    .btn.btn-signin:active,
+    .btn.btn-signin:focus {
+        background-color: rgb(12, 97, 33);
+    }
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+    .forgot-password:hover,
+    .forgot-password:active,
+    .forgot-password:focus {
+        color: rgb(12, 97, 33);
+    }
+</style>
+<link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/3dev/bootstrap.css")' />
+<link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/3dev/bootstrap-responsive.css")' />
+<div class="container">
+    <div class="card card-container">
+        <div class="bs-docs-example">
+            <p style="text-transform:uppercase">LOGIN</p>
+        </div>
+        <div class="prettyprint" style="padding: 25px;">
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña">
+                <button class="btn btn-info" type="submit">Acceder</button>
+            </form>
+        </div>
     </div>
-    <div id="successLogin">
-    </div>
-    <div class="wrapper" id="inner">
-        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "loginForm" }))
-        {
-            <div class="container">
-                <div style="border-radius: 0 0 5px 5px; background: #FFFFFF; line-height: 36px; padding: 5px; position: absolute;z-index: 1; top: 0px; left: 5%;">
-                    <label style="color:    #097917">
-                        @DateTime.Now.ToString("dddd, d 'de' MMMM 'del' yyyy")
-                    </label>
-                </div>
-                <div class="row">
-                    <h1 style="color: white;z-index: 2;position: relative; text-align: right">@Title.TituloLogin</h1>
-                    <div style="clear: both">
-                    </div>
-                </div>
-            </div>
-            <div id="login">
-                <div class="inner">
-                    <div class="formLogin">
-                        <img style="float: left;" src="~/Content/images/Login.jpg" />
-                        <div class="tip">
-
-                            <label class="form-label">Usuario</label>
-
-                            @Html.EditorFor(model => model.UserName,
-                                    new
-                                    {
-                                        @id = "UserName",
-                                        @placeholder = "Ingrese Usuario",
-                                    })
-                            <font color="red">@Html.ValidationMessageFor(model => model.UserName, "", new { Style = "display: block; margin-right:85px;" })</font>
-
-                        </div>
-                        <div class="tip">
-                            <label class="form-label">Contraseña</label>
-
-                            @Html.EditorFor(model => model.Password,
-                                    new
-                                    {
-                                        @id = "Password",
-                                        placeholder = DisplayLabel.Password
-                                    })
-                            <font color="red">@Html.ValidationMessageFor(model => model.Password, "", new { Style = "display: block; margin-right:63px;" })</font>
-
-                            <input type="submit" value="Acceder" class="bingresar" />
-
-                        </div>
-                        <div>
-                            @Html.AntiForgeryToken()
-                            <font color="red">@Html.ValidationSummary(true)</font>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear">
-                </div>
-            </div>
-
-        }
-    </div>
-</body>
-</html>
-<script type='text/javascript' src='@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")'></script>
-<script type='text/javascript' src='@Url.Content("~/Scripts/jquery.validate.min.js")'></script>
-<script type='text/javascript' src='@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")'></script>
+</div>

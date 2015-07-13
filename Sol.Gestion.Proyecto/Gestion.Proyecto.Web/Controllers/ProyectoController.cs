@@ -22,7 +22,6 @@ namespace Gestion.Proyecto.Web.Controllers
             return View();
         }
 
-        [RequiresAuthenticationAjaxAttribute]
         public ActionResult Consultar()
         {
             var model = new ProyectoConsultaViewModel();
