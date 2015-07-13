@@ -14,7 +14,7 @@
             <div class="span4">
                 @Html.LabelFor(model => model.Proyectos.Codigo, new { @Class = "span3" })
                 <div class="span9">
-                    @Html.TextBoxFor(model => model.Proyectos.Codigo, new { @id = "Codigo", @placeholder = "Buscar Cliente por Código" })
+                    @Html.TextBoxFor(model => model.Proyectos.Codigo, new { @id = "Codigo", @placeholder = "Ingrese Código" })
                 </div>
                 @Html.ValidationMessageFor(model => model.Proyectos.Codigo, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
