@@ -18,7 +18,7 @@
         $.ajax({
             url: $("#FrmProyectoRegistrar").attr('action'),
             data: $("#FrmProyectoRegistrar").serialize(),
-            type: "GET",
+            type: "POST",
             success: function (data) {
                 eval(data);
             },

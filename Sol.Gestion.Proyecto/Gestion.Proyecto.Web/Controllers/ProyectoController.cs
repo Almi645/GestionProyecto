@@ -52,7 +52,7 @@ namespace Gestion.Proyecto.Web.Controllers
             return View(model);
         }
 
-       
+        [HttpPost]
         public ActionResult Registrar(ProyectoViewModel model)
         {
             if (ModelState.IsValid)
