@@ -32,7 +32,6 @@ namespace Gestion.Proyecto.Web.Controllers
             return View(model);
         }
 
-        [HttpPost]
         public ActionResult ConsultarPartial(
             ProyectoConsultaViewModel model,
             int page = 1,
@@ -54,10 +53,15 @@ namespace Gestion.Proyecto.Web.Controllers
         }
 
        
-        [HttpPost]
         public ActionResult Registrar(ProyectoViewModel model)
         {
-            return null;
+            if (ModelState.IsValid)
+                if (new ProyectosBusinessLogic().Registrar(model.Proyectos) != 0)
+                    return Content(MessageCode.BootBoxSuccess);
+                else
+                    return Content(MessageCode.ToastrRegisterError);
+            else
+                return Content(String.Format(MessageCode.FormValidate, "FrmProyectoRegistrar"));
         }
     }
 }

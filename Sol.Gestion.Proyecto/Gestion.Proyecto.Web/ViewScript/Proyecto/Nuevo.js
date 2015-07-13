@@ -7,14 +7,18 @@
 
     var ValidForm = function () {
         if ($("#FrmProyectoRegistrar").valid())
-            Register();
+            ConfirmProyecto();
+    }
+
+    var ConfirmProyecto = function () {
+        bbconfirm("¿Desea registrar el proyecto?", Register)
     }
 
     var Register = function () {
         $.ajax({
-            url: 'Proyecto/NewProyecto',
+            url: $("#FrmProyectoRegistrar").attr('action'),
             data: $("#FrmProyectoRegistrar").serialize(),
-            type: "POST",
+            type: "GET",
             success: function (data) {
                 eval(data);
             },

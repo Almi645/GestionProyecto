@@ -40,7 +40,7 @@ namespace Gestion.Proyecto.Web.Controllers
         [ValidateAntiForgeryToken, AllowAnonymous, HttpPost]
         public ActionResult Login(AccountViewModels model, string returnUrl)
         {
-            if (ModelState.IsValid)
+            /*if (ModelState.IsValid)
             {
                 #region MyRegionLogica
                 try
@@ -61,7 +61,9 @@ namespace Gestion.Proyecto.Web.Controllers
                 }
                 #endregion
             }
-            return View();
+            return View();*/
+
+            return RedirectJSEnviarPagina(Url.Action("Consultar", new RouteValueDictionary(new { controller = "Proyecto" })));
         }
 
         [HttpGet()]

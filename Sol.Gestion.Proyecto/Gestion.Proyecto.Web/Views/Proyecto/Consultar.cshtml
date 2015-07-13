@@ -5,6 +5,7 @@
 @Html.Hidden("UrlNuevoProyecto", Url.Action("Nuevo", "Proyecto"))
 @using (Html.BeginForm("ConsultarPartial", "Proyecto", FormMethod.Post, new { @id = "FrmProyectoConsulta" }))
 {
+    @Html.AntiForgeryToken()
     <div class="bs-docs-example">
         <p style="text-transform:uppercase">:: @Gestion.Proyecto.Resource.Title.CriterioBusqueda</p>
     </div>

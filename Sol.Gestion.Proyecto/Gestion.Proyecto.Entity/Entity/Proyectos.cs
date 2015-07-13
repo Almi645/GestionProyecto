@@ -40,7 +40,10 @@ namespace Gestion.Proyecto.Entity.Entity
         public enum Proc
         {
             [StringValue("[dbo].[Usp_ProyectoPaginacion]")]
-            Paginacion
+            Paginacion,
+
+            [StringValue("[dbo].[Usp_Ins_Proyecto]")]
+            Insertar
         }
     }
 }

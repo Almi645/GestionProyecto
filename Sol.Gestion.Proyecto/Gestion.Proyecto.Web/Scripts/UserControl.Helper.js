@@ -1239,3 +1239,13 @@ function val_Hours(e) {
     return patron.test(text);
 }
 
+function bbconfirm(message, action) {
+    bootbox.confirm(message, function (result) {
+        if (result == true)
+            action();
+    });
+}
+
+function bbredirect(message, action) {
+    bootbox.alert(message, function () { action(); });
+}

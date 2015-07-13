@@ -3,7 +3,7 @@
     ViewBag.Title = @Gestion.Proyecto.Resource.Title.RegistrarProyecto;
 }
 @Html.Hidden("UrlConsultarProyecto", Url.Action("Consultar", "Proyecto"))
-@using (Html.BeginForm("NewProyecto", "Proyecto", FormMethod.Post, new { @id = "FrmProyectoRegistrar" }))
+@using (Html.BeginForm("Registrar", "Proyecto", FormMethod.Post, new { @id = "FrmProyectoRegistrar" }))
 {
     <div class="bs-docs-example">
         <p style="text-transform:uppercase">:: @Gestion.Proyecto.Resource.Title.RegistrarProyecto</p>

@@ -51,5 +51,26 @@ namespace Gestion.Proyecto.DataAccess
             RowCount = Convert.ToInt32(oDatabase.GetParameterValue(oDbCommand, "@RowCount"));
             return olista;
         }
+
+        public int Registrar(Proyectos oProyectos)
+        {
+            try
+            {
+                oDatabase.ExecuteScalar(Proyectos.Proc.Insertar.Str(),
+                                                    oProyectos.Codigo,
+                                                    oProyectos.Descripcion,
+                                                    oProyectos.Estado,
+                                                    oProyectos.NombreEstacion,
+                                                    oProyectos.TipoEquipo,
+                                                    oProyectos.NombreEquipo,
+                                                    oProyectos.ID,
+                                                    oProyectos.IP);
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
     }
 }

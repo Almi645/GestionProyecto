@@ -12,9 +12,14 @@ namespace Gestion.Proyecto.BusinessLogic
 {
     public class ProyectosBusinessLogic
     {
-        public ProyectosList GetProyectosOPaginacion(Proyectos oPersona, Paginacion oPaginacion, out int RowCount)
+        public ProyectosList GetProyectosOPaginacion(Proyectos oProyectos, Paginacion oPaginacion, out int RowCount)
         {
-            return new ProyectosDataAccess().GetProyectosOPaginacion(oPersona, oPaginacion, out RowCount);
+            return new ProyectosDataAccess().GetProyectosOPaginacion(oProyectos, oPaginacion, out RowCount);
+        }
+
+        public int Registrar(Proyectos oProyectos)
+        {
+            return new ProyectosDataAccess().Registrar(oProyectos);
         }
     }
 }
