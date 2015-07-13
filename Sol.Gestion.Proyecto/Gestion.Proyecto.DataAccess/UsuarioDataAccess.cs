@@ -1,4 +1,5 @@
-﻿using Gestion.Proyecto.Entity.Entity;
+﻿using Gestion.Proyecto.DataAccess;
+using Gestion.Proyecto.Entity.Entity;
 using Gestion.Proyecto.Resource;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using Repository;
