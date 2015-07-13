@@ -14,6 +14,7 @@ namespace Gestion.Proyecto.Entity.Entity
         public int IdProyecto { get; set; }
 
         [Display(Name = "Codigo", ResourceType = typeof(DisplayLabel))]
+        [Required(ErrorMessageResourceType = typeof(Validation), ErrorMessageResourceName = "CampoRequeridoCustom")]  
         public string Codigo{ get; set; }
 
         [Display(Name = "Descripcion", ResourceType = typeof(DisplayLabel))]

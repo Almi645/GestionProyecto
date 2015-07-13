@@ -14,24 +14,22 @@
                 @Html.LabelFor(model => model.Proyectos.Codigo, new { @Class = "span3" })
                 <div class="span9">
                     @Html.TextBoxFor(model => model.Proyectos.Codigo, new { @id = "Codigo",})
+                    @Html.ValidationMessageFor(model => model.Proyectos.Codigo, string.Empty, new { @Class = "error" })
                 </div>
-                @Html.ValidationMessageFor(model => model.Proyectos.Codigo, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
             <div class="span4">
                 @Html.LabelFor(model => model.Proyectos.Descripcion, new { @Class = "span3" })
                 <div class="span9">
                     @Html.TextBoxFor(model => model.Proyectos.Descripcion, new { @id = "Descripcion",})
+                    @Html.ValidationMessageFor(model => model.Proyectos.Descripcion, string.Empty, new { @Class = "error" })
                 </div>
-                @Html.ValidationMessageFor(model => model.Proyectos.Descripcion, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
             <div class="span4">
-                @*@Html.LabelFor(model => model.Proyectos.Estado, new { @Class = "span3" })
+                @Html.LabelFor(model => model.Proyectos.Estado, new { @Class = "span3" })
                 <div class="span9">
-
                     @Html.CheckBoxFor(m => m.Proyectos.Estado, new { id = "Estado"})
-                    
-                </div>
-                @Html.ValidationMessageFor(model => model.Proyectos.Estado, string.Empty, new { @Class = "error", @Style = "display:block;" })*@
+                    @Html.ValidationMessageFor(model => model.Proyectos.Estado, string.Empty, new { @Class = "error" })
+                </div>            
             </div>
         </div>
         <div class="row-fluid">
@@ -39,22 +37,22 @@
                 @Html.LabelFor(model => model.Proyectos.NombreEstacion, new { @Class = "span3" })
                 <div class="span9">
                     @Html.TextBoxFor(model => model.Proyectos.NombreEstacion, new { @id = "NombreEstacion" })
+                    @Html.ValidationMessageFor(model => model.Proyectos.NombreEstacion, string.Empty, new { @Class = "error" })
                 </div>
-                @Html.ValidationMessageFor(model => model.Proyectos.NombreEstacion, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
             <div class="span4">
                 @Html.LabelFor(model => model.Proyectos.NombreEquipo, new { @Class = "span3" })
                 <div class="span9">
                     @Html.TextBoxFor(model => model.Proyectos.NombreEquipo, new { @id = "NombreEquipo" })
+                    @Html.ValidationMessageFor(model => model.Proyectos.NombreEquipo, string.Empty, new { @Class = "error" })
                 </div>
-                @Html.ValidationMessageFor(model => model.Proyectos.NombreEquipo, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
             <div class="span4">
                 @Html.LabelFor(model => model.Proyectos.TipoEquipo, new { @Class = "span3" })
                 <div class="span9">
                     @Html.TextBoxFor(model => model.Proyectos.TipoEquipo, new { @id = "TipoEquipo" })
+                    @Html.ValidationMessageFor(model => model.Proyectos.TipoEquipo, string.Empty, new { @Class = "error" })
                 </div>
-                @Html.ValidationMessageFor(model => model.Proyectos.TipoEquipo, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
         </div>
         <div class="row-fluid">
@@ -62,15 +60,15 @@
                 @Html.LabelFor(model => model.Proyectos.ID, new { @Class = "span3" })
                 <div class="span9">
                     @Html.TextBoxFor(model => model.Proyectos.ID, new { @id = "ID" })
+                    @Html.ValidationMessageFor(model => model.Proyectos.ID, string.Empty, new { @Class = "error" })
                 </div>
-                @Html.ValidationMessageFor(model => model.Proyectos.ID, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
             <div class="span4">
                 @Html.LabelFor(model => model.Proyectos.IP, new { @Class = "span3" })
                 <div class="span9">
                     @Html.TextBoxFor(model => model.Proyectos.IP, new { @id = "IP" })
+                    @Html.ValidationMessageFor(model => model.Proyectos.IP, string.Empty, new { @Class = "error" })
                 </div>
-                @Html.ValidationMessageFor(model => model.Proyectos.IP, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
         </div>
         <div class="row-fluid">
