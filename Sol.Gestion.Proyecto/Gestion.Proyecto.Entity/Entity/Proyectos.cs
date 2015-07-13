@@ -20,7 +20,7 @@ namespace Gestion.Proyecto.Entity.Entity
         public string Descripcion { get; set; }
 
         [Display(Name = "Estado", ResourceType = typeof(DisplayLabel))]
-        public string Estado { get; set; }
+        public bool Estado { get; set; }
 
         [Display(Name = "NombreEstacion", ResourceType = typeof(DisplayLabel))]
         public string NombreEstacion { get; set; }

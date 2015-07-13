@@ -27,7 +27,9 @@
             <div class="span4">
                 @Html.LabelFor(model => model.Proyectos.Estado, new { @Class = "span3" })
                 <div class="span9">
-                    @Html.TextBoxFor(model => model.Proyectos.Estado, new { @id = "Estado", @placeholder = "Buscar Cliente por Código" })
+
+                    @*@Html.CheckBoxFor(m => m.Proyectos.Estado, new { id = "Estado"})*@
+                    <input type="checkbox" class="checkbox" />
                 </div>
                 @Html.ValidationMessageFor(model => model.Proyectos.Estado, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
