@@ -5,6 +5,7 @@ using Gestion.Proyecto.Entity.EntityList;
 using Gestion.Proyecto.Entity.Other;
 using Gestion.Proyecto.Resource;
 using Gestion.Proyecto.Seguridad.Filters;
+using Gestion.Proyecto.Web.Controllers.Base;
 using Gestion.Proyecto.Web.Models.Proyecto;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ using System.Web.Mvc;
 
 namespace Gestion.Proyecto.Web.Controllers
 {
-    public class ProyectoController : Controller
+    public class ProyectoController : BaseController
     {
         // GET: Proyecto
         public ActionResult Index()
@@ -31,7 +32,7 @@ namespace Gestion.Proyecto.Web.Controllers
             return View(model);
         }
 
-        [HttpGet]
+        [HttpPost]
         public ActionResult ConsultarPartial(
             ProyectoConsultaViewModel model,
             int page = 1,
@@ -48,7 +49,15 @@ namespace Gestion.Proyecto.Web.Controllers
 
         public ActionResult Nuevo()
         {
-            return View();
+            var model = new ProyectoViewModel();
+            return View(model);
+        }
+
+       
+        [HttpPost]
+        public ActionResult Registrar(ProyectoViewModel model)
+        {
+            return null;
         }
     }
 }

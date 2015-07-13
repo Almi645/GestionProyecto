@@ -161,6 +161,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\Base\JSResultView.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ProyectoController.cs" />
     <Compile Include="Controllers\ProyectoDetalleController.cs" />
     <Compile Include="Filters\NoCacheAttribute.cs" />
@@ -1658,6 +1659,7 @@
     <Content Include="Scripts\Util.JSHelper.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="ViewScript\Proyecto\Consulta.js" />
+    <Content Include="ViewScript\Proyecto\Nuevo.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1701,6 +1703,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\images\fileManager\" />
     <Folder Include="Content\images\icons\control\16\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

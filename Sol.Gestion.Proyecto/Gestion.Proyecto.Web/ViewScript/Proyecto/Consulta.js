@@ -6,10 +6,11 @@
     })
 
     var BuscarProyecto = function () {
+        debugger;
         $.ajax({
             url: $("#FrmProyectoConsulta").attr('action'),
             data: $("#FrmProyectoConsulta").serialize(),
-            type: 'GET',
+            type: 'POST',
             cache: false,
             success: function (data) {
                 $("#IdGridProyecto").html(data);
