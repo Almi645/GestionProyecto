@@ -28,20 +28,7 @@ namespace Gestion.Proyecto.Web
                                 "~/Content/3dev/bootstrap-responsive.css",
                                 "~/Content/3dev/font-awesome.css"));
 
-            bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
-                        "~/Content/3dev/base/jquery.ui.core.css",
-                        "~/Content/3dev/base/jquery.ui.resizable.css",
-                        "~/Content/3dev/base/jquery.ui.selectable.css",
-                        "~/Content/3dev/base/jquery.ui.accordion.css",
-                        "~/Content/3dev/base/jquery.ui.autocomplete.css",
-                        "~/Content/3dev/base/jquery.ui.button.css",
-                        "~/Content/3dev/base/jquery.ui.dialog.css",
-                        "~/Content/3dev/base/jquery.ui.slider.css",
-                        "~/Content/3dev/base/jquery.ui.tabs.css",
-                        "~/Content/3dev/base/jquery.ui.datepicker.css",
-                        "~/Content/3dev/base/jquery.ui.progressbar.css",
-                        "~/Content/3dev/base/jquery.ui.theme.css",
-                         "~/Content/themes/base/jquery.ui.autocomplete.css"));
+          
 
         }
     }

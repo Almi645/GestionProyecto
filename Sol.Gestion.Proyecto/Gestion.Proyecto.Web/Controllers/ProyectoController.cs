@@ -29,7 +29,6 @@ namespace Gestion.Proyecto.Web.Controllers
             model.Proyectos = new Proyectos();
             model.PersonaList = new ProyectosList();
             model.Paginacion = UtilGrid.MyPaginationDefault<Paginacion>(string.Empty, string.Empty, Constants.RowsPerPage.Int());
-            ModelState.Remove("Proyectos.Codigo");
             return View(model);
         }
 
