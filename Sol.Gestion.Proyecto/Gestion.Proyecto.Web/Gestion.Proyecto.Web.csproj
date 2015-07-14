@@ -246,11 +246,14 @@
     <Content Include="Content\3dev\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\3dev\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\3dev\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\3dev\bootstrap-3.3.2.min.css" />
+    <Content Include="Content\3dev\bootstrap-multiselect.css" />
     <Content Include="Content\3dev\bootstrap-responsive.css" />
     <Content Include="Content\3dev\bootstrap.css" />
     <Content Include="Content\3dev\docs.css" />
     <Content Include="Content\3dev\font-awesome.css" />
     <Content Include="Content\3dev\font.css" />
+    <Content Include="Content\3dev\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\3dev\ui_custom.css" />
     <Content Include="Content\cleditor\images\buttons.gif" />
     <Content Include="Content\cleditor\images\toolbar.gif" />
@@ -1648,11 +1651,18 @@
     <Content Include="Content\texteditor\js\tinymce\skins\xenmce\fonts\readme.md" />
     <Content Include="Content\texteditor\js\tinymce\skins\xenmce\skin.json" />
     <Content Include="Mvc.sitemap" />
+    <Content Include="Content\3dev\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\3dev\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\3dev\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\3dev\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\bootbox.min.js" />
+    <Content Include="Scripts\bootstrap-multiselect-collapsible-groups.js" />
+    <Content Include="Scripts\bootstrap-multiselect.js" />
     <Content Include="Scripts\jquery-1.7.0.min.js" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
