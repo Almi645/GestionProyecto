@@ -1,9 +1,21 @@
 ﻿(function () {
-
     $(document).ready(function () {
+        $("#Codigo").rules("remove");
+        $('#FrmProyectoConsulta').keypress(KeyEnterInput);
         $("#btnProyectoBuscar").click(BuscarProyecto);
         $("#btnProyectoNuevo").click(NuevoProyecto);
     })
+
+    var KeyEnterInput = function (e) {
+        if (e.which === 13) {
+            BuscarProyecto();
+            return false;
+        }
+    }
+
+    var NuevoProyecto = function () {
+        window.location = $("#UrlNuevoProyecto").val();
+    }
 
     var BuscarProyecto = function () {
         $.ajax({
@@ -23,19 +35,13 @@
 
         });
     }
-
-    var NuevoProyecto = function ()
-    {
-        window.location = $("#UrlNuevoProyecto").val();
-    }
-
 })()
 
 function SetTotalRecordsProyecto() {
     $("#IdGridProyecto tfoot tr a, #IdGridProyecto thead tr a").on("click", function (e) {
 
-        var sortDir = "";
-        var sortType = "";
+        var SortDir = "";
+        var sort = "";
         var page = 1;
         var queue = "";
 
@@ -49,9 +55,9 @@ function SetTotalRecordsProyecto() {
         for (var i = 0; i <= arr.length - 1; i++) {
             if (arr[i].indexOf("page") >= 0)
                 page = arr[i].toString().split("=")[1].toString();
-            if (arr[i].indexOf("sortType") >= 0)
+            if (arr[i].indexOf("sort") >= 0)
                 sort = arr[i].toString().split("=")[1].toString();
-            if (arr[i].indexOf("sortDir") >= 0)
+            if (arr[i].indexOf("sortdir") >= 0)
                 SortDir = arr[i].toString().split("=")[1].toString();
         }
     });

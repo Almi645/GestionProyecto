@@ -87,6 +87,10 @@
     <Compile Include="UsuarioBusinessLogic.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Gestion.Proyecto.Common\Gestion.Proyecto.Common.csproj">
+      <Project>{9b8d6cad-b859-472a-af3e-58ec5a9f950a}</Project>
+      <Name>Gestion.Proyecto.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gestion.Proyecto.DataAccess\Gestion.Proyecto.DataAccess.csproj">
       <Project>{a6b81939-134d-4ef3-a015-f4365b170245}</Project>
       <Name>Gestion.Proyecto.DataAccess</Name>

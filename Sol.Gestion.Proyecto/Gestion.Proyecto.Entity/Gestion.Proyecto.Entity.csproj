@@ -129,6 +129,7 @@
     <Compile Include="Entity\TarjetaM40V.cs" />
     <Compile Include="Entity\Usuario.cs" />
     <Compile Include="Others\Paginacion.cs" />
+    <Compile Include="Others\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

@@ -29,5 +29,25 @@ namespace Gestion.Proyecto.Common
         {
             return Convert.ToInt32(value);
         }
+        public static int Int(this decimal value)
+        {
+            return Convert.ToInt32(value);
+        }
+
+        public static int Bool(this bool value)
+        {
+            if (value)
+                return 1;
+            else
+                return 0;
+        }
+
+        public static string nullEmpty(this String value)
+        {
+            if (value == null)
+                return string.Empty;
+            else
+                return value;
+        }
     }
 }

@@ -7,19 +7,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gestion.Proyecto.Common;
 
 namespace Gestion.Proyecto.BusinessLogic
 {
     public class ProyectosBusinessLogic
     {
-        public ProyectosList GetProyectosOPaginacion(Proyectos oProyectos, Paginacion oPaginacion, out int RowCount)
+        public ProyectosList GetProyectosPaginacion(Proyectos oProyectos, Paginacion oPaginacion, out int RowCount)
         {
-            return new ProyectosDataAccess().GetProyectosOPaginacion(oProyectos, oPaginacion, out RowCount);
+            try
+            {
+                return new ProyectosDataAccess().GetProyectosPaginacion(oProyectos, oPaginacion, out RowCount);
+            }
+            catch (Exception)
+            {
+                RowCount = decimal.Zero.Int();
+                return null;
+            }
         }
 
         public int Registrar(Proyectos oProyectos)
         {
-            return new ProyectosDataAccess().Registrar(oProyectos);
+            try
+            {
+                return new ProyectosDataAccess().Registrar(oProyectos);
+            }
+            catch (Exception)
+            {
+                return decimal.Zero.Int();
+            }
         }
     }
 }

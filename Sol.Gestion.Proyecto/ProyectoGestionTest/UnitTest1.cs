@@ -21,5 +21,24 @@ namespace ProyectoGestionTest
             oUsuario.Contrasenia = Encriptador.RijndaelSimple.Encriptar("123");
             Int32 i = oUsuarioBusinessLogic.RegistrarUsuario(oUsuario);
         }
+
+        [TestMethod]
+        public void InsertarProyecto()
+        {
+
+            for (int i = 0; i < 30; i++)
+            {
+                var obj = new Proyectos();
+                obj.Codigo = "00" + i;
+                obj.Descripcion = "Descrición " + i;
+                obj.Estado = true;
+                obj.NombreEstacion = "Nombre de Estación " + i;
+                obj.TipoEquipo = "Tipo Equipo " + i;
+                obj.NombreEquipo = "Nombre de Equipo " + i;
+                obj.ID = "ID " + i;
+                obj.IP = "IP " + i;
+                new ProyectosBusinessLogic().Registrar(obj);
+            }
+        }
     }
 }

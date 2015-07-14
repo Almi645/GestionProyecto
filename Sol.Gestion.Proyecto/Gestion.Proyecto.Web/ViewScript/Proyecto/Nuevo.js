@@ -6,7 +6,7 @@
     })
 
     var ValidForm = function () {
-        if ($("#FrmProyectoRegistrar").valid())
+        if ($("#FrmProyecto").valid())
             ConfirmProyecto();
     }
 
@@ -16,8 +16,8 @@
 
     var Register = function () {
         $.ajax({
-            url: $("#FrmProyectoRegistrar").attr('action'),
-            data: $("#FrmProyectoRegistrar").serialize(),
+            url: $("#FrmProyecto").attr('action'),
+            data: $("#FrmProyecto").serialize(),
             type: "POST",
             success: function (data) {
                 eval(data);

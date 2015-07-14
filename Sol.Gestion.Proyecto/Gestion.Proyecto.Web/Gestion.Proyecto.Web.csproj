@@ -40,6 +40,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MvcSiteMapProvider">
+      <HintPath>..\packages\MvcSiteMapProvider.MVC5.Core.4.6.18\lib\net45\MvcSiteMapProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcSiteMapProvider.WebActivator, Version=4.6.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvcSiteMapProvider.MVC5.4.6.18\lib\net45\MvcSiteMapProvider.WebActivator.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -92,6 +99,10 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebActivatorEx.2.0.1\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -1636,6 +1647,10 @@
     <Content Include="Content\texteditor\js\tinymce\skins\xenmce\fonts\icomoon.woff" />
     <Content Include="Content\texteditor\js\tinymce\skins\xenmce\fonts\readme.md" />
     <Content Include="Content\texteditor\js\tinymce\skins\xenmce\skin.json" />
+    <Content Include="Mvc.sitemap" />
+    <None Include="MvcSiteMapSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\jquery-1.7.0.min.js" />
@@ -1698,6 +1713,14 @@
     <Content Include="Views\Proyecto\_ProyectoGridPartialView.cshtml" />
     <Content Include="Views\ProyectoDetalle\Nuevo.cshtml" />
     <Content Include="Views\Proyecto\Nuevo.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1729,10 +1752,6 @@
     <ProjectReference Include="..\Gestion.Proyecto.Resource\Gestion.Proyecto.Resource.csproj">
       <Project>{030bc957-5862-40ce-a9bc-b979d4d42992}</Project>
       <Name>Gestion.Proyecto.Resource</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Gestion.Proyecto.Seguridad\Gestion.Proyecto.Seguridad.csproj">
-      <Project>{85129db2-fc40-4656-92d5-5bcaf6fb27e9}</Project>
-      <Name>Gestion.Proyecto.Seguridad</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

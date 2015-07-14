@@ -10,7 +10,7 @@
                 rowStyle: "fix_td",
                 alternatingRowStyle: "",
                 footerStyle: "pagination",
-                         htmlAttributes: new { id = "IdGridProyectoDetalle", @class = "table table-striped", @style = "margin: 5px auto; border: 1px solid #CFD8DE;border-radius: 4px;width: 100%;" },
+                         htmlAttributes: new { id = "IdGridProyectoAttr", @class = "table table-striped", @style = "margin: 5px auto; border: 1px solid #CFD8DE;border-radius: 4px;width: 100%;" },
                 mode: WebGridPagerModes.All,
                 firstText: Gestion.Proyecto.Resource.Constants.ButtonPageFirst,
                 previousText: Gestion.Proyecto.Resource.Constants.ButtonPageBack,
@@ -21,11 +21,13 @@
                     grid.Column("Codigo", "Código", canSort: true, style: "centrar", format: @<text>@item.Codigo</text>),
                     grid.Column("Descripcion", "Nombre", canSort: true, style: "centrar", format: @<text>@item.Descripcion</text>),
                     grid.Column("NombreEstacion", "Descripción", canSort: true, style: "centrar", format: @<text>@item.NombreEstacion</text>),
-                    grid.Column("NombreEstacion", "Descripción", canSort: true, style: "centrar", format: @<text>@item.NombreEstacion</text>),
-                    grid.Column("NombreEstacion", "Descripción", canSort: true, style: "centrar", format: @<text>@item.NombreEstacion</text>),
+                    grid.Column("TipoEquipo", "Tipo de Equipo", canSort: true, style: "centrar", format: @<text>@item.TipoEquipo</text>),
+                    grid.Column("NombreEquipo", "Nombre de Equipo", canSort: true, style: "centrar", format: @<text>@item.NombreEquipo</text>)
+        @*,
 
                     grid.Column("", "Acciones", canSort: true, style: "centrar", format:
-                    @<text>@Html.ActionLink("Detalle", "Edit", "Proyecto", new { id = item.Codigo }, new { @class = "", title = "Detalle" })</text>)))
+                    @<text>@Html.ActionLink("Detalle", "Edit", "Proyecto", new { id = item.Codigo }, new { @class = "", title = "Detalle" })</text>)*@
+))
 
         @Html.HiddenFor(model => model.Paginacion.RowCount, new { @id = "RowCountProyecto" })
         @Html.HiddenFor(model => model.Paginacion.RowsPerPage, new { @id = "RowsPerPageProyecto" })

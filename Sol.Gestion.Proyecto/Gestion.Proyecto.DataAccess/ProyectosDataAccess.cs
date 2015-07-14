@@ -22,11 +22,11 @@ namespace Gestion.Proyecto.DataAccess
         private static DatabaseProviderFactory oDatabaseProviderFactory = new DatabaseProviderFactory();
         private Database oDatabase = oDatabaseProviderFactory.Create(Global.Conexion);
 
-        public ProyectosList GetProyectosOPaginacion(Proyectos oPersona, Paginacion oPaginacion, out int RowCount)
+        public ProyectosList GetProyectosPaginacion(Proyectos oPersona, Paginacion oPaginacion, out int RowCount)
         {
             ProyectosList olista = new ProyectosList();
             DbCommand oDbCommand = oDatabase.GetStoredProcCommand(Proyectos.Proc.Paginacion.Str());
-            oDatabase.AddInParameter(oDbCommand, "@Codigo", DbType.String, oPersona.Codigo);
+            oDatabase.AddInParameter(oDbCommand, "@Codigo", DbType.String, oPersona.Codigo.nullEmpty());
             oDatabase = Pagination.DefaultParams(oDatabase, oDbCommand, oPaginacion);
 
             using (IDataReader oIDataReader = oDatabase.ExecuteReader(oDbCommand))
@@ -54,23 +54,16 @@ namespace Gestion.Proyecto.DataAccess
 
         public int Registrar(Proyectos oProyectos)
         {
-            try
-            {
-                oDatabase.ExecuteScalar(Proyectos.Proc.Insertar.Str(),
-                                                    oProyectos.Codigo,
-                                                    oProyectos.Descripcion,
-                                                    oProyectos.Estado,
-                                                    oProyectos.NombreEstacion,
-                                                    oProyectos.TipoEquipo,
-                                                    oProyectos.NombreEquipo,
-                                                    oProyectos.ID,
-                                                    oProyectos.IP);
-                return 1;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
+            DbCommand oDbCommand = oDatabase.GetStoredProcCommand(Proyectos.Proc.Insertar.Str());
+            oDatabase.AddInParameter(oDbCommand, "@Codigo", DbType.String, oProyectos.Codigo);
+            oDatabase.AddInParameter(oDbCommand, "@Descripcion", DbType.String, oProyectos.Descripcion);
+            oDatabase.AddInParameter(oDbCommand, "@Estado", DbType.Int32, oProyectos.Estado);
+            oDatabase.AddInParameter(oDbCommand, "@NombreEstacion", DbType.String, oProyectos.NombreEstacion);
+            oDatabase.AddInParameter(oDbCommand, "@TipoEquipo", DbType.String, oProyectos.TipoEquipo);
+            oDatabase.AddInParameter(oDbCommand, "@NombreEquipo", DbType.String, oProyectos.NombreEquipo);
+            oDatabase.AddInParameter(oDbCommand, "@ID", DbType.String, oProyectos.ID);
+            oDatabase.AddInParameter(oDbCommand, "@IP", DbType.String, oProyectos.IP);
+            return Convert.ToInt32(oDatabase.ExecuteScalar(oDbCommand));
         }
     }
 }

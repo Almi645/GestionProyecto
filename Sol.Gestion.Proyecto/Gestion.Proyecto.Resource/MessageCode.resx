@@ -118,21 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BootBoxSuccess" xml:space="preserve">
-    <value>bbredirect("Registrado correctamente.", CancelarProyecto);</value>
+    <value>bbredirect("Registrado correctamente.", {0});</value>
   </data>
   <data name="FormValidate" xml:space="preserve">
-    <value>$('#{0}').valid()</value>
+    <value>$('#{0}').valid();</value>
+  </data>
+  <data name="ToastrCodigoProyectoExist" xml:space="preserve">
+    <value>toastr.warning('El código de proyecto ingresado ya existe.');</value>
   </data>
   <data name="ToastrEditError" xml:space="preserve">
-    <value>toastr.error('Ocurrio un error al guardar los cambios.')</value>
+    <value>toastr.error('Ocurrio un error al guardar los cambios.');</value>
   </data>
   <data name="ToastrEditSuccess" xml:space="preserve">
-    <value>toastr.success('Cambios guardados correctamente.')</value>
+    <value>toastr.success('Cambios guardados correctamente.');</value>
   </data>
   <data name="ToastrRegisterError" xml:space="preserve">
-    <value>toastr.error('Ocurrio un error al registrar.')</value>
+    <value>toastr.error('Ocurrio un error al registrar.');</value>
   </data>
   <data name="ToastrRegisterSuccess" xml:space="preserve">
-    <value>toastr.success('Registrado correctamente.')</value>
+    <value>toastr.success('Registrado correctamente.');</value>
   </data>
 </root>

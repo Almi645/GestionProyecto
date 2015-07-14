@@ -17,7 +17,6 @@ namespace Gestion.Proyecto.Web.Controllers
 {
     public class ProyectoController : BaseController
     {
-        // GET: Proyecto
         public ActionResult Index()
         {
             return View();
@@ -36,11 +35,11 @@ namespace Gestion.Proyecto.Web.Controllers
             ProyectoConsultaViewModel model,
             int page = 1,
             string sortDir = "",
-            string sortType = "")
+            string sort = "")
         {
             int RowCount = (int)Decimal.Zero;
-            model.Paginacion = UtilGrid.MyPaginationDefault<Paginacion>(sortDir, sortType, page);
-            model.PersonaList = new ProyectosBusinessLogic().GetProyectosOPaginacion(model.Proyectos, model.Paginacion, out RowCount);
+            model.Paginacion = UtilGrid.MyPaginationDefault<Paginacion>(sortDir, sort, page);
+            model.PersonaList = new ProyectosBusinessLogic().GetProyectosPaginacion(model.Proyectos, model.Paginacion, out RowCount);
             model.Paginacion.RowCount = RowCount;
             model.Paginacion.FooterDesc = UtilGrid.CountRecords(page, model.Paginacion.RowsPerPage, RowCount);
             return PartialView("_ProyectoGridPartialView", model);
@@ -56,12 +55,20 @@ namespace Gestion.Proyecto.Web.Controllers
         public ActionResult Registrar(ProyectoViewModel model)
         {
             if (ModelState.IsValid)
-                if (new ProyectosBusinessLogic().Registrar(model.Proyectos) != 0)
-                    return Content(MessageCode.BootBoxSuccess);
-                else
-                    return Content(MessageCode.ToastrRegisterError);
+            {
+                int result = new ProyectosBusinessLogic().Registrar(model.Proyectos);
+                switch (result)
+	            {
+                    case 0:
+                        return Content(MessageCode.ToastrRegisterError);
+                    case -1:
+                        return Content(MessageCode.ToastrCodigoProyectoExist);
+		            default:
+                        return Content(String.Format(MessageCode.BootBoxSuccess, "CancelarProyecto"));
+	            }
+            }            
             else
-                return Content(String.Format(MessageCode.FormValidate, "FrmProyectoRegistrar"));
+                return Content(String.Format(MessageCode.FormValidate, "FrmProyecto"));
         }
     }
 }

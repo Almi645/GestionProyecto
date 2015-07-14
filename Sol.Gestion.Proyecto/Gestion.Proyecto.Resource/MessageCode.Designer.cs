@@ -61,7 +61,7 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to bbredirect(&quot;Registrado correctamente.&quot;, CancelarProyecto);.
+        ///   Looks up a localized string similar to bbredirect(&quot;Registrado correctamente.&quot;, {0});.
         /// </summary>
         public static string BootBoxSuccess {
             get {
@@ -70,7 +70,7 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to $(&apos;#{0}&apos;).valid().
+        ///   Looks up a localized string similar to $(&apos;#{0}&apos;).valid();.
         /// </summary>
         public static string FormValidate {
             get {
@@ -79,7 +79,16 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to toastr.error(&apos;Ocurrio un error al guardar los cambios.&apos;).
+        ///   Looks up a localized string similar to toastr.warning(&apos;El código de proyecto ingresado ya existe.&apos;);.
+        /// </summary>
+        public static string ToastrCodigoProyectoExist {
+            get {
+                return ResourceManager.GetString("ToastrCodigoProyectoExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to toastr.error(&apos;Ocurrio un error al guardar los cambios.&apos;);.
         /// </summary>
         public static string ToastrEditError {
             get {
@@ -88,7 +97,7 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to toastr.success(&apos;Cambios guardados correctamente.&apos;).
+        ///   Looks up a localized string similar to toastr.success(&apos;Cambios guardados correctamente.&apos;);.
         /// </summary>
         public static string ToastrEditSuccess {
             get {
@@ -97,7 +106,7 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to toastr.error(&apos;Ocurrio un error al registrar.&apos;).
+        ///   Looks up a localized string similar to toastr.error(&apos;Ocurrio un error al registrar.&apos;);.
         /// </summary>
         public static string ToastrRegisterError {
             get {
@@ -106,7 +115,7 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to toastr.success(&apos;Registrado correctamente.&apos;).
+        ///   Looks up a localized string similar to toastr.success(&apos;Registrado correctamente.&apos;);.
         /// </summary>
         public static string ToastrRegisterSuccess {
             get {
