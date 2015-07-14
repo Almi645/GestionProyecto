@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Codigo" xml:space="preserve">
-    <value>Código</value>
+    <value>Código de Proyecto</value>
   </data>
   <data name="IngreseContraseña" xml:space="preserve">
     <value>Ingrese contraseña</value>
@@ -149,5 +149,8 @@
   </data>
   <data name="TipoEquipo" xml:space="preserve">
     <value>Tipo de Equipo</value>
+  </data>
+  <data name="Asignacion" xml:space="preserve">
+    <value>Asignación</value>
   </data>
 </root>

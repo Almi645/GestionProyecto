@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityList\AlmacenList.cs" />
+    <Compile Include="EntityList\EmpleadoList.cs" />
     <Compile Include="EntityList\ProyectosList.cs" />
     <Compile Include="EntityList\ArticulosList.cs" />
     <Compile Include="EntityList\CabeceraGuiaList.cs" />

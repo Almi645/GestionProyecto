@@ -1,13 +1,25 @@
-﻿using System;
+﻿using Gestion.Proyecto.DataAccess;
+using Gestion.Proyecto.Entity.EntityList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gestion.Proyecto.Entity.Entity
+namespace Gestion.Proyecto.BusinessLogic
 {
-    public class Empleado
+    public class EmpleadoBusinessLogic
     {
-        public Int32 IdEmpleado { get; set; }
+        public EmpleadoList GetAllEmpleado()
+        {
+            try
+            {
+                return new EmpleadoDataAccess().GetAllEmpleado();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

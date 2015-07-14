@@ -48,6 +48,7 @@ namespace Gestion.Proyecto.Web.Controllers
         public ActionResult Nuevo()
         {
             var model = new ProyectoViewModel();
+            model.EmpleadoList = new EmpleadoBusinessLogic().GetAllEmpleado();
             return View(model);
         }
 
@@ -68,7 +69,11 @@ namespace Gestion.Proyecto.Web.Controllers
 	            }
             }            
             else
+            {
+                var errors = ModelState.Select(x => x.Value.Errors).Where(y => y.Count > 0).ToList();
+
                 return Content(String.Format(MessageCode.FormValidate, "FrmProyecto"));
+            }
         }
     }
 }

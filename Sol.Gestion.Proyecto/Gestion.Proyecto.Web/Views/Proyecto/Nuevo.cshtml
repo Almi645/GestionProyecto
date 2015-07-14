@@ -3,10 +3,6 @@
     ViewBag.Title = @Gestion.Proyecto.Resource.Title.RegistrarProyecto;
 }
 @Html.Hidden("UrlConsultarProyecto", Url.Action("Consultar", "Proyecto"))
-
-
-<link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/3dev/base/bootstrap-multiselect.css")' />
-
 @using (Html.BeginForm("Registrar", "Proyecto", FormMethod.Post, new { @id = "FrmProyecto" }))
 {
     <div class="bs-docs-example">
@@ -74,15 +70,27 @@
                     @Html.ValidationMessageFor(model => model.Proyectos.IP, string.Empty, new { @Class = "error" })
                 </div>
             </div>
-            <div class="spa4">
-                <select id="example-post" name="multiselect[]" multiple="multiple">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                    <option value="5">Option 5</option>
-                    <option value="6">Option 6</option>
-                </select>
+            <div class="span4">
+                @Html.LabelFor(model => model.Proyectos.Asignacion, new { @Class = "span3" })
+                <div class="span9">
+                    @*<select id="example-post" name="multiselect[]" multiple="multiple">
+                        <option value="1">Option 1 Option Option</option>
+                        <option value="2">Option 2 Option Option</option>
+                        <option value="3">Option 3 Option Option</option>
+                        <option value="4">Option 4 Option Option</option>
+                        <option value="5">Option 5 Option Option</option>
+                        <option value="6">Option 6 Option Option</option>
+                    </select>*@
+
+                    @Html.DropDownListFor(model => model.Proyectos.Asignacion,
+                    new SelectList(Model.EmpleadoList, "IdEmpleado", "Nombres"),
+                    new  {
+                            @id = "SelectEmpleado",
+                            multiple = "multiple"
+                        })
+                    @Html.ValidationMessageFor(model => model.Proyectos.Asignacion, string.Empty, new { @Class = "error" })
+
+                </div>
             </div>
         </div>
         <div class="row-fluid">
@@ -93,11 +101,10 @@
 }
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#example-post').multiselect({
+        $('#SelectEmpleado').multiselect({
             includeSelectAllOption: true,
             enableFiltering: true
         });
     });
 </script>
 <script type='text/javascript' src='@Url.Content("~/ViewScript/Proyecto/Nuevo.js")'></script>
-<script type="text/javascript" src='@Url.Content("~/Scripts/bootstrap-multiselect.js")'></script>
