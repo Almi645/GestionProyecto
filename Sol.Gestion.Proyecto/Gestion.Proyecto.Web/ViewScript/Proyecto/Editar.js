@@ -7,23 +7,27 @@
             enableFiltering: true
         });
 
+        var arr = $('#AsignacionItems').val().split(',');
+        arr.forEach(function (entry) {
+            $('#Asignacion').multiselect("select", entry)
+        });
+
         $("#Asignacion").change(ValidMultiselect);
-        $("#btnProyectoRegistrar").click(ValidForm);
+        $("#btnProyectoGuardar").click(ValidForm);
         $("#btnProyectoCancelar").click(CancelarProyecto);
     })
 
     var ValidForm = function () {
         var multiselect = ValidMultiselect();
-
         if ($("#FrmProyecto").valid() && multiselect)
             ConfirmProyecto();
     }
 
     var ConfirmProyecto = function () {
-        bbconfirm("¿Desea registrar el proyecto?", Register)
+        bbconfirm("¿Desea guardar los cambios?", Edit)
     }
 
-    var Register = function () {
+    var Edit = function () {
         $.ajax({
             url: $("#FrmProyecto").attr('action'),
             data: $("#FrmProyecto").serialize(),
@@ -41,7 +45,6 @@
     }
 
     var ValidMultiselect = function () {
-
         if ($("#Asignacion").val() == null) {
             $("#AsignacionError").text("Seleccione una asignación");
             $("#AsignacionError").css("display", "");

@@ -22,7 +22,7 @@ namespace Gestion.Proyecto.Entity.Entity
         public string Descripcion { get; set; }
 
         [Display(Name = "Estado", ResourceType = typeof(DisplayLabel))]
-        public bool Estado { get; set; }
+        public String Estado { get; set; }
 
         [Display(Name = "NombreEstacion", ResourceType = typeof(DisplayLabel))]
         [Required(ErrorMessageResourceType = typeof(Validation), ErrorMessageResourceName = "CampoRequerido")] 
@@ -54,7 +54,10 @@ namespace Gestion.Proyecto.Entity.Entity
             Paginacion,
 
             [StringValue("[dbo].[Usp_Ins_Proyecto]")]
-            Insertar
+            Insertar,
+
+            [StringValue("[dbo].[Usp_Sel_Proyecto]")]
+            SelectById
         }
     }
 }

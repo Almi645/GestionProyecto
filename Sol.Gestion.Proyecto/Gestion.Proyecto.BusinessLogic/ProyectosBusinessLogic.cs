@@ -37,5 +37,17 @@ namespace Gestion.Proyecto.BusinessLogic
                 return decimal.Zero.Int();
             }
         }
+
+        public Proyectos GetbyId(int Id)
+        {
+            try
+            {
+                return new ProyectosDataAccess().GetbyId(Id);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

@@ -186,6 +186,9 @@
     <Compile Include="Helpers\ModelObejctValidate\ResultValidateAttribute.cs" />
     <Compile Include="Helpers\ModelObejctValidate\ValidateObjectAttribute.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Common\Estado.cs" />
+    <Compile Include="Models\Common\EstadoList.cs" />
+    <Compile Include="Models\Common\DefaultModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Proyecto\ProyectoConsultaViewModel.cs" />
@@ -1628,6 +1631,7 @@
     <Content Include="Scripts\Util.JSHelper.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="ViewScript\Proyecto\Consulta.js" />
+    <Content Include="ViewScript\Proyecto\Editar.js" />
     <Content Include="ViewScript\Proyecto\Nuevo.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -1675,6 +1679,7 @@
     <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
+    <Content Include="Views\Proyecto\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

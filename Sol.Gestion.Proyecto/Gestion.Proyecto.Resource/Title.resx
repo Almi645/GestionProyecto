@@ -123,6 +123,9 @@
   <data name="CriterioBusqueda" xml:space="preserve">
     <value>Criterios de Búsqueda</value>
   </data>
+  <data name="EditarProyecto" xml:space="preserve">
+    <value>Editar Proyecto</value>
+  </data>
   <data name="RegistrarProyecto" xml:space="preserve">
     <value>Registrar Proyecto</value>
   </data>
