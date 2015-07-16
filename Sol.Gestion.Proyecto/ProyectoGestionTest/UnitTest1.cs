@@ -15,10 +15,8 @@ namespace ProyectoGestionTest
         {
             UsuarioBusinessLogic oUsuarioBusinessLogic = new UsuarioBusinessLogic();
             Usuario oUsuario = new Usuario();
-            //oUsuario.Empleado = new Empleado();
-            oUsuario.Empleado.IdEmpleado = 1000;
-            oUsuario.NombreUsuario = "Admin";
-            oUsuario.Contrasenia = Encriptador.RijndaelSimple.Encriptar("123");
+            oUsuario.UserName = "Admin";
+            oUsuario.Password = Encrypt.RijndaelSimple.Encriptar("123");
             Int32 i = oUsuarioBusinessLogic.RegistrarUsuario(oUsuario);
         }
 
@@ -31,7 +29,7 @@ namespace ProyectoGestionTest
                 var obj = new Proyectos();
                 obj.Codigo = "00" + i;
                 obj.Descripcion = "Descrición " + i;
-                obj.Estado = true;
+                obj.Estado = "A";
                 obj.NombreEstacion = "Nombre de Estación " + i;
                 obj.TipoEquipo = "Tipo Equipo " + i;
                 obj.NombreEquipo = "Nombre de Equipo " + i;

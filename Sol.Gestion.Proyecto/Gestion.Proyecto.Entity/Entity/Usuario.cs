@@ -11,13 +11,16 @@ namespace Gestion.Proyecto.Entity.Entity
     {
         public Int32 IdUsuario { get; set; }
         public Empleado Empleado { get; set; }
-        public string NombreUsuario { get; set; }
-        public string Contrasenia { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
 
         public enum Proc
         {
             [StringValue("[dbo].[Usp_ValidarUsuario]")]
-            ValidarUsuario
+            ValidarUsuario,
+
+            [StringValue("[dbo].[Usp_Ins_Usuario]")]
+            Insertar
         }
     }
 }

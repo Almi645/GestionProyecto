@@ -166,15 +166,12 @@ namespace Gestion.Proyecto.Seguridad
         {
             
             Usuario oUsuario = new Usuario();
-            oUsuario.NombreUsuario = username;
-           // oUsuario.Contrasenia = password;
-            oUsuario.Contrasenia =Encriptador.RijndaelSimple.Encriptar(password);
-            //oUsuario.IdAplicacion = Int32.Parse(ConfigurationManager.AppSettings["CodigoAplicacion"]);
-            var usuarioResponse =oUsuarioBusinessLogic.AutenticarUsuario(oUsuario);
-
-            if (usuarioResponse.IdUsuario > 0)
+            oUsuario.UserName = username;
+            oUsuario.Password =Encrypt.RijndaelSimple.Encriptar(password);
+            var userResponse = oUsuarioBusinessLogic.AutenticarUsuario(oUsuario);
+            if (userResponse.IdUsuario > 0)
             {
-                HttpContext.Current.Session["UsuarioGP"] = usuarioResponse;
+                HttpContext.Current.Session["UsuarioGP"] = userResponse;
                 return true;
             }
             else

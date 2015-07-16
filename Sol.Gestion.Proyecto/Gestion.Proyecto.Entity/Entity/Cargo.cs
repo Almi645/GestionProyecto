@@ -8,5 +8,10 @@ namespace Gestion.Proyecto.Entity.Entity
 {
     public class Cargo
     {
+        public int IdCargo { get; set; }
+
+        public string Descripcion { get; set; }
+
+        public string Estado { get; set; }
     }
 }

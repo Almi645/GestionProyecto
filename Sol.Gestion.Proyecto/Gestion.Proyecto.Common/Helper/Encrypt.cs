@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Gestion.Proyecto.Common.Helper
 {
-    public static class Encriptador
+    public static class Encrypt
     {
         public static class RijndaelSimple
         {

@@ -102,5 +102,21 @@ namespace Gestion.Proyecto.DataAccess
             }
             return oProyectos;
         }
+
+        public int Actualizar(Proyectos oProyectos)
+        {
+            DbCommand oDbCommand = oDatabase.GetStoredProcCommand(Proyectos.Proc.Actualizar.Str());
+            oDatabase.AddInParameter(oDbCommand, "@IdProyecto", DbType.Int32, oProyectos.IdProyecto);
+            oDatabase.AddInParameter(oDbCommand, "@Codigo", DbType.String, oProyectos.Codigo);
+            oDatabase.AddInParameter(oDbCommand, "@Descripcion", DbType.String, oProyectos.Descripcion);
+            oDatabase.AddInParameter(oDbCommand, "@Estado", DbType.String, oProyectos.Estado);
+            oDatabase.AddInParameter(oDbCommand, "@NombreEstacion", DbType.String, oProyectos.NombreEstacion);
+            oDatabase.AddInParameter(oDbCommand, "@TipoEquipo", DbType.String, oProyectos.TipoEquipo);
+            oDatabase.AddInParameter(oDbCommand, "@NombreEquipo", DbType.String, oProyectos.NombreEquipo);
+            oDatabase.AddInParameter(oDbCommand, "@ID", DbType.String, oProyectos.ID);
+            oDatabase.AddInParameter(oDbCommand, "@IP", DbType.String, oProyectos.IP);
+            oDatabase.AddInParameter(oDbCommand, "@Asignacion", DbType.String, String.Join(",", oProyectos.Asignacion));
+            return Convert.ToInt32(oDatabase.ExecuteScalar(oDbCommand));
+        }
     }
 }

@@ -49,5 +49,17 @@ namespace Gestion.Proyecto.BusinessLogic
                 return null;
             }
         }
+
+        public int Actualizar(Proyectos oProyectos)
+        {
+            try
+            {
+                return new ProyectosDataAccess().Actualizar(oProyectos);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
     }
 }

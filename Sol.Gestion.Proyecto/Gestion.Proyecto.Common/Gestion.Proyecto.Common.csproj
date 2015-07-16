@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtendMethod.cs" />
-    <Compile Include="Helper\Encriptador.cs" />
+    <Compile Include="Helper\Encrypt.cs" />
     <Compile Include="StringValueAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UtilGrid.cs" />

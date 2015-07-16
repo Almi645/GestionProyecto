@@ -57,7 +57,10 @@ namespace Gestion.Proyecto.Entity.Entity
             Insertar,
 
             [StringValue("[dbo].[Usp_Sel_Proyecto]")]
-            SelectById
+            SelectById,
+
+            [StringValue("[dbo].[Usp_Upd_Proyecto]")]
+            Actualizar
         }
     }
 }

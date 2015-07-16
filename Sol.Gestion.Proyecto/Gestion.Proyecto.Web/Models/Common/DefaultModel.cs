@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Gestion.Proyecto.Web.Models.Common
 {
-    public static class DefaultModel
+    public class DefaultModel
     {
         public static EstadoList GetEstado()
         {

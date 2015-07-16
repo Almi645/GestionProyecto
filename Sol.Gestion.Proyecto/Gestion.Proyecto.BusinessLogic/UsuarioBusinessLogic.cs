@@ -11,13 +11,22 @@ namespace Gestion.Proyecto.BusinessLogic
     public class UsuarioBusinessLogic
     {
         UsuarioDataAccess oUsuarioDataAccess = new UsuarioDataAccess();
+
         public Usuario AutenticarUsuario(Usuario oUsuario) 
         {
-            return oUsuarioDataAccess.AutenticarUsuario(oUsuario);
+            return new UsuarioDataAccess().AutenticarUsuario(oUsuario);
         }
+
         public int RegistrarUsuario(Usuario oUsuario)
         {
-            return oUsuarioDataAccess.RegistrarUsuario(oUsuario);
+            try
+            {
+                return oUsuarioDataAccess.RegistrarUsuario(oUsuario);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
     }
 }

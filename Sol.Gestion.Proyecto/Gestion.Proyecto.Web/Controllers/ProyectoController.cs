@@ -55,7 +55,7 @@ namespace Gestion.Proyecto.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Registrar(ProyectoViewModel model)
+        public ActionResult Nuevo(ProyectoViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -92,8 +92,23 @@ namespace Gestion.Proyecto.Web.Controllers
         [HttpPost]
         public ActionResult Editar(ProyectoViewModel model)
         {
-
-            return null;
+            if (ModelState.IsValid)
+            {
+                int result = new ProyectosBusinessLogic().Actualizar(model.Proyectos);
+                switch (result)
+                {
+                    case 0:
+                        return Content(MessageCode.ToastrRegisterError);
+                    case -1:
+                        return Content(MessageCode.ToastrCodigoProyectoExist);
+                    default:
+                        return Content(String.Format(MessageCode.BootBoxSuccessEdit, "CancelarProyecto"));
+                }
+            }
+            else
+            {
+                return Content(String.Format(MessageCode.FormValidate, "FrmProyecto") + MessageCode.FunctionMultiselectValidate);
+            }
         }
     }
 }

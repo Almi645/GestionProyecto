@@ -1627,7 +1627,9 @@
     <Content Include="ViewScript\Proyecto\Consulta.js" />
     <Content Include="ViewScript\Proyecto\Editar.js" />
     <Content Include="ViewScript\Proyecto\Nuevo.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1701,6 +1703,10 @@
     <ProjectReference Include="..\Gestion.Proyecto.Resource\Gestion.Proyecto.Resource.csproj">
       <Project>{030bc957-5862-40ce-a9bc-b979d4d42992}</Project>
       <Name>Gestion.Proyecto.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion.Proyecto.Security\Gestion.Proyecto.Security.csproj">
+      <Project>{ae986fc0-3640-422b-acdb-1acc17ac3ac9}</Project>
+      <Name>Gestion.Proyecto.Security</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

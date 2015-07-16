@@ -40,17 +40,14 @@ namespace Gestion.Proyecto.Web.Controllers
         [ValidateAntiForgeryToken, AllowAnonymous, HttpPost]
         public ActionResult Login(AccountViewModels model, string returnUrl)
         {
-            /*if (ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                #region MyRegionLogica
                 try
                 {
                     if (Membership.ValidateUser(model.UserName, model.Password))
                     {
-                        #region MyRegion
-                        #endregion
                         FormsAuthentication.RedirectFromLoginPage(model.UserName, false);
-                        return RedirectJSEnviarPagina(Url.Action("Index", new RouteValueDictionary(new { controller = "Home" })));
+                        return RedirectJSEnviarPagina(Url.Action("Consultar", new RouteValueDictionary(new { controller = "Proyecto" })));
                     }
                     else
                         ModelState.AddModelError(string.Empty, Messages.InvalidLogin);
@@ -59,11 +56,8 @@ namespace Gestion.Proyecto.Web.Controllers
                 {
                     ModelState.AddModelError(string.Empty, Messages.InesperadoErrorLogin);
                 }
-                #endregion
             }
-            return View();*/
-
-            return RedirectJSEnviarPagina(Url.Action("Consultar", new RouteValueDictionary(new { controller = "Proyecto" })));
+            return View();
         }
 
         [HttpGet()]

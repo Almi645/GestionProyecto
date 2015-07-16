@@ -20,10 +20,10 @@
     }
 
     var ConfirmProyecto = function () {
-        bbconfirm("¿Desea registrar el proyecto?", Register)
+        bbconfirm("¿Desea registrar el proyecto?", New)
     }
 
-    var Register = function () {
+    var New = function () {
         $.ajax({
             url: $("#FrmProyecto").attr('action'),
             data: $("#FrmProyecto").serialize(),
