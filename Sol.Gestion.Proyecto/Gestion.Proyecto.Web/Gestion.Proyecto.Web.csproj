@@ -257,7 +257,6 @@
     <Content Include="Content\3dev\docs.css" />
     <Content Include="Content\3dev\font-awesome.css" />
     <Content Include="Content\3dev\font.css" />
-    <Content Include="Content\3dev\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\3dev\ui_custom.css" />
     <Content Include="Content\cleditor\images\buttons.gif" />
     <Content Include="Content\cleditor\images\toolbar.gif" />
@@ -1595,11 +1594,6 @@
     <Content Include="Content\texteditor\js\tinymce\skins\xenmce\fonts\readme.md" />
     <Content Include="Content\texteditor\js\tinymce\skins\xenmce\skin.json" />
     <Content Include="Mvc.sitemap" />
-    <Content Include="Content\3dev\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\3dev\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\3dev\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\3dev\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
@@ -1688,10 +1682,6 @@
     <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>

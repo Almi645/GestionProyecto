@@ -32,19 +32,21 @@ namespace Gestion.Proyecto.DataAccess
             using (IDataReader oIDataReader = oDatabase.ExecuteReader(oDbCommand))
             {
                 Proyectos obj = new Proyectos();
-                int i1 = oIDataReader.GetOrdinal("CodProyecto");
-                int i2 = oIDataReader.GetOrdinal("DescripProyecto");
-                int i3 = oIDataReader.GetOrdinal("NombreEstacion");
-                int i4 = oIDataReader.GetOrdinal("TipoEquipo");
-                int i5 = oIDataReader.GetOrdinal("NombreEquipo");
+                int i1 = oIDataReader.GetOrdinal("IdProyecto");
+                int i2 = oIDataReader.GetOrdinal("CodProyecto");
+                int i3 = oIDataReader.GetOrdinal("DescripProyecto");
+                int i4 = oIDataReader.GetOrdinal("NombreEstacion");
+                int i5 = oIDataReader.GetOrdinal("TipoEquipo");
+                int i6 = oIDataReader.GetOrdinal("NombreEquipo");
                 while (oIDataReader.Read())
                 {
                     obj = new Proyectos();
-                    obj.Codigo = DataUtil.DbValueToDefault<String>(oIDataReader[i1]);
-                    obj.Descripcion = DataUtil.DbValueToDefault<String>(oIDataReader[i2]);
-                    obj.NombreEstacion = DataUtil.DbValueToDefault<String>(oIDataReader[i3]);
-                    obj.TipoEquipo = DataUtil.DbValueToDefault<String>(oIDataReader[i4]);
-                    obj.NombreEquipo = DataUtil.DbValueToDefault<String>(oIDataReader[i5]);
+                    obj.IdProyecto = DataUtil.DbValueToDefault<Int32>(oIDataReader[i1]);
+                    obj.Codigo = DataUtil.DbValueToDefault<String>(oIDataReader[i2]);
+                    obj.Descripcion = DataUtil.DbValueToDefault<String>(oIDataReader[i3]);
+                    obj.NombreEstacion = DataUtil.DbValueToDefault<String>(oIDataReader[i4]);
+                    obj.TipoEquipo = DataUtil.DbValueToDefault<String>(oIDataReader[i5]);
+                    obj.NombreEquipo = DataUtil.DbValueToDefault<String>(oIDataReader[i6]);
                     olista.Add(obj);
                 }
             }

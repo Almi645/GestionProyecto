@@ -22,11 +22,10 @@
                     grid.Column("Descripcion", "Nombre", canSort: true, style: "centrar", format: @<text>@item.Descripcion</text>),
                     grid.Column("NombreEstacion", "Descripción", canSort: true, style: "centrar", format: @<text>@item.NombreEstacion</text>),
                     grid.Column("TipoEquipo", "Tipo de Equipo", canSort: true, style: "centrar", format: @<text>@item.TipoEquipo</text>),
-                    grid.Column("NombreEquipo", "Nombre de Equipo", canSort: true, style: "centrar", format: @<text>@item.NombreEquipo</text>)
-        @*,
+                    grid.Column("NombreEquipo", "Nombre de Equipo", canSort: true, style: "centrar", format: @<text>@item.NombreEquipo</text>),
 
                     grid.Column("", "Acciones", canSort: true, style: "centrar", format:
-                    @<text>@Html.ActionLink("Detalle", "Edit", "Proyecto", new { id = item.Codigo }, new { @class = "", title = "Detalle" })</text>)*@
+                    @<text>@Html.ActionLink("d", "Editar", "Proyecto", new { Id = item.IdProyecto }, new { @class = "glyphicon-remove-circle", title = "Detalle" })</text>)
 ))
 
         @Html.HiddenFor(model => model.Paginacion.RowCount, new { @id = "RowCountProyecto" })
