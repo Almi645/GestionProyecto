@@ -79,6 +79,15 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ValidMultiselect();.
+        /// </summary>
+        public static string FunctionMultiselectValidate {
+            get {
+                return ResourceManager.GetString("FunctionMultiselectValidate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to toastr.warning(&apos;El código de proyecto ingresado ya existe.&apos;);.
         /// </summary>
         public static string ToastrCodigoProyectoExist {

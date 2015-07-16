@@ -1,12 +1,15 @@
 ﻿(function () {
 
     $(document).ready(function () {
+        $("#SelectEmpleado").change(ValidMultiselect);
         $("#btnProyectoRegistrar").click(ValidForm);
         $("#btnProyectoCancelar").click(CancelarProyecto);
     })
 
     var ValidForm = function () {
-        if ($("#FrmProyecto").valid())
+        //var multiselect = ValidMultiselect();
+
+        //if ($("#FrmProyecto").valid() && multiselect)
             ConfirmProyecto();
     }
 
@@ -30,4 +33,19 @@
     var CancelarProyecto = function () {
         window.location = $("#UrlConsultarProyecto").val();
     }
+
+    var ValidMultiselect = function () {
+
+        if ($("#SelectEmpleado").val() == null) {
+            $("#SelectEmpleadoError").text("Seleccione una asignación");
+            $("#SelectEmpleadoError").css("display", "");
+            return false;
+        }
+        else {
+            $("#SelectEmpleadoError").text("");
+            $("#SelectEmpleadoError").css("display", "none");
+            return true;
+        }
+    }
+
 })()

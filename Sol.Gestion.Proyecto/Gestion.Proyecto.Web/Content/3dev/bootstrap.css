@@ -3786,6 +3786,7 @@ input[type="submit"].btn.btn-mini {
   /*white-space: nowrap;*/
   vertical-align: middle;
   *zoom: 1;
+  margin-bottom: 10px; /*multiselct*/
 }
 
 .btn-group:first-child {
@@ -6424,7 +6425,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e22c', end
 a, button, input{transition:all 0.5s ease 0s;}
 li{transition:all 0.7s ease 0s;
 }
-.error{color:red; white-space:pre-line;display:block; margin-bottom: 15px;}
+.error {
+    color:red; 
+    white-space:pre-line;
+    display:block; 
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
 h1{color:white; font-size:22px; font-weight:normal!important;text-transform:uppercase; text-align:right;line-height:22px!important}
 .cerrar:hover
 {

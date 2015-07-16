@@ -6,6 +6,7 @@ using Gestion.Proyecto.Entity.Other;
 using Gestion.Proyecto.Resource;
 using Gestion.Proyecto.Seguridad.Filters;
 using Gestion.Proyecto.Web.Controllers.Base;
+using Gestion.Proyecto.Web.Helpers.ModelObejctValidate;
 using Gestion.Proyecto.Web.Models.Proyecto;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,7 @@ namespace Gestion.Proyecto.Web.Controllers
         [HttpPost]
         public ActionResult Registrar(ProyectoViewModel model)
         {
+
             if (ModelState.IsValid)
             {
                 int result = new ProyectosBusinessLogic().Registrar(model.Proyectos);
@@ -70,9 +72,7 @@ namespace Gestion.Proyecto.Web.Controllers
             }            
             else
             {
-                var errors = ModelState.Select(x => x.Value.Errors).Where(y => y.Count > 0).ToList();
-
-                return Content(String.Format(MessageCode.FormValidate, "FrmProyecto"));
+                return Content(String.Format(MessageCode.FormValidate, "FrmProyecto") + MessageCode.FunctionMultiselectValidate);
             }
         }
     }

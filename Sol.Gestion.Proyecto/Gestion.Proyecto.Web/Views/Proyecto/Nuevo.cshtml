@@ -88,7 +88,7 @@
                             @id = "SelectEmpleado",
                             multiple = "multiple"
                         })
-                    @Html.ValidationMessageFor(model => model.Proyectos.Asignacion, string.Empty, new { @Class = "error" })
+                    <span id="SelectEmpleadoError" class="error" style="display:none; margin-bottom: 15px;"></span>
 
                 </div>
             </div>

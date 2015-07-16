@@ -123,6 +123,9 @@
   <data name="FormValidate" xml:space="preserve">
     <value>$('#{0}').valid();</value>
   </data>
+  <data name="FunctionMultiselectValidate" xml:space="preserve">
+    <value>ValidMultiselect();</value>
+  </data>
   <data name="ToastrCodigoProyectoExist" xml:space="preserve">
     <value>toastr.warning('El código de proyecto ingresado ya existe.');</value>
   </data>
