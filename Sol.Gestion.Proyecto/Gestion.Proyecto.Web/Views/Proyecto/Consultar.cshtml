@@ -12,17 +12,19 @@
     <div class="prettyprint">
         <div class="row-fluid">
             <div class="span4">
-                @Html.LabelFor(model => model.Proyectos.Codigo, new { @Class = "span3" })
-                <div class="span9">
+                @Html.LabelFor(model => model.Proyectos.Codigo, new { @Class = "span4" })
+                <div class="span8">
                     @Html.TextBoxFor(model => model.Proyectos.Codigo, new { @id = "Codigo", @placeholder = "Ingrese Código" })
                 </div>
                 @Html.ValidationMessageFor(model => model.Proyectos.Codigo, string.Empty, new { @Class = "error", @Style = "display:block;" })
             </div>
-        </div>
-        <div class="row-fluid">
             <button id="btnProyectoNuevo" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Nuevo </button>
             <button id="btnProyectoBuscar" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Buscar </button>
         </div>
+        @*<div class="row-fluid">
+            <button id="btnProyectoNuevo" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Nuevo </button>
+            <button id="btnProyectoBuscar" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Buscar </button>
+        </div>*@
     </div>
     <div class="bs-docs-example">
         <p style="text-transform:uppercase">:: @Gestion.Proyecto.Resource.Title.ResultadoBusqueda</p>

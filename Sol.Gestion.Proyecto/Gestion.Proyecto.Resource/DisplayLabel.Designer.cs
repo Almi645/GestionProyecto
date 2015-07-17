@@ -70,6 +70,15 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Acceder.
+        /// </summary>
+        public static string BtnLogin {
+            get {
+                return ResourceManager.GetString("BtnLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Código de Proyecto.
         /// </summary>
         public static string Codigo {
@@ -160,11 +169,38 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contraseña.
+        /// </summary>
+        public static string PlaceHolderPass {
+            get {
+                return ResourceManager.GetString("PlaceHolderPass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuario.
+        /// </summary>
+        public static string PlaceHolderUser {
+            get {
+                return ResourceManager.GetString("PlaceHolderUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tipo de Equipo.
         /// </summary>
         public static string TipoEquipo {
             get {
                 return ResourceManager.GetString("TipoEquipo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuario.
+        /// </summary>
+        public static string UserName {
+            get {
+                return ResourceManager.GetString("UserName", resourceCulture);
             }
         }
     }

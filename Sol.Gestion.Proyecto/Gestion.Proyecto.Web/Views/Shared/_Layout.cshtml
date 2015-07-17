@@ -34,17 +34,13 @@
     <header class="top">
         <div style="float: left;">
             <ul class="breadcrumb">
-
-                    @*<div class="btn-toolbar btn-group">
-                        <a class="btn" href="#"><i class="icon-align-justify"></i></a>
-                    </div>*@
-
                 <li><span style="text-transform: uppercase; font-size: 12px"><a href="/Home/Index"><i class="icon-th icon-white"></i> Gestión Proyectos</a></span> <span class="divider">|</span></li>
                 <li class="active">@ViewBag.Title</li>
             </ul>
         </div>
+        @{ var User = Gestion.Proyecto.Security.ProfileUserUtil.GetUserSession(); }
         <div style="float: right;">
-            <span><strong>BIENVENIDO : </strong>Miguel Mamani Arotoma</span>|
+            <span><strong>@Gestion.Proyecto.Resource.Title.Bienvenido </strong>@User.Empleado.Nombres @User.Empleado.Apellidos (@User.Empleado.Cargo.Descripcion) </span>|
             <a title="" class="cerrar" href="@Url.Action("SignOut", "Account")"><i class="icon-off icon-white"></i></a>
         </div>
         <div class="clearfix"></div>

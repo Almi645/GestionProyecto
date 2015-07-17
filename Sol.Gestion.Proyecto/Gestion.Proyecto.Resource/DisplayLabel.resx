@@ -153,4 +153,16 @@
   <data name="Asignacion" xml:space="preserve">
     <value>Asignación</value>
   </data>
+  <data name="BtnLogin" xml:space="preserve">
+    <value>Acceder</value>
+  </data>
+  <data name="PlaceHolderPass" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="PlaceHolderUser" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
 </root>
