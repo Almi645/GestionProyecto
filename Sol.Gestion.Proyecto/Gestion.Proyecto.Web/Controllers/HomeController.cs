@@ -1,4 +1,4 @@
-﻿using Gestion.Proyecto.Seguridad.Filters;
+﻿using Gestion.Proyecto.Security.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;

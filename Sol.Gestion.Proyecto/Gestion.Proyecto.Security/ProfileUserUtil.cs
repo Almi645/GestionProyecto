@@ -1,16 +1,12 @@
-﻿using Gestion.Proyecto.Entity;
+﻿using Gestion.Proyecto.Entity.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
-using System.Web.Script.Serialization;
-using System.Web.Security;
 
-namespace Gestion.Proyecto.Helpers
+namespace Gestion.Proyecto.Security
 {
     public class ProfileUserUtil
     {
@@ -18,15 +14,15 @@ namespace Gestion.Proyecto.Helpers
         {
             Usuario oUsuario = new Usuario();
 
-            if (HttpContext.Current.Session["GPUsuario"] != null)
-                oUsuario = (Usuario)HttpContext.Current.Session["GPUsuario"];
+            if (HttpContext.Current.Session["Usuario"] != null)
+                oUsuario = (Usuario)HttpContext.Current.Session["Usuario"];
 
             return oUsuario;
         }
 
         public static bool IsAuthenticated()
         {
-            if (HttpContext.Current.Session["GPUsuario"] == null)
+            if (HttpContext.Current.Session["Usuario"] == null)
                 return false;
             else
                 return true;
@@ -34,7 +30,7 @@ namespace Gestion.Proyecto.Helpers
 
         public static void SetUserSession(Usuario oUsuario)
         {
-            HttpContext.Current.Session["GPUsuario"] = oUsuario;
+            HttpContext.Current.Session["Usuario"] = oUsuario;
         }
     }
 }

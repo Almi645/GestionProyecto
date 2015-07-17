@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Net;
-using Gestion.Proyecto.Seguridad.Filters;
+using Gestion.Proyecto.Security.Filters;
 
 
 namespace Gestion.Proyecto.Web.Controllers.Base

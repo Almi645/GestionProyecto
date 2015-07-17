@@ -9,13 +9,15 @@ using System.Security.Principal;
 using Newtonsoft.Json;
 using System.Web.Script.Serialization;
 using Gestion.Proyecto.Web.Controllers.Base;
-using Gestion.Proyecto.Helpers;
+using Gestion.Proyecto.Security;
 using Gestion.Proyecto.Resource;
 using Gestion.Proyecto.Web.Models;
 
 namespace Gestion.Proyecto.Web.Controllers
 {
-    [Authorize]
+    //[Authorize]
+    //[Authorize(Roles = "Administrators")]
+    //[Authorize(Users = "Alice,Bob")]
     public class AccountController : BaseController
     {
         [AllowAnonymous]
@@ -31,7 +33,6 @@ namespace Gestion.Proyecto.Web.Controllers
                 {
                     return View();
                 }
-
             }
 
             return View();
@@ -57,18 +58,16 @@ namespace Gestion.Proyecto.Web.Controllers
                     ModelState.AddModelError(string.Empty, Messages.InesperadoErrorLogin);
                 }
             }
+
             return View();
         }
 
         [HttpGet()]
         public ActionResult SignOut()
         {
-            HttpCookie myCookie = new HttpCookie("userCookie");
-            myCookie.Expires = DateTime.Now.AddDays(-1d);
-            Response.Cookies.Add(myCookie);
             FormsAuthentication.SignOut();
             Session.RemoveAll();
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("Login");
         }
     }
 }

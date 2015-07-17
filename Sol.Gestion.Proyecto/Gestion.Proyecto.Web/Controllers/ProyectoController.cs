@@ -4,7 +4,7 @@ using Gestion.Proyecto.Entity.Entity;
 using Gestion.Proyecto.Entity.EntityList;
 using Gestion.Proyecto.Entity.Other;
 using Gestion.Proyecto.Resource;
-using Gestion.Proyecto.Seguridad.Filters;
+using Gestion.Proyecto.Security.Filters;
 using Gestion.Proyecto.Web.Controllers.Base;
 using Gestion.Proyecto.Web.Helpers.ModelObejctValidate;
 using Gestion.Proyecto.Web.Models.Common;
@@ -17,13 +17,15 @@ using System.Web.Mvc;
 
 namespace Gestion.Proyecto.Web.Controllers
 {
+    [OutputCacheAttribute(VaryByParam = "*", Duration = 0, NoStore = true)]
     public class ProyectoController : BaseController
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
 
+        [RequiresAuthenticationAttribute]
         public ActionResult Consultar()
         {
             var model = new ProyectoConsultaViewModel();
@@ -33,11 +35,8 @@ namespace Gestion.Proyecto.Web.Controllers
             return View(model);
         }
 
-        public ActionResult ConsultarPartial(
-            ProyectoConsultaViewModel model,
-            int page = 1,
-            string sortDir = "",
-            string sort = "")
+        [RequiresAuthenticationAjaxAttribute]
+        public ActionResult ConsultarPartial(ProyectoConsultaViewModel model, int page = 1, string sortDir = "", string sort = "")
         {
             int RowCount = (int)Decimal.Zero;
             model.Paginacion = UtilGrid.MyPaginationDefault<Paginacion>(sortDir, sort, page);
@@ -47,6 +46,7 @@ namespace Gestion.Proyecto.Web.Controllers
             return PartialView("_ProyectoGridPartialView", model);
         }
 
+        [RequiresAuthenticationAttribute]
         public ActionResult Nuevo()
         {
             var model = new ProyectoViewModel();
@@ -54,7 +54,7 @@ namespace Gestion.Proyecto.Web.Controllers
             return View(model);
         }
 
-        [HttpPost]
+        [HttpPost, RequiresAuthenticationAjaxAttribute]
         public ActionResult Nuevo(ProyectoViewModel model)
         {
             if (ModelState.IsValid)
@@ -76,6 +76,7 @@ namespace Gestion.Proyecto.Web.Controllers
             }
         }
 
+        [RequiresAuthenticationAttribute]
         public ActionResult Editar(int Id)
         {   
             var model = new ProyectoViewModel();
@@ -89,7 +90,7 @@ namespace Gestion.Proyecto.Web.Controllers
                 return View(model);
         }
 
-        [HttpPost]
+        [HttpPost, RequiresAuthenticationAjaxAttribute]
         public ActionResult Editar(ProyectoViewModel model)
         {
             if (ModelState.IsValid)
@@ -98,7 +99,7 @@ namespace Gestion.Proyecto.Web.Controllers
                 switch (result)
                 {
                     case 0:
-                        return Content(MessageCode.ToastrRegisterError);
+                        return Content(MessageCode.ToastrEditError);
                     case -1:
                         return Content(MessageCode.ToastrCodigoProyectoExist);
                     default:

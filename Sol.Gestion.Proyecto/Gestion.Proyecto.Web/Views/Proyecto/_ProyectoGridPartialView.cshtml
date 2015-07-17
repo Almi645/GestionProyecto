@@ -25,8 +25,11 @@
                     grid.Column("NombreEquipo", "Nombre de Equipo", canSort: true, style: "centrar", format: @<text>@item.NombreEquipo</text>),
 
                     grid.Column("", "Acciones", canSort: true, style: "centrar", format:
-                    @<text>@Html.ActionLink("d", "Editar", "Proyecto", new { Id = item.IdProyecto }, new { @class = "glyphicon-remove-circle", title = "Detalle" })</text>)
-))
+                    @<text>
+                        <a style="cursor:pointer" href="/Proyecto/Editar/@item.IdProyecto" title="Ver">
+                            <i class="glyphicon glyphicon-pencil"></i>
+                        </a> 
+                    </text>)))
 
         @Html.HiddenFor(model => model.Paginacion.RowCount, new { @id = "RowCountProyecto" })
         @Html.HiddenFor(model => model.Paginacion.RowsPerPage, new { @id = "RowsPerPageProyecto" })

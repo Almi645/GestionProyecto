@@ -70,7 +70,7 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to bbredirect(&quot;Cambios realizados correctamente.&quot;, {0});.
+        ///   Looks up a localized string similar to bbredirect(&quot;Cambios guardados correctamente.&quot;, {0});.
         /// </summary>
         public static string BootBoxSuccessEdit {
             get {

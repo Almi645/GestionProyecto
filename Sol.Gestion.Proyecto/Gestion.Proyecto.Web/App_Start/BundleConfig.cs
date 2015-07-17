@@ -24,9 +24,9 @@ namespace Gestion.Proyecto.Web
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                                "~/Content/3dev/bootstrap.css",
-                                "~/Content/3dev/bootstrap-responsive.css",
-                                "~/Content/3dev/font-awesome.css"));
+                                "~/Content/style/bootstrap.css",
+                                "~/Content/style/bootstrap-responsive.css",
+                                "~/Content/style/font-awesome.css"));
 
           
 

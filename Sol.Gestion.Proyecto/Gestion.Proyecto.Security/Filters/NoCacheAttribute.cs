@@ -4,7 +4,7 @@ using System.Web.Security;
 using System.Web.Routing;
 using System.Web;
 
-namespace Gestion.Proyecto.Seguridad.Filters
+namespace Gestion.Proyecto.Security.Filters
 {
     public class NoCacheAttribute : ActionFilterAttribute
     {

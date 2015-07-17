@@ -93,25 +93,22 @@
         background-color: rgb(12, 97, 33);
     }
 </style>
-<link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/3dev/bootstrap.css")' />
-<link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/3dev/bootstrap-responsive.css")' />
-@*@Html.Hidden("UrlConsultarProyecto", Url.Action("Consultar", "Proyecto"))*@
+<link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/style/bootstrap.css")' />
+<link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/style/bootstrap-responsive.css")' />
 <div class="container">
     <div class="card card-container">
         <div class="bs-docs-example">
-            <p style="text-transform:uppercase">LOGIN</p>
+            <p style="text-transform:uppercase">ACCESO</p>
         </div>
         <div class="prettyprint" style="padding: 25px;">
 
             @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-signin" }))
             {
-                <span id="reauth-email" class="reauth-email"></span>
-                
                 <input name="UserName" type="text" id="inputUser" class="form-control" placeholder="Usuario" autofocus>
-                <font color="red">@Html.ValidationMessageFor(model => model.UserName, "", new { Style = "display: block; margin-right:63px;" })</font>
+                <font color="red">@Html.ValidationMessageFor(model => model.UserName, "", new { Style = "display: block" })</font>
                 
                 <input name="Password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña">
-                <font color="red">@Html.ValidationMessageFor(model => model.Password, "", new { Style = "display: block; margin-right:63px;" })</font>
+                <font color="red">@Html.ValidationMessageFor(model => model.Password, "", new { Style = "display: block" })</font>
 
                 <button id="btnAcceder" type="submit" class="btn btn-info">Acceder</button>
                 @Html.AntiForgeryToken()
