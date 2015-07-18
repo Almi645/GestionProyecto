@@ -1,0 +1,38 @@
+﻿@model Gestion.Proyecto.Web.Models.Bandeja.BandejaViewModel
+@{
+    WebGrid grid = new WebGrid(rowsPerPage: Model.Paginacion.RowsPerPage, ajaxUpdateContainerId: "IdGridBandeja",
+    ajaxUpdateCallback: "SetTotalRecordsBandeja");
+    grid.Bind(Model.PersonaList, autoSortAndPage: false, rowCount: Model.Paginacion.RowCount);
+
+    <div id="IdGridBandeja">
+        @grid.GetHtml(
+                headerStyle: "fix_head",
+                rowStyle: "fix_td",
+                alternatingRowStyle: "",
+                footerStyle: "pagination",
+                            htmlAttributes: new { id = "IdGridBandejaAttr", @class = "table table-striped", @style = "margin: 5px auto; border: 1px solid #CFD8DE;border-radius: 4px;width: 100%;" },
+                mode: WebGridPagerModes.All,
+                firstText: Gestion.Proyecto.Resource.Constants.ButtonPageFirst,
+                previousText: Gestion.Proyecto.Resource.Constants.ButtonPageBack,
+                nextText: Gestion.Proyecto.Resource.Constants.ButtonPageNext,
+                lastText: Gestion.Proyecto.Resource.Constants.ButtonPageLast,
+                columns: grid.Columns
+                (
+                    grid.Column("Codigo", "Código", canSort: true, style: "centrar", format: @<text>@item.Codigo</text>),
+                    grid.Column("Descripcion", "Nombre", canSort: true, style: "centrar", format: @<text>@item.Descripcion</text>),
+                    grid.Column("NombreEstacion", "Descripción", canSort: true, style: "centrar", format: @<text>@item.NombreEstacion</text>),
+                    grid.Column("TipoEquipo", "Tipo de Equipo", canSort: true, style: "centrar", format: @<text>@item.TipoEquipo</text>),
+                    grid.Column("NombreEquipo", "Nombre de Equipo", canSort: true, style: "centrar", format: @<text>@item.NombreEquipo</text>),
+
+                    grid.Column("", "Acciones", canSort: true, style: "centrar", format:
+                    @<text>
+                        <a style="cursor:pointer" href="/Proyecto/Editar/@item.IdProyecto" title="Gestionar">
+                            <i class="glyphicon glyphicon-hand-right"></i>
+                        </a>
+                    </text>)))
+
+        @Html.HiddenFor(model => model.Paginacion.RowCount, new { @id = "RowCountBandeja" })
+        @Html.HiddenFor(model => model.Paginacion.RowsPerPage, new { @id = "RowsPerPageBandeja" })
+        @Html.HiddenFor(model => model.Paginacion.FooterDesc, new { @id = "FooterDescBandeja" })
+    </div>
+}

@@ -1,0 +1,32 @@
+﻿@model Gestion.Proyecto.Web.Models.Bandeja.BandejaViewModel
+@{
+    ViewBag.Title = @Gestion.Proyecto.Resource.Title.ConsultarProyecto;
+}
+@using (Html.BeginForm("ConsultarPartial", "Bandeja", FormMethod.Post, new { @id = "FrmBandejaConsulta" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="bs-docs-example">
+        <p style="text-transform:uppercase">:: @Gestion.Proyecto.Resource.Title.CriterioBusqueda</p>
+    </div>
+    <div class="prettyprint">
+        <div class="row-fluid">
+            <div class="span4">
+                @Html.LabelFor(model => model.Proyectos.Codigo, new { @Class = "span4" })
+                <div class="span8">
+                    @Html.TextBoxFor(model => model.Proyectos.Codigo, new { @id = "Codigo", @placeholder = "Ingrese Código" })
+                </div>
+                @Html.ValidationMessageFor(model => model.Proyectos.Codigo, string.Empty, new { @Class = "error", @Style = "display:block;" })
+            </div>
+            <button id="btnBandejaBuscar" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Buscar </button>
+        </div>
+    </div>
+    <div class="bs-docs-example">
+        <p style="text-transform:uppercase">:: @Gestion.Proyecto.Resource.Title.ResultadoBusqueda</p>
+    </div>
+    <div class="prettyprint">
+        <div id="ContainerGrid" class="table">
+            @Html.Partial("_BandejaGridPartialView", Model)
+        </div>
+    </div>
+}
+<script type='text/javascript' src='@Url.Content("~/ViewScript/Bandeja/Consulta.js")'></script>

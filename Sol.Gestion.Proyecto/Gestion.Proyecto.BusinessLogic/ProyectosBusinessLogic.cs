@@ -61,5 +61,18 @@ namespace Gestion.Proyecto.BusinessLogic
                 return 0;
             }
         }
+
+        public ProyectosList GetBandejaPaginacion(Proyectos oProyectos, int IdEmpleado, Paginacion oPaginacion, out int RowCount)
+        {
+            try
+            {
+                return new ProyectosDataAccess().GetBandejaPaginacion(oProyectos, IdEmpleado, oPaginacion, out RowCount);
+            }
+            catch (Exception)
+            {
+                RowCount = decimal.Zero.Int();
+                return null;
+            }
+        }
     }
 }

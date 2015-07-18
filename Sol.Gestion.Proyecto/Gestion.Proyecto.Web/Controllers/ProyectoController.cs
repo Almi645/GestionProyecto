@@ -31,7 +31,7 @@ namespace Gestion.Proyecto.Web.Controllers
             var model = new ProyectoConsultaViewModel();
             model.Proyectos = new Proyectos();
             model.PersonaList = new ProyectosList();
-            model.Paginacion = UtilGrid.MyPaginationDefault<Paginacion>(string.Empty, string.Empty, Constants.RowsPerPage.Int());
+            model.Paginacion = UtilGrid.MyPaginationDefault<Paginacion>();
             return View(model);
         }
 

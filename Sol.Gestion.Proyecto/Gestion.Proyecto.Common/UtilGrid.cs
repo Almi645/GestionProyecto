@@ -34,6 +34,18 @@ namespace Gestion.Proyecto.Common
             return paginacion;
         }
 
+        public static T MyPaginationDefault<T>() where T : new()
+        {
+            dynamic paginacion = new T();
+
+            paginacion.Page = Constants.RowsPerPage.Int();
+            paginacion.RowsPerPage = Convert.ToInt32(Constants.RowsPerPage);
+            paginacion.SortDir = string.Empty;
+            paginacion.SortType = string.Empty;
+
+            return paginacion;
+        }
+
         public static string CountRecords(int page, int rowsPerPage, int rowCount)
         {
             string strContador;

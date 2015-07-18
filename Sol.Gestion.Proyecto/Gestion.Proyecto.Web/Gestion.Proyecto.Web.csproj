@@ -174,7 +174,7 @@
     <Compile Include="Controllers\Base\JSResultView.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ProyectoController.cs" />
-    <Compile Include="Controllers\ProyectoDetalleController.cs" />
+    <Compile Include="Controllers\BandejaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -184,6 +184,7 @@
     <Compile Include="Helpers\ModelObejctValidate\ResultValidateAttribute.cs" />
     <Compile Include="Helpers\ModelObejctValidate\ValidateObjectAttribute.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Bandeja\BandejaViewModel.cs" />
     <Compile Include="Models\Common\Estado.cs" />
     <Compile Include="Models\Common\EstadoList.cs" />
     <Compile Include="Models\Common\DefaultModel.cs" />
@@ -1513,6 +1514,7 @@
     <Content Include="Scripts\UserControl.Helper.js" />
     <Content Include="Scripts\Util.JSHelper.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="ViewScript\Bandeja\Consulta.js" />
     <Content Include="ViewScript\Proyecto\Consulta.js" />
     <Content Include="ViewScript\Proyecto\Editar.js" />
     <Content Include="ViewScript\Proyecto\Nuevo.js" />
@@ -1554,7 +1556,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Proyecto\Consultar.cshtml" />
     <Content Include="Views\Proyecto\_ProyectoGridPartialView.cshtml" />
-    <Content Include="Views\ProyectoDetalle\Nuevo.cshtml" />
+    <Content Include="Views\Bandeja\Nuevo.cshtml" />
     <Content Include="Views\Proyecto\Nuevo.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
@@ -1565,6 +1567,8 @@
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
     <Content Include="Views\Proyecto\Editar.cshtml" />
+    <Content Include="Views\Bandeja\Consulta.cshtml" />
+    <Content Include="Views\Bandeja\_BandejaGridPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

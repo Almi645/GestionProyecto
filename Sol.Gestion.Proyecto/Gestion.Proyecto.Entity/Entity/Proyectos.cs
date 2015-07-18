@@ -60,7 +60,10 @@ namespace Gestion.Proyecto.Entity.Entity
             SelectById,
 
             [StringValue("[dbo].[Usp_Upd_Proyecto]")]
-            Actualizar
+            Actualizar,
+
+            [StringValue("[dbo].[Usp_BandejaPaginacion]")]
+            Bandeja,
         }
     }
 }

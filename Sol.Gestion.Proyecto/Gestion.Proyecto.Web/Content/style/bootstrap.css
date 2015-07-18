@@ -6854,4 +6854,15 @@ a {
 
 .glyphicon-pencil:before {
   content: "\270f";
+  font-size: 16px;
+}
+
+.glyphicon-hand-right:before {
+  content: "\e127";
+  font-size: 16px;
+}
+
+.glyphicon-circle-arrow-right:before {
+  content: "\e131";
+  font-size: 16px;
 }

@@ -30,13 +30,14 @@ namespace Gestion.Proyecto.DataAccess
             {
                 int i1 = oIDataReader.GetOrdinal("IdUsuario");
                 int i2 = oIDataReader.GetOrdinal("UserName");
-                int i3 = oIDataReader.GetOrdinal("Nombres");
-                int i4 = oIDataReader.GetOrdinal("Apellidos");
-                int i5 = oIDataReader.GetOrdinal("IdTipoDocEmp");
-                int i6 = oIDataReader.GetOrdinal("NroDoc");
-                int i7 = oIDataReader.GetOrdinal("Direccion");
-                int i8 = oIDataReader.GetOrdinal("IdCargo");
-                int i9 = oIDataReader.GetOrdinal("DescripCargo");
+                int i3 = oIDataReader.GetOrdinal("IdEmpleado");
+                int i4 = oIDataReader.GetOrdinal("Nombres");
+                int i5 = oIDataReader.GetOrdinal("Apellidos");
+                int i6 = oIDataReader.GetOrdinal("IdTipoDocEmp");
+                int i7 = oIDataReader.GetOrdinal("NroDoc");
+                int i8 = oIDataReader.GetOrdinal("Direccion");
+                int i9 = oIDataReader.GetOrdinal("IdCargo");
+                int i10 = oIDataReader.GetOrdinal("DescripCargo");
 
                 while (oIDataReader.Read())
                 {
@@ -44,15 +45,16 @@ namespace Gestion.Proyecto.DataAccess
                     oUsuario.IdUsuario = DataUtil.DbValueToDefault<Int32>(oIDataReader[i1]);
                     oUsuario.UserName = DataUtil.DbValueToDefault<String>(oIDataReader[i2]);
                     oUsuario.Empleado = new Empleado();
-                    oUsuario.Empleado.Nombres = DataUtil.DbValueToDefault<String>(oIDataReader[i3]);
-                    oUsuario.Empleado.Apellidos = DataUtil.DbValueToDefault<String>(oIDataReader[i4]);
-                    oUsuario.Empleado.IdTipoDocumento = DataUtil.DbValueToDefault<Int32>(oIDataReader[i5]);
-                    oUsuario.Empleado.NroDocumento = DataUtil.DbValueToDefault<String>(oIDataReader[i6]);
-                    oUsuario.Empleado.Direccion = DataUtil.DbValueToDefault<String>(oIDataReader[i7]);
-                    oUsuario.Empleado.IdCargo = DataUtil.DbValueToDefault<Int32>(oIDataReader[i8]);
+                    oUsuario.Empleado.IdEmpleado = DataUtil.DbValueToDefault<Int32>(oIDataReader[i3]);
+                    oUsuario.Empleado.Nombres = DataUtil.DbValueToDefault<String>(oIDataReader[i4]);
+                    oUsuario.Empleado.Apellidos = DataUtil.DbValueToDefault<String>(oIDataReader[i5]);
+                    oUsuario.Empleado.IdTipoDocumento = DataUtil.DbValueToDefault<Int32>(oIDataReader[i6]);
+                    oUsuario.Empleado.NroDocumento = DataUtil.DbValueToDefault<String>(oIDataReader[i7]);
+                    oUsuario.Empleado.Direccion = DataUtil.DbValueToDefault<String>(oIDataReader[i8]);
+                    oUsuario.Empleado.IdCargo = DataUtil.DbValueToDefault<Int32>(oIDataReader[i9]);
                     oUsuario.Empleado.Cargo = new Cargo();
-                    oUsuario.Empleado.Cargo.IdCargo = DataUtil.DbValueToDefault<Int32>(oIDataReader[i8]);
-                    oUsuario.Empleado.Cargo.Descripcion = DataUtil.DbValueToDefault<String>(oIDataReader[i9]);
+                    oUsuario.Empleado.Cargo.IdCargo = DataUtil.DbValueToDefault<Int32>(oIDataReader[i9]);
+                    oUsuario.Empleado.Cargo.Descripcion = DataUtil.DbValueToDefault<String>(oIDataReader[i10]);
                 }
             }
             return oUsuario;
