@@ -4,7 +4,6 @@
 }
 @using (Html.BeginForm("ConsultarPartial", "Bandeja", FormMethod.Post, new { @id = "FrmBandejaConsulta" }))
 {
-    @Html.AntiForgeryToken()
     <div class="bs-docs-example">
         <p style="text-transform:uppercase">:: @Gestion.Proyecto.Resource.Title.CriterioBusqueda</p>
     </div>

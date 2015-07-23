@@ -174,6 +174,7 @@
     <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\Base\JSResultView.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\Detalle\DetalleTarjetaLugarController.cs" />
     <Compile Include="Controllers\ProyectoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -1517,6 +1518,8 @@
     <Content Include="Scripts\Util.JSHelper.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="ViewScript\Bandeja\Consulta.js" />
+    <Content Include="ViewScript\ProyectoDetalle\DetalleTarjetaLugar\Nuevo.js" />
+    <Content Include="ViewScript\ProyectoDetalle\Render.js" />
     <Content Include="ViewScript\Proyecto\Consulta.js" />
     <Content Include="ViewScript\Proyecto\Editar.js" />
     <Content Include="ViewScript\Proyecto\Nuevo.js" />
@@ -1571,6 +1574,7 @@
     <Content Include="Views\Bandeja\Consulta.cshtml" />
     <Content Include="Views\Bandeja\_BandejaGridPartialView.cshtml" />
     <Content Include="Views\ProyectoDetalle\Gestionar.cshtml" />
+    <Content Include="Views\ProyectoDetalle\DetalleTarjetaLugar\Nuevo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

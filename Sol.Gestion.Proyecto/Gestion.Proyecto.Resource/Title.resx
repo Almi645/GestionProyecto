@@ -126,6 +126,9 @@
   <data name="CriterioBusqueda" xml:space="preserve">
     <value>Criterios de Búsqueda</value>
   </data>
+  <data name="DetalleTarjetaLugar" xml:space="preserve">
+    <value>Detalles de tarjeta por lugar</value>
+  </data>
   <data name="EditarProyecto" xml:space="preserve">
     <value>Editar Proyecto</value>
   </data>

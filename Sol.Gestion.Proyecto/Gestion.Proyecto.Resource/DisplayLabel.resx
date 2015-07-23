@@ -165,4 +165,10 @@
   <data name="UserName" xml:space="preserve">
     <value>Usuario</value>
   </data>
+  <data name="Slot" xml:space="preserve">
+    <value>Slot</value>
+  </data>
+  <data name="SubRackId" xml:space="preserve">
+    <value>SubRack Id</value>
+  </data>
 </root>

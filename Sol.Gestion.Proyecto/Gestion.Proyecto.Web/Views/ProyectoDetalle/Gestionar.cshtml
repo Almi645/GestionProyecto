@@ -12,9 +12,10 @@
         overflow-x: hidden;
     }
 </style>
-
+@Html.Hidden("UrlConsultarBandeja", Url.Action("Consulta", "Bandeja"))
+@Html.Hidden("UrlRenderProyectoDetalle", Url.Action("Render", "ProyectoDetalle"))
 <div class="bs-docs-example">
-    <p style="text-transform:uppercase">:: PROYECTO DETALLE</p>
+    <p style="text-transform:uppercase"><i class="icon-th icon-black"></i> Proyecto: @Model.Proyectos.Codigo - @Model.Proyectos.Descripcion</p>
 </div>
 <div class="prettyprint">
     <div class="row-fluid">
@@ -27,54 +28,37 @@
                 <div id="overflow">
                     @foreach (var option in Model.MenuDetalleList)
                     {
-                        <a href="#" class="list-group-item" codeform="@option.Codigo" onclick="dialog(this)">@option.Descripcion</a>
+                        <a href="#" class="list-group-item" codeform="@option.Codigo" onclick="Render(this)">@option.Descripcion</a>
                     }
                 </div>
             </div>
         </div>
 
         <div class="span9">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">
-                    Proyecto : @Model.Proyectos.Codigo - 
-                </a>
-                <div class="list-group-item">
-                    <div class="row-fluid">
-                        <div class="span4">
-                            <h4 class="list-group-item-heading">@Html.LabelFor(model => model.Proyectos.Descripcion, new {})</h4>
-                            <p class="list-group-item-text">@Model.Proyectos.Descripcion</p>
-                        </div>
+            <div id="IdFormDetalle">
+
+                <div class="list-group">
+                    <a class="list-group-item active"> &nbsp; </a>
+                    <div class="list-group-item">
+                        <div class="row-fluid"></div>
                     </div>
                 </div>
+
             </div>
-
         </div>
-
-
-
         <div class="row-fluid">
-            <button type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Nuevo </button>
-            <button id="btnProyectoBuscar" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Buscar </button>
+            <button id="btnCancelar" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Cancelar </button>
         </div>
     </div>
-
-    <script>
-        function dialog(thi) {
-            toastr.warning($(thi).attr('codeform'));
-        }
-    </script>
-    <script>
-
-
-
-        $(function () {
-            var width = 0;
-            $('#overflow .container div').each(function () {
-                width += $(this).outerWidth(true);
-            });
-            $('#overflow .container').css('width', width + "px");
-            alert(width);
+</div>
+<script type='text/javascript' src='@Url.Content("~/ViewScript/ProyectoDetalle/Render.js")'></script>
+@*<script>
+    $(function () {
+        var width = 0;
+        $('#overflow .container div').each(function () {
+            width += $(this).outerWidth(true);
         });
-
-
-    </script>
+        $('#overflow .container').css('width', width + "px");
+        alert(width);
+    });
+</script>*@

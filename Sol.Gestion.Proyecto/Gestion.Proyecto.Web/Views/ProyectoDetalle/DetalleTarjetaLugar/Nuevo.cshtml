@@ -1,0 +1,81 @@
+﻿@model Gestion.Proyecto.Web.Models.ProyectoDetalle.ProyectoDetalleViewModel
+@Html.Hidden("UrlConsultarProyecto", Url.Action("Consultar", "Proyecto"))
+@using (Html.BeginForm("Nuevo", "DetalleTarjetaLugar", FormMethod.Post, new { @id = "FrmDetalleTarjetaLugarNew" }))
+{
+    <div class="list-group">
+        <a class="list-group-item active"><i class="icon-th icon-white"></i> Registrar <i class="glyphicon glyphicon-chevron-right"></i> @Gestion.Proyecto.Resource.Title.DetalleTarjetaLugar </a>
+        <div class="list-group-item">
+            <div class="row-fluid">
+                <div class="span6">
+                    @Html.LabelFor(model => model.DetalleTarjetaLugar.SubRackId, new { @Class = "span3" })
+                    <div class="span9">
+                        @Html.TextBoxFor(model => model.DetalleTarjetaLugar.SubRackId, new { @id = "Codigo", })
+                        @Html.ValidationMessageFor(model => model.DetalleTarjetaLugar.SubRackId, string.Empty, new { @Class = "error" })
+                    </div>
+                </div>
+                <div class="span6">
+                    @Html.LabelFor(model => model.DetalleTarjetaLugar.Slot, new { @Class = "span3" })
+                    <div class="span9">
+                        @Html.TextBoxFor(model => model.DetalleTarjetaLugar.Slot, new { @id = "Descripcion", })
+                        @Html.ValidationMessageFor(model => model.DetalleTarjetaLugar.Slot, string.Empty, new { @Class = "error" })
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    @Html.LabelFor(model => model.DetalleTarjetaLugar.BoardType, new { @Class = "span3" })
+                    <div class="span9">
+                        @Html.TextBoxFor(model => model.DetalleTarjetaLugar.BoardType, new { @id = "TipoEquipo" })
+                        @Html.ValidationMessageFor(model => model.DetalleTarjetaLugar.BoardType, string.Empty, new { @Class = "error" })
+                    </div>
+                </div>
+                <div class="span6">
+                    @Html.LabelFor(model => model.DetalleTarjetaLugar.BiosVersion, new { @Class = "span3" })
+                    <div class="span9">
+                        @Html.TextBoxFor(model => model.DetalleTarjetaLugar.BiosVersion, new { @id = "TipoEquipo" })
+                        @Html.ValidationMessageFor(model => model.DetalleTarjetaLugar.BiosVersion, string.Empty, new { @Class = "error" })
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    @Html.LabelFor(model => model.DetalleTarjetaLugar.SoftVersion, new { @Class = "span3" })
+                    <div class="span9">
+                        @Html.TextBoxFor(model => model.DetalleTarjetaLugar.SoftVersion, new { @id = "TipoEquipo" })
+                        @Html.ValidationMessageFor(model => model.DetalleTarjetaLugar.SoftVersion, string.Empty, new { @Class = "error" })
+                    </div>
+                </div>
+                <div class="span6">
+                    @Html.LabelFor(model => model.DetalleTarjetaLugar.LogicVersion, new { @Class = "span3" })
+                    <div class="span9">
+                        @Html.TextBoxFor(model => model.DetalleTarjetaLugar.LogicVersion, new { @id = "TipoEquipo" })
+                        @Html.ValidationMessageFor(model => model.DetalleTarjetaLugar.LogicVersion, string.Empty, new { @Class = "error" })
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    @Html.LabelFor(model => model.DetalleTarjetaLugar.PCBVersion, new { @Class = "span3" })
+                    <div class="span9">
+                        @Html.TextBoxFor(model => model.DetalleTarjetaLugar.PCBVersion, new { @id = "TipoEquipo" })
+                        @Html.ValidationMessageFor(model => model.DetalleTarjetaLugar.PCBVersion, string.Empty, new { @Class = "error" })
+                    </div>
+                </div>
+                <div class="span6">
+                    @Html.LabelFor(model => model.DetalleTarjetaLugar.SerialNumber, new { @Class = "span3" })
+                    <div class="span9">
+                        @Html.TextBoxFor(model => model.DetalleTarjetaLugar.SerialNumber, new { @id = "TipoEquipo" })
+                        @Html.ValidationMessageFor(model => model.DetalleTarjetaLugar.SerialNumber, string.Empty, new { @Class = "error" })
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <button id="btnDetalleTarjetaLugarRegistrar" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Registrar </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script type='text/javascript' src='~/ViewScript/ProyectoDetalle/DetalleTarjetaLugar/Nuevo.js'></script>
+<script type='text/javascript' src='@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")'></script>
+<script type='text/javascript' src='@Url.Content("~/Scripts/jquery.validate.min.js")'></script>
+<script type='text/javascript' src='@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")'></script>

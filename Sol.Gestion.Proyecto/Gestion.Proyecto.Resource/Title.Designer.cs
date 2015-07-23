@@ -88,6 +88,15 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detalles de tarjeta por lugar.
+        /// </summary>
+        public static string DetalleTarjetaLugar {
+            get {
+                return ResourceManager.GetString("DetalleTarjetaLugar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Editar Proyecto.
         /// </summary>
         public static string EditarProyecto {

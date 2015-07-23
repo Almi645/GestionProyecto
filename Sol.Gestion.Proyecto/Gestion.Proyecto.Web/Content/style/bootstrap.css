@@ -6866,3 +6866,7 @@ a {
   content: "\e131";
   font-size: 16px;
 }
+
+.glyphicon-chevron-right:before {
+  content: "\e080";
+}

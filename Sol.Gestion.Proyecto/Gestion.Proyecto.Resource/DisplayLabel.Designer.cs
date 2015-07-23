@@ -187,6 +187,24 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Slot.
+        /// </summary>
+        public static string Slot {
+            get {
+                return ResourceManager.GetString("Slot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubRack Id.
+        /// </summary>
+        public static string SubRackId {
+            get {
+                return ResourceManager.GetString("SubRackId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tipo de Equipo.
         /// </summary>
         public static string TipoEquipo {
