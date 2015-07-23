@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sodimac.ECommerce.Repository.Helper
+namespace Gestion.Proyecto.DataAccess.Helper
 {
     public class Pagination
     {

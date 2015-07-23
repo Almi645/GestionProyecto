@@ -20,11 +20,6 @@ namespace Gestion.Proyecto.Web.Controllers
     [OutputCacheAttribute(VaryByParam = "*", Duration = 0, NoStore = true)]
     public class ProyectoController : BaseController
     {
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
         [RequiresAuthenticationAttribute]
         public ActionResult Consultar()
         {

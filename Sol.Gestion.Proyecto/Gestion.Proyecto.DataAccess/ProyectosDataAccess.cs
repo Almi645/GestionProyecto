@@ -3,7 +3,6 @@ using Gestion.Proyecto.Entity.Other;
 using Gestion.Proyecto.Resource;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using Repository;
-using Sodimac.ECommerce.Repository.Helper;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +13,7 @@ using System.Threading.Tasks;
 using Gestion.Proyecto.Common;
 using Gestion.Proyecto.Entity.EntityList;
 using Gestion.Proyecto.Entity.Entity;
+using Gestion.Proyecto.DataAccess.Helper;
 
 namespace Gestion.Proyecto.DataAccess
 {

@@ -1,0 +1,80 @@
+﻿@model Gestion.Proyecto.Web.Models.ProyectoDetalle.ProyectoDetalleViewModel
+@{
+    ViewBag.Title = "PROYECTO DETALLE";
+}
+
+<style>
+    #overflow {
+        border-bottom: 1px solid #E1E1E8;
+        border-radius: 4px;
+        height: 400px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+</style>
+
+<div class="bs-docs-example">
+    <p style="text-transform:uppercase">:: PROYECTO DETALLE</p>
+</div>
+<div class="prettyprint">
+    <div class="row-fluid">
+
+        <div class="span3">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    Seleccion un detalle ↓
+                </a>
+                <div id="overflow">
+                    @foreach (var option in Model.MenuDetalleList)
+                    {
+                        <a href="#" class="list-group-item" codeform="@option.Codigo" onclick="dialog(this)">@option.Descripcion</a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="span9">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    Proyecto : @Model.Proyectos.Codigo - 
+                </a>
+                <div class="list-group-item">
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <h4 class="list-group-item-heading">@Html.LabelFor(model => model.Proyectos.Descripcion, new {})</h4>
+                            <p class="list-group-item-text">@Model.Proyectos.Descripcion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="row-fluid">
+            <button type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Nuevo </button>
+            <button id="btnProyectoBuscar" type="button" class="btn btn-info" style="float:right; margin-left:1px; margin-right:1px"> Buscar </button>
+        </div>
+    </div>
+
+    <script>
+        function dialog(thi) {
+            toastr.warning($(thi).attr('codeform'));
+        }
+    </script>
+    <script>
+
+
+
+        $(function () {
+            var width = 0;
+            $('#overflow .container div').each(function () {
+                width += $(this).outerWidth(true);
+            });
+            $('#overflow .container').css('width', width + "px");
+            alert(width);
+        });
+
+
+    </script>

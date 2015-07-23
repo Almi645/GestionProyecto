@@ -40,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmpleadoBusinessLogic.cs" />
+    <Compile Include="MenuDetalleBusinessLogic.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ProyectosBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBusinessLogic.cs" />

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="EntityList\AlmacenList.cs" />
     <Compile Include="EntityList\EmpleadoList.cs" />
+    <Compile Include="EntityList\MenuDetalleList.cs" />
     <Compile Include="EntityList\ProyectosList.cs" />
     <Compile Include="EntityList\ArticulosList.cs" />
     <Compile Include="EntityList\CabeceraGuiaList.cs" />
@@ -129,10 +130,10 @@
     <Compile Include="Entity\SensitividadMinRecep.cs" />
     <Compile Include="Entity\TarjetaM40V.cs" />
     <Compile Include="Entity\Usuario.cs" />
+    <Compile Include="Others\MenuDetalle.cs" />
     <Compile Include="Others\Paginacion.cs" />
     <Compile Include="Others\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

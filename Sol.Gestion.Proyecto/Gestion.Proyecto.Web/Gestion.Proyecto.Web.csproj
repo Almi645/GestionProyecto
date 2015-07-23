@@ -170,13 +170,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BandejaController.cs" />
     <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\Base\JSResultView.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ProyectoController.cs" />
-    <Compile Include="Controllers\BandejaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProyectoDetalleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,6 +191,7 @@
     <Compile Include="Models\Common\DefaultModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ProyectoDetalle\ProyectoDetalleViewModel.cs" />
     <Compile Include="Models\Proyecto\ProyectoConsultaViewModel.cs" />
     <Compile Include="Models\Proyecto\ProyectoViewModel.cs" />
     <Compile Include="Models\Usuario\UsuarioViewModel.cs" />
@@ -1556,7 +1558,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Proyecto\Consultar.cshtml" />
     <Content Include="Views\Proyecto\_ProyectoGridPartialView.cshtml" />
-    <Content Include="Views\Bandeja\Nuevo.cshtml" />
     <Content Include="Views\Proyecto\Nuevo.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
@@ -1569,6 +1570,7 @@
     <Content Include="Views\Proyecto\Editar.cshtml" />
     <Content Include="Views\Bandeja\Consulta.cshtml" />
     <Content Include="Views\Bandeja\_BandejaGridPartialView.cshtml" />
+    <Content Include="Views\ProyectoDetalle\Gestionar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

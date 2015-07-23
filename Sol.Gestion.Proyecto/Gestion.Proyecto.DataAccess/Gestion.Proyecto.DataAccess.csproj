@@ -72,6 +72,7 @@
     <Compile Include="Helpers\Pagination.cs" />
     <Compile Include="LonOndaCentralOpTransDataAccess.cs" />
     <Compile Include="MarcaDataAccess.cs" />
+    <Compile Include="MenuDetalleDataAccess.cs" />
     <Compile Include="ModelosDataAccess.cs" />
     <Compile Include="MovimientosDataAccess.cs" />
     <Compile Include="ObservacionesOpticalDataAccess.cs" />
