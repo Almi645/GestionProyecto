@@ -123,6 +123,9 @@
   <data name="BootBoxSuccessEdit" xml:space="preserve">
     <value>bbredirect("Cambios guardados correctamente.", {0});</value>
   </data>
+  <data name="FormClearInput" xml:space="preserve">
+    <value>ClearInput();</value>
+  </data>
   <data name="FormValidate" xml:space="preserve">
     <value>$('#{0}').valid();</value>
   </data>

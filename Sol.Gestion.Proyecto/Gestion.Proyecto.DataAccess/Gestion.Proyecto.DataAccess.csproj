@@ -50,53 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlmacenDataAccess.cs" />
-    <Compile Include="ArticulosDataAccess.cs" />
-    <Compile Include="CabeceraGuia.cs" />
-    <Compile Include="CargoDataAccess.cs" />
-    <Compile Include="ClienteDataAccess.cs" />
-    <Compile Include="ConectividadODFDataAccess.cs" />
-    <Compile Include="ConectividadT2000DataAccess.cs" />
-    <Compile Include="DepartamentoDataAccess.cs" />
-    <Compile Include="DetalleDCMDataAccess.cs" />
-    <Compile Include="DetalleGuiaDataAccess.cs" />
-    <Compile Include="DetalleTarjetaLugarDataAccess.cs" />
-    <Compile Include="DetTarjetaLugarDataAccess.cs" />
-    <Compile Include="DistritoDataAccess.cs" />
+    <Compile Include="ProyectoDetalleDataAccess.cs" />
     <Compile Include="EmpleadoDataAccess.cs" />
-    <Compile Include="EmpleadoProyectoDataAccess.cs" />
-    <Compile Include="FamiliaDataAccess.cs" />
-    <Compile Include="FuncionamientoTarjMCADataAccess.cs" />
-    <Compile Include="GananciaAmplificadorDataAccess.cs" />
-    <Compile Include="GananciaAmpliRamanDataAccess.cs" />
     <Compile Include="Helpers\Pagination.cs" />
-    <Compile Include="LonOndaCentralOpTransDataAccess.cs" />
-    <Compile Include="MarcaDataAccess.cs" />
     <Compile Include="MenuDetalleDataAccess.cs" />
-    <Compile Include="ModelosDataAccess.cs" />
-    <Compile Include="MovimientosDataAccess.cs" />
-    <Compile Include="ObservacionesOpticalDataAccess.cs" />
-    <Compile Include="PaisDataAccess.cs" />
-    <Compile Include="PerdidaInsercionDCMDataAccess.cs" />
-    <Compile Include="PerdidaInsercionDCPDataAccess.cs" />
-    <Compile Include="PerdidaInsercionFIUDataAccess.cs" />
-    <Compile Include="PerdidaInsercionITLDataAccess.cs" />
-    <Compile Include="PerdidaInsercionM40VDataAccess.cs" />
-    <Compile Include="PosicionesEnergiaDataAccess.cs" />
-    <Compile Include="PosicionesODFDataAccess.cs" />
-    <Compile Include="PotenciaOpPromTransDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProveedorDataAccess.cs" />
-    <Compile Include="ProvinciaDataAccess.cs" />
     <Compile Include="ProyectosDataAccess.cs" />
-    <Compile Include="PruebaConmutacionDataAccess.cs" />
-    <Compile Include="PruebaFuncionTefDataAccess.cs" />
-    <Compile Include="PruebasConexNS3_THADataAccess.cs" />
-    <Compile Include="PruebaSenalRuidoOpDataAccess.cs" />
-    <Compile Include="PruebasTasaDataAccess.cs" />
-    <Compile Include="RuidoOpticoDataAccess.cs" />
-    <Compile Include="SensitividadMinRecepDataAccess.cs" />
-    <Compile Include="TarjetaM40VDataAccess.cs" />
     <Compile Include="UsuarioDataAccess.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -70,6 +70,24 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BIOS Version.
+        /// </summary>
+        public static string BiosVersion {
+            get {
+                return ResourceManager.GetString("BiosVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Board Type.
+        /// </summary>
+        public static string BoardType {
+            get {
+                return ResourceManager.GetString("BoardType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Acceder.
         /// </summary>
         public static string BtnLogin {
@@ -142,6 +160,15 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Logic Version.
+        /// </summary>
+        public static string LogicVersion {
+            get {
+                return ResourceManager.GetString("LogicVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nombre de Equipo.
         /// </summary>
         public static string NombreEquipo {
@@ -169,6 +196,15 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PCB Version.
+        /// </summary>
+        public static string PCBVersion {
+            get {
+                return ResourceManager.GetString("PCBVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contraseña.
         /// </summary>
         public static string PlaceHolderPass {
@@ -187,6 +223,15 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Serial Number.
+        /// </summary>
+        public static string SerialNumber {
+            get {
+                return ResourceManager.GetString("SerialNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Slot.
         /// </summary>
         public static string Slot {
@@ -196,7 +241,16 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SubRack Id.
+        ///   Looks up a localized string similar to Software Version.
+        /// </summary>
+        public static string SoftVersion {
+            get {
+                return ResourceManager.GetString("SoftVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subrack ID.
         /// </summary>
         public static string SubRackId {
             get {

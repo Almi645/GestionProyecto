@@ -9,6 +9,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Gestion.Proyecto.Common;
+using Gestion.Proyecto.Entity.EntityList;
+using Gestion.Proyecto.Entity.Other;
+using Gestion.Proyecto.Entity.Entity;
 
 namespace Gestion.Proyecto.Web.Controllers
 {
@@ -26,13 +29,27 @@ namespace Gestion.Proyecto.Web.Controllers
 
         public ActionResult Render(string Codigo)
         {
+            string codigo = Codigo.Split('|')[0];
+            int idProyecto = Codigo.Split('|')[1].Int();
+
             var model = new ProyectoDetalleViewModel();
-            if(Codigo == ConfigurationManager.AppSettings["DetalleTarjetaLugar"])
+            model.Paginacion = UtilGrid.MyPaginationDefault<Paginacion>();
+            model.Proyectos = new ProyectosBusinessLogic().GetbyId(idProyecto);
+            model.Proyectos = new Proyectos();
+            model.Proyectos.IdProyecto = idProyecto;
+
+            if (codigo == ConfigurationManager.AppSettings["DetalleTarjetaLugar"])
             {
-                return PartialView(ProyectoDetalleViewModel.Partial.DetalleTarjetaLugar.Str(), model);
+                return ViewDetalleTarjetaLugar(model);
             }
 
             return null;
+        }
+
+        private ActionResult ViewDetalleTarjetaLugar(ProyectoDetalleViewModel model)
+        {
+            model.DetalleTarjetaLugarList = new DetalleTarjetaLugarList();
+            return PartialView(ProyectoDetalleViewModel.Partial.DetalleTarjetaLugar.Str(), model);
         }
     }
 }

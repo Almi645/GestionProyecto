@@ -1,6 +1,7 @@
 ﻿(function () {
 
     $("#btnDetalleTarjetaLugarRegistrar").click(ValidForm);
+    Busqueda("IdGridDetalleTarjetaLugar", "FrmDetalleTarjetaLugarConsulta");
     
     function ValidForm() {
         if ($("#FrmDetalleTarjetaLugarNew").valid())
@@ -23,4 +24,19 @@
             }
         });
     }
+
+    function ClearInput()
+    {
+        $("#SubRackId").val('');
+        $("#Slot").val('');
+        $("#BoardType").val('');
+        $("#BiosVersion").val('');
+        $("#SoftVersion").val('');
+        $("#LogicVersion").val('');
+        $("#PCBVersion").val('');
+        $("#SerialNumber").val('');
+    }
+
 })()
+
+

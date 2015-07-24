@@ -5,6 +5,7 @@ using System.Web;
 using Gestion.Proyecto.Entity.EntityList;
 using Gestion.Proyecto.Entity.Entity;
 using Gestion.Proyecto.Common;
+using Gestion.Proyecto.Entity.Other;
 
 namespace Gestion.Proyecto.Web.Models.ProyectoDetalle
 {
@@ -14,12 +15,19 @@ namespace Gestion.Proyecto.Web.Models.ProyectoDetalle
 
         public Proyectos Proyectos { get; set; }
 
+        public Paginacion Paginacion { get; set; }
+
         public DetalleTarjetaLugar DetalleTarjetaLugar { get; set; }
+
+        public DetalleTarjetaLugarList DetalleTarjetaLugarList { get; set; }
 
         public enum Partial
         {
             [StringValue("~/Views/ProyectoDetalle/DetalleTarjetaLugar/Nuevo.cshtml")]
-            DetalleTarjetaLugar
+            DetalleTarjetaLugar,
+
+            [StringValue("~/Views/ProyectoDetalle/DetalleTarjetaLugar/_GridPartial.cshtml")]
+            DetalleTarjetaLugarGrid
         }
     }
 }

@@ -79,6 +79,15 @@ namespace Gestion.Proyecto.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ClearInput();.
+        /// </summary>
+        public static string FormClearInput {
+            get {
+                return ResourceManager.GetString("FormClearInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to $(&apos;#{0}&apos;).valid();.
         /// </summary>
         public static string FormValidate {

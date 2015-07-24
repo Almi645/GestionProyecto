@@ -165,10 +165,28 @@
   <data name="UserName" xml:space="preserve">
     <value>Usuario</value>
   </data>
+  <data name="BiosVersion" xml:space="preserve">
+    <value>BIOS Version</value>
+  </data>
+  <data name="BoardType" xml:space="preserve">
+    <value>Board Type</value>
+  </data>
+  <data name="LogicVersion" xml:space="preserve">
+    <value>Logic Version</value>
+  </data>
+  <data name="PCBVersion" xml:space="preserve">
+    <value>PCB Version</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>Serial Number</value>
+  </data>
   <data name="Slot" xml:space="preserve">
     <value>Slot</value>
   </data>
+  <data name="SoftVersion" xml:space="preserve">
+    <value>Software Version</value>
+  </data>
   <data name="SubRackId" xml:space="preserve">
-    <value>SubRack Id</value>
+    <value>Subrack ID</value>
   </data>
 </root>

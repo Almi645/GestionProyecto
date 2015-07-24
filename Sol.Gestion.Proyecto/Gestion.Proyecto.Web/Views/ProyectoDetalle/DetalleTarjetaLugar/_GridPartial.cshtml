@@ -1,0 +1,38 @@
+﻿@using Gestion.Proyecto.Resource
+@model Gestion.Proyecto.Web.Models.ProyectoDetalle.ProyectoDetalleViewModel
+@{
+    WebGrid grid = new WebGrid(rowsPerPage: Model.Paginacion.RowsPerPage, ajaxUpdateContainerId: "IdGridDetalleTarjetaLugar",
+    ajaxUpdateCallback: "SetTotalRecordsGeneric('IdGridDetalleTarjetaLugar')");
+    grid.Bind(Model.DetalleTarjetaLugarList, autoSortAndPage: false, rowCount: Model.Paginacion.RowCount);
+
+    <div id="IdGridDetalleTarjetaLugar">
+        @grid.GetHtml(
+                headerStyle: "fix_head",
+                rowStyle: "fix_td",
+                alternatingRowStyle: "",
+                footerStyle: "pagination",
+                        htmlAttributes: new { id = "IdDetalleTarjetaLugarAttr", @class = "table table-striped", @style = "margin: 5px auto; border: 1px solid #CFD8DE;border-radius: 4px;width: 100%;" },
+                mode: WebGridPagerModes.All,
+                firstText: Gestion.Proyecto.Resource.Constants.ButtonPageFirst,
+                previousText: Gestion.Proyecto.Resource.Constants.ButtonPageBack,
+                nextText: Gestion.Proyecto.Resource.Constants.ButtonPageNext,
+                lastText: Gestion.Proyecto.Resource.Constants.ButtonPageLast,
+                columns: grid.Columns
+                (
+                    grid.Column("SubRackId", DisplayLabel.SubRackId, canSort: true, style: "centrar", format: @<text>@item.SubRackId</text>),
+                    grid.Column("Slot", DisplayLabel.Slot, canSort: true, style: "centrar", format: @<text>@item.Slot</text>),
+                    grid.Column("BoardType", DisplayLabel.BoardType, canSort: true, style: "centrar", format: @<text>@item.BoardType</text>),
+
+                    grid.Column("", "Acciones", canSort: true, style: "centrar", format:
+                    @<text>
+                    <a style="cursor:pointer" onclick="Edit()" title="Ver">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    </text>)))
+
+        @Html.HiddenFor(model => model.Paginacion.RowCount, new { @id = "RowCountGeneric" })
+        @Html.HiddenFor(model => model.Paginacion.RowsPerPage, new { @id = "RowsPerPageGeneric" })
+        @Html.HiddenFor(model => model.Paginacion.FooterDesc, new { @id = "FooterDescGeneric" })
+    </div>
+}
+

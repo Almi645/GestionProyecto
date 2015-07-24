@@ -1518,6 +1518,7 @@
     <Content Include="Scripts\Util.JSHelper.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="ViewScript\Bandeja\Consulta.js" />
+    <Content Include="ViewScript\ProyectoDetalle\DetalleTarjetaLugar\Consulta.js" />
     <Content Include="ViewScript\ProyectoDetalle\DetalleTarjetaLugar\Nuevo.js" />
     <Content Include="ViewScript\ProyectoDetalle\Render.js" />
     <Content Include="ViewScript\Proyecto\Consulta.js" />
@@ -1575,6 +1576,7 @@
     <Content Include="Views\Bandeja\_BandejaGridPartialView.cshtml" />
     <Content Include="Views\ProyectoDetalle\Gestionar.cshtml" />
     <Content Include="Views\ProyectoDetalle\DetalleTarjetaLugar\Nuevo.cshtml" />
+    <Content Include="Views\ProyectoDetalle\DetalleTarjetaLugar\_GridPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

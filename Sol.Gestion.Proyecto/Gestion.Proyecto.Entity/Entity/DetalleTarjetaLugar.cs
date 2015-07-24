@@ -1,4 +1,5 @@
-﻿using Gestion.Proyecto.Resource;
+﻿using Gestion.Proyecto.Common;
+using Gestion.Proyecto.Resource;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,18 +23,39 @@ namespace Gestion.Proyecto.Entity.Entity
         [Required(ErrorMessageResourceType = typeof(Validation), ErrorMessageResourceName = "CampoRequerido")]  
         public string Slot { get; set; }
 
+        [Display(Name = "BoardType", ResourceType = typeof(DisplayLabel))]
+        [Required(ErrorMessageResourceType = typeof(Validation), ErrorMessageResourceName = "CampoRequerido")]  
         public string BoardType { get; set; }
 
+        [Display(Name = "BiosVersion", ResourceType = typeof(DisplayLabel))]
+        [Required(ErrorMessageResourceType = typeof(Validation), ErrorMessageResourceName = "CampoRequerido")]  
         public string BiosVersion { get; set; }
 
+        [Display(Name = "SoftVersion", ResourceType = typeof(DisplayLabel))]
+        [Required(ErrorMessageResourceType = typeof(Validation), ErrorMessageResourceName = "CampoRequerido")]  
         public string SoftVersion { get; set; }
 
+        [Display(Name = "LogicVersion", ResourceType = typeof(DisplayLabel))]
+        [Required(ErrorMessageResourceType = typeof(Validation), ErrorMessageResourceName = "CampoRequerido")]  
         public string LogicVersion{ get; set; }
 
+        [Display(Name = "PCBVersion", ResourceType = typeof(DisplayLabel))]
+        [Required(ErrorMessageResourceType = typeof(Validation), ErrorMessageResourceName = "CampoRequerido")]  
         public string PCBVersion { get; set; }
 
+        [Display(Name = "SerialNumber", ResourceType = typeof(DisplayLabel))]
+        [Required(ErrorMessageResourceType = typeof(Validation), ErrorMessageResourceName = "CampoRequerido")]  
         public string SerialNumber { get; set; }
 
         public Proyectos Proyectos { get; set; }
+
+        public enum Proc
+        {
+            [StringValue("[dbo].[Usp_Ins_DetalleTarjetaLugar]")]
+            Insertar,
+
+            [StringValue("[dbo].[Usp_DetalleTarjetaLugarPaginacion]")]
+            Paginacion
+        }
     }
 }
